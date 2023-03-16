@@ -1,0 +1,8 @@
+*.pyc
+.noseids
+nosetests.xml
+*.orig
+.DS_Store
+.idea
+temp/
+
