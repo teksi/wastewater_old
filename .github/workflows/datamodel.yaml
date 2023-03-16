@@ -39,7 +39,7 @@ jobs:
       - name: "assert version is up to date"
         run: |
           LAST_VERSION=$(ls datamodel/delta | sort -r | sed '/^delta_/!d' | head -n 1 | cut -d_ -f2)
-          CUR_VERSION=$(cat system/CURRENT_VERSION.txt)
+          CUR_VERSION=$(cat datamodel/system/CURRENT_VERSION.txt)
           [[ "${LAST_VERSION}" == "${CUR_VERSION}" ]] || (echo "Version mismatch ${LAST_VERSION} != ${CUR_VERSION}" && exit 1)
 
       - name: "build dockerfile"
