@@ -78,8 +78,10 @@ else:
 PLUGIN_FOLDER = Path(__file__).parent.parent
 DATAMODEL_PATH = PLUGIN_FOLDER / "datamodel"
 REQUIREMENTS_PATH = DATAMODEL_PATH / "requirements.txt"
-DBSETUP_SCRIPT_PATH = DATAMODEL_PATH / "scripts" / "db_setup.sh"
 DELTAS_PATH = DATAMODEL_PATH / "delta"
+INIT_SCRIPT_PATH = (
+    DATAMODEL_PATH / "init" / "qgep_1.5.6-1_structure_with_value_lists.sql"
+)
 QGISPROJECT_PATH = PLUGIN_FOLDER / "project" / "qgep.qgs"
 
 
@@ -245,8 +247,10 @@ class QgepDatamodelInitToolDialog(QDialog, get_ui_class("qgepdatamodeldialog.ui"
         sql_command,
         master_db=False,
         autocommit=False,
+        returns=False,
         error_message="Psycopg error, see logs for more information",
     ):
+        results = None
         connection_string = f"service={self.conf}"
         if master_db:
             connection_string += f" dbname=postgres"
@@ -259,11 +263,12 @@ class QgepDatamodelInitToolDialog(QDialog, get_ui_class("qgepdatamodeldialog.ui"
                 conn.autocommit = True
             cur = conn.cursor()
             cur.execute(sql_command)
-            results = cur.fetchall()
+            if returns:
+                results = cur.fetchall()
             conn.commit()
             cur.close()
             conn.close()
-        except psycopg2.OperationalError as e:
+        except psycopg2.Error as e:
             message = f"{error_message}\nCommand :\n{sql_command}\n{e}"
             raise QGEPDatamodelError(message)
         return results
@@ -331,6 +336,7 @@ class QgepDatamodelInitToolDialog(QDialog, get_ui_class("qgepdatamodeldialog.ui"
 
         results = self._run_sql(
             "SELECT version FROM qgep_sys.pum_info;",
+            returns=True,
             error_message="Could not retrieve versions from pum_info table",
         )
         for (version_str,) in results:
@@ -638,12 +644,8 @@ class QgepDatamodelInitToolDialog(QDialog, get_ui_class("qgepdatamodeldialog.ui"
     @qgep_datamodel_error_catcher
     def initialize_version(self):
 
-        target_version = self._get_target_version()
-
         confirm = QMessageBox()
-        confirm.setText(
-            f"You are about to initialize the datamodel on {self.conf} to version {target_version}. "
-        )
+        confirm.setText(f"You are about to initialize the datamodel on {self.conf}. ")
         confirm.setInformativeText(
             "Please confirm that you have a backup of your data as this operation can result in data loss."
         )
@@ -662,16 +664,55 @@ class QgepDatamodelInitToolDialog(QDialog, get_ui_class("qgepdatamodeldialog.ui"
             self._show_progress("Initializing the datamodel")
 
             # TODO : this should be done by PUM directly (see https://github.com/opengisch/pum/issues/94)
-            # also currently SRID doesn't work
-            if platform == "win32":
-                raise QGEPDatamodelError(
-                    "Initializing a datamodel is currently not supported on Windows"
+
+            # Dirty hack to customize SRID in a dump
+            init_script_path = INIT_SCRIPT_PATH
+            if srid != "2056":
+                with open(INIT_SCRIPT_PATH, "r", encoding="utf8") as file:
+                    contents = file.read()
+                contents = contents.replace("2056", srid)
+                init_script_path = tempfile.NamedTemporaryFile(
+                    suffix=".sql", delete=False
                 )
-            self._run_cmd(
-                [str(DBSETUP_SCRIPT_PATH), "-s", srid, "-p", self.conf],
-                error_message="Errors when running initialisation script.",
-                timeout=300,
-            )
+                with open(init_script_path, "w", encoding="utf8") as file:
+                    file.write(contents)
+
+            try:
+                try:
+                    conn = psycopg2.connect(f"service={self.conf}")
+                except psycopg2.Error:
+                    # It may be that the database doesn't exist yet
+                    # in that case, we try to connect to the postgres database and to create it from there
+                    self._show_progress("Creating the database")
+                    dbname = self._read_pgservice()[self.conf]["dbname"]
+                    self._run_sql(
+                        f"CREATE DATABASE {dbname};",
+                        autocommit=True,
+                        master_db=True,
+                        error_message="Could not create a new database.",
+                    )
+
+                self._show_progress("Running the initialization scripts")
+                self._run_sql(
+                    "CREATE EXTENSION IF NOT EXISTS postgis;",
+                    error_message="Errors when initializing the database.",
+                )
+                # we cannot use this, as it doesn't support COPY statements
+                # this means we'll run through psql without transaction :-/
+                # cur.execute(open(sql_path, "r").read())
+                self._run_cmd(
+                    f'psql -f {init_script_path} "service={self.conf}"',
+                    error_message="Errors when initializing the database.",
+                    timeout=300,
+                )
+                # workaround until https://github.com/QGEP/QGEP/issues/612 is fixed
+                self._run_sql(
+                    "SELECT qgep_network.refresh_network_simple();",
+                    error_message="Errors when initializing the database.",
+                )
+
+            except psycopg2.Error as e:
+                raise QGEPDatamodelError(str(e))
 
             self.check_version()
             self.check_project()
@@ -679,12 +720,16 @@ class QgepDatamodelInitToolDialog(QDialog, get_ui_class("qgepdatamodeldialog.ui"
             self._done_progress()
 
             success = QMessageBox()
-            success.setText("Datamodel successfully initialized")
+            success.setText(
+                "Datamodel successfully initialized, will now proceed to upgrade."
+            )
             success.setIcon(QMessageBox.Information)
             success.exec_()
 
+            self.upgrade_version(skip_confirmation=True)
+
     @qgep_datamodel_error_catcher
-    def upgrade_version(self):
+    def upgrade_version(self, skip_confirmation=False):
 
         target_version = self._get_target_version()
 
@@ -698,7 +743,7 @@ class QgepDatamodelInitToolDialog(QDialog, get_ui_class("qgepdatamodeldialog.ui"
         confirm.setStandardButtons(QMessageBox.Apply | QMessageBox.Cancel)
         confirm.setIcon(QMessageBox.Warning)
 
-        if confirm.exec_() == QMessageBox.Apply:
+        if skip_confirmation or confirm.exec_() == QMessageBox.Apply:
 
             self._show_progress("Upgrading the datamodel")
 
