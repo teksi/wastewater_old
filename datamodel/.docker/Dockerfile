@@ -6,7 +6,6 @@ RUN apt-get update && apt-get install -y python3 python3-pip libpq-dev wget && a
 # /INSTALL SYSTEM DEPS (PYTHON-3.9 debian bullseye)
 
 # Python deps
-WORKDIR datamodel
 ADD requirements.txt .
 RUN pip3 install pytest
 RUN pip3 install -r ./requirements.txt
