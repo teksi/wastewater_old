@@ -22,16 +22,13 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 # ---------------------------------------------------------------------
-from sys import platform
 import configparser
 import functools
 from typing import Optional
 import os
 import subprocess
 import tempfile
-import zipfile
 from pathlib import Path
-from pkg_resources import packaging
 from pkg_resources.extern.packaging.version import Version
 from pkg_resources import parse_version
 import pkg_resources
@@ -40,11 +37,9 @@ from qgis.core import (
     Qgis,
     QgsApplication,
     QgsMessageLog,
-    QgsNetworkAccessManager,
     QgsProject,
 )
-from qgis.PyQt.QtCore import QFile, QIODevice, QSettings, Qt, QUrl
-from qgis.PyQt.QtNetwork import QNetworkReply, QNetworkRequest
+from qgis.PyQt.QtCore import Qt
 from qgis.PyQt.QtWidgets import (
     QApplication,
     QDialog,
@@ -54,12 +49,6 @@ from qgis.PyQt.QtWidgets import (
 )
 
 from ..utils import get_ui_class
-
-# Currently, the latest release is hard-coded in the plugin, meaning we need
-# to publish a plugin update for each datamodel update.
-# In the future, once plugin/datamodel versionning scheme clearly reflects
-# compatibility, we could retrieve this dynamically, so datamodel bugfix
-# releases don't require a plugin upgrade.
 
 # Path for pg_service.conf
 PG_CONFIG_PATH_KNOWN = True
