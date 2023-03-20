@@ -1,0 +1,10 @@
+build
+compile_messages
+init
+*~
+*.mo
+i18n
+.DS_Store
+.idea
+.venv
+.vscode

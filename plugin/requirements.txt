@@ -1,0 +1,6 @@
+pip
+networkx
+flake8
+pep8-naming
+transifex-client
+future
