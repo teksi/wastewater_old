@@ -127,6 +127,9 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Get dependencies
+        run: pip install sphinx-rtd-theme==0.1.9
+
       - name: Compile translations
         run: lrelease $(find ./doc -type f -name "*.ts")
 

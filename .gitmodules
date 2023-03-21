@@ -1,7 +1,3 @@
-[submodule "doc/themes/sphinx_rtd_theme"]
-	path = doc/themes/sphinx_rtd_theme
-	url = https://github.com/snide/sphinx_rtd_theme.git
-
 [submodule "plugin/qgepplugin/qgepqwat2ili"]
 	path = plugin/qgepplugin/qgepqwat2ili
 	url = https://github.com/QGEP/qgepqwat2ili.git
