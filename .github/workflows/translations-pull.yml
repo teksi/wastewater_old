@@ -19,7 +19,7 @@ jobs:
       - name: Pull translations from transifex
         env:
           TX_TOKEN: ${{ secrets.TX_TOKEN }}
-        run: .\tx pull -a 
+        run: .\tx pull --all --minimum-perc 50
 
       - uses: EndBug/add-and-commit@v9
         with:

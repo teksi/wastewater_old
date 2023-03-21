@@ -110,22 +110,22 @@
     <message>
         <location filename="../qgepqwat2ili/qgepqwat2ili/gui/gui_export.ui" line="38"/>
         <source>Export labels</source>
-        <translation type="unfinished"/>
+        <translation>Exporter les étiquettes</translation>
     </message>
     <message>
         <location filename="../qgepqwat2ili/qgepqwat2ili/gui/gui_export.ui" line="50"/>
         <source>This feature requires QGIS 3.26.2 or newer.</source>
-        <translation type="unfinished"/>
+        <translation>Cette fonction requiert QGIS 3.26.2 ou ultérieur.</translation>
     </message>
     <message>
         <location filename="../qgepqwat2ili/qgepqwat2ili/gui/gui_export.ui" line="60"/>
         <source>Save logs next to output</source>
-        <translation type="unfinished"/>
+        <translation>Sauvegarder le journal à côté du fichier</translation>
     </message>
     <message>
         <location filename="../ui/qgeppgserviceeditordialog.ui" line="14"/>
         <source>PG Config editor</source>
-        <translation type="unfinished"/>
+        <translation>Éditeur de configuration Postgres</translation>
     </message>
     <message>
         <location filename="../ui/qgeppgserviceeditordialog.ui" line="20"/>
@@ -160,7 +160,7 @@
     <message>
         <location filename="../ui/qgeppgserviceeditordialog.ui" line="157"/>
         <source>WARNING ! These settings will be saved to the pg_service.conf in plain text ! Any person having access to this file will be able to access the credentials.</source>
-        <translation type="unfinished"/>
+        <translation>ATTENTION ! Ces réglages seront sauvegardés dans le fichier pg_service.conf en clair ! Toute personne ayant accès à ce fichier aura également accès aux identifiants de connexion.</translation>
     </message>
 </context>
 <context>
@@ -229,32 +229,32 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../qgepqwat2ili/qgepqwat2ili/processing_algs/extractlabels_interlis.py" line="50"/>
         <source>Extract labels for interlis</source>
-        <translation type="unfinished"/>
+        <translation>Extraire les labels pour Interlis</translation>
     </message>
     <message>
         <location filename="../qgepqwat2ili/qgepqwat2ili/processing_algs/extractlabels_interlis.py" line="54"/>
         <source>Output labels file</source>
-        <translation type="unfinished"/>
+        <translation>Fichier de destination pour les étiquettes</translation>
     </message>
     <message>
         <location filename="../qgepqwat2ili/qgepqwat2ili/processing_algs/extractlabels_interlis.py" line="62"/>
         <source>Restrict to selection</source>
-        <translation type="unfinished"/>
+        <translation>Restreindre à la séléction</translation>
     </message>
     <message>
         <location filename="../qgepqwat2ili/qgepqwat2ili/processing_algs/extractlabels_interlis.py" line="69"/>
         <source>Scales to export</source>
-        <translation type="unfinished"/>
+        <translation>Échelles à exporter</translation>
     </message>
     <message>
         <location filename="../qgepqwat2ili/qgepqwat2ili/processing_algs/extractlabels_interlis.py" line="79"/>
         <source>Structure view layer</source>
-        <translation type="unfinished"/>
+        <translation>Couche vue structures</translation>
     </message>
     <message>
         <location filename="../qgepqwat2ili/qgepqwat2ili/processing_algs/extractlabels_interlis.py" line="87"/>
         <source>Reach view layer</source>
-        <translation type="unfinished"/>
+        <translation>Couche vue conduites</translation>
     </message>
 </context>
 <context>
@@ -345,7 +345,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../gui/qgepdatamodeldialog.py" line="257"/>
         <source>Cancel</source>
-        <translation type="unfinished"/>
+        <translation>Annuler</translation>
     </message>
 </context>
 <context>
