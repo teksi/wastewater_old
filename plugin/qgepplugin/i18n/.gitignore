@@ -1,0 +1,3 @@
+# don't version the extracted source strings nor the compiled files as they be regenerated from source
+qgep-plugin.ts
+*.qm

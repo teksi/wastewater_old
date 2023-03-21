@@ -1,0 +1,695 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module
+# This file is distributed under the same license as the QGEP package.
+# 
+# Translators:
+# Allgemein Fischer <arbon@fischering.ch>, 2016
+# TriformDaniel <daniel.hollenweger@triform.ch>, 2019
+# Georg Weickelt <georg.weickelt@web.de>, 2016
+# Konradin Fischer <fischer8712@gmail.com>, 2015,2017
+# Matthias Kuhn <matthias@opengis.ch>, 2015
+# Sebastian Schoeller, 2019
+# Stefan <stefan.burckhardt@gmx.ch>, 2015
+# Stefan <stefan.burckhardt@gmx.ch>, 2017,2021
+# Urs Kaufmann <urs.kaufmann@holinger.com>, 2018
+# Urs Kaufmann <urs.kaufmann@holinger.com>, 2017
+# Urs Kaufmann <urs.kaufmann@holinger.com>, 2018-2020,2022
+msgid ""
+msgstr ""
+"Project-Id-Version: QGEP Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-11 14:38+0000\n"
+"PO-Revision-Date: 2015-07-29 16:00+0000\n"
+"Last-Translator: Urs Kaufmann <urs.kaufmann@holinger.com>, 2018-2020,2022\n"
+"Language-Team: German (http://www.transifex.com/qgep/qgep-documentation/language/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../en/installation-guide/database-initialization.rst:4
+msgid "Database initialization"
+msgstr "Initialisierung der Datenbank"
+
+#: ../../en/installation-guide/database-initialization.rst:6
+msgid "You can use :ref:`pgAdmin` to access and manage the database server."
+msgstr "Für die Konfiguration der Datenbank können sie pgAdmin verwenden."
+
+#: ../../en/installation-guide/database-initialization.rst:10
+msgid "By clicking the link you can learn how to :ref:`install-pgAdmin`"
+msgstr "Mit diesem Link können sie lernen wie man :ref:`install-pgAdmin` benutzt."
+
+#: ../../en/installation-guide/database-initialization.rst:13
+msgid "Process"
+msgstr "Vorgehen"
+
+#: ../../en/installation-guide/database-initialization.rst:15
+msgid "In pgAdmin4"
+msgstr "In pgAdmin4"
+
+#: ../../en/installation-guide/database-initialization.rst:17
+msgid "Connect to the database server"
+msgstr "Verbinden Sie sich mit dem Datenbankserver"
+
+#: ../../en/installation-guide/database-initialization.rst:19
+msgid "Create a new database with UTF8 encoding (e.g. `qgep_prod`)."
+msgstr "Erstellen Sie eine neue Datenbank mit UTF8-Kodierung (z. B. \"qgep_prod\")."
+
+#: ../../en/installation-guide/database-initialization.rst:24
+msgid "Restore demo datamodel"
+msgstr "Demodaten einrichten"
+
+#: ../../en/installation-guide/database-initialization.rst:26
+msgid "Restore the latest data model that also includes demo data:"
+msgstr "Das aktuelle Datenbank-Schema mit dem Demodatensatz einrichten"
+
+#: ../../en/installation-guide/database-initialization.rst:28
+msgid ""
+"Download demo data * https://github.com/QGEP/datamodel/releases/latest * "
+"download `qgep_vx.y.z_structure_and_demo_data.backup`"
+msgstr "Herunterladen der Demodaten * https://github.com/QGEP/datamodel/releases/latest * download `qgep_vx.y.z_structure_and_demo_data.backup`"
+
+#: ../../en/installation-guide/database-initialization.rst:32
+msgid "Back in pgAdmin :"
+msgstr "Weiter in pgAdmin:"
+
+#: ../../en/installation-guide/database-initialization.rst:34
+msgid "Right click the `qgep_prod` database"
+msgstr "Rechtsklick auf die Datenbank `qgep_prod`."
+
+#: ../../en/installation-guide/database-initialization.rst:36
+#: ../../en/installation-guide/database-initialization.rst:48
+msgid "Click `Restore`"
+msgstr "'Restore' wählen"
+
+#: ../../en/installation-guide/database-initialization.rst:38
+msgid "Load your download of qgep_vx.y.z_structure_and_demo_data.backup"
+msgstr "Laden sie ihren Download von `qgep_vx.y.z_structure_and_demo_data.backup` "
+
+#: ../../en/installation-guide/database-initialization.rst:43
+msgid "Click the `Restore Options` Tab and check these options"
+msgstr "Klicken Sie den `Restore Option`-Tab und überprüfen Sie die folgenden Optionen"
+
+#: ../../en/installation-guide/database-initialization.rst:50
+msgid ""
+"Check whether in Message window `Restoring backup on the server` is "
+"successfully completed."
+msgstr "Kontrollieren sie im Fenster `Restoring backup on the server`, ob der Abschluss erfolgreich war."
+
+#: ../../en/installation-guide/database-initialization.rst:54
+msgid ""
+"If the Restore is failed and the detail reads something like \"pg_restore: "
+"[archiver] unsupported version (1.13) in file header\" or in German "
+"\"pg_restore: [Archivierer] nicht unterstützte Version (1.13) im Dateikopf\""
+" try updating your PostgreSQL, see "
+"https://stackoverflow.com/questions/49064209/getting-archiver-unsupported-"
+"version-1-13-in-file-header-when-running-pg-r"
+msgstr "Wenn die Wiederherstellung nicht funktioniert und unter `more details` etwas steht wie \"pg_restore: [archiver] unsupported version (1.13) in file header\" resp. in Deutsch \"pg_restore: [Archivierer] nicht unterstützte Version (1.13) im Dateikopf\" updaten sie PostgreSQL, vgl. https://stackoverflow.com/questions/49064209/getting-archiver-unsupported-version-1-13-in-file-header-when-running-pg-r"
+
+#: ../../en/installation-guide/database-initialization.rst:56
+msgid "Close the Restoring-Window"
+msgstr "Schliessen sie das Wiederherstellungsfenster"
+
+#: ../../en/installation-guide/database-initialization.rst:58
+msgid "Right click the database and click `Refresh`"
+msgstr "Recktsklick auf die Datenbank und 'Refresh' wählen"
+
+#: ../../en/installation-guide/database-initialization.rst:62
+msgid ""
+"Propably you want to rename the database: Right click the database, click "
+"`Properties...` and rename the database."
+msgstr "Vermutlich wollen sie die Datenbank jetzt umbenennen: Rechtsklick auf die Datenbank, klick auf `Eigenschaften...` und geben sie einen neuen Namen ein."
+
+#: ../../en/installation-guide/database-initialization.rst:64
+msgid ""
+"There are now 7 schemas in the database (public, qgep_import, qgep_network, "
+"qgep_swmm, qgep_od, qgep_sys, qgep_vl)"
+msgstr "Es sind jetzt 7 Schemata in der Datenbank vorhanden (public, qgep_import, qgep_network, qgep_swmm, qgep_od, qgep_sys, qgep_vl)"
+
+#: ../../en/installation-guide/database-initialization.rst:67
+msgid "Create  minimal roles and access"
+msgstr "Rollen und Zugriffsrechte erstellen"
+
+#: ../../en/installation-guide/database-initialization.rst:69
+msgid ""
+"The QGEP roles are defined in the "
+"https://github.com/QGEP/datamodel/blob/master/12_0_roles.sql (per cluster) "
+"and https://github.com/QGEP/datamodel/blob/master/12_1_roles.sql (per "
+"database) files. It is recommended to use these when using QGEP in a "
+"production environment."
+msgstr "Die QGEP-Rollen werden in den Dateien https://github.com/QGEP/datamodel/blob/master/12_0_roles.sql (pro Cluster) und https://github.com/QGEP/datamodel/blob/master/12_1_roles.sql (pro Datenbank) definiert. Es wird empfohlen, diese zu verwenden, wenn Sie QGEP in einer Produktionsumgebung einsetzen."
+
+#: ../../en/installation-guide/database-initialization.rst:70
+msgid ""
+"Copy paste and run the two .sql one after the other in the query editor of "
+"pgAdmin4 (Tools > Query Tool)."
+msgstr "Kopieren Einsetzen und Starten der beiden .sql nacheinander im Query Editor von pgAdmin4 (Tools > Query Tool)."
+
+#: ../../en/installation-guide/database-initialization.rst:73
+msgid "Empty data model"
+msgstr "Leeres Datenbank-Schema"
+
+#: ../../en/installation-guide/database-initialization.rst:75
+msgid ""
+"You also have the option to restore the latest empty data model (no demo "
+"data)."
+msgstr "Es ist auch möglich, ein leeres Datenbank-Schema zu erstellen (ohne Demodatensatz)."
+
+#: ../../en/installation-guide/database-initialization.rst:77
+msgid ""
+"Download the data model by going to "
+"https://github.com/QGEP/datamodel/releases/latest and by downloading the "
+"latest `qgep_vx.y.z_structure_with_value_lists.sql`."
+msgstr "Herunterladen das Datenbank-Schema unter https://github.com/QGEP/datamodel/releases/latest, und der Datei `qgep_vx.y.z_structure_with_value_lists.sql`."
+
+#: ../../en/installation-guide/database-initialization.rst:82
+msgid ""
+"If you run the sql in a :ref:`SQL-query` Window, you will get an error. You "
+"have to use a BAT-File."
+msgstr "Wenn dieses  SQL in einem :ref:`SQL-query` Fenster gestartet wird, gibt es einen Fehler. Es muss ein BAT-File benutzt werden."
+
+#: ../../en/installation-guide/database-initialization.rst:84
+msgid ""
+"Use a BAT-File like that, to create the database, the extensions and the "
+"schemas with valuelist  (replace x.y.z with your version)::"
+msgstr "Benutze eine BAT-Datei wie folgt, um die Datenbank, die Erweiterungen und die Schemata mit Wertelisten zu erzeugen  (ersetzen sie x.y.z mit ihrer Versionnummer)::"
+
+#: ../../en/installation-guide/database-initialization.rst:130
+msgid "You are free to choose any database name."
+msgstr "Es kann irgendein Datenbankname verwendet werden."
+
+#: ../../en/installation-guide/database-initialization.rst:132
+msgid ""
+"Update privileges for the qgep_od, qgep_sys, qgep_vl, qgep_network, "
+"qgep_import, qgep_swmm schema as described in the chapter `Create  minimal "
+"roles and access`."
+msgstr "Die Berechtigungen definieren für die Schemata qgep_od, qgep_sys, qgep_vl, qgep_network, qgep_import, qgep_swmm wie im Kapitel `Rollen und Zugriffsrechte erzeugen` beschrieben ."
+
+#: ../../en/installation-guide/database-initialization.rst:136
+msgid "Generate the data model under Linux"
+msgstr "Erzeugen des Datenmodells unter Linux"
+
+#: ../../en/installation-guide/database-initialization.rst:138
+msgid "You can also generate the data model under Linux."
+msgstr "Es ist auch unter LINUX möglich das Datenmodell zu erzeugen"
+
+#: ../../en/installation-guide/database-initialization.rst:140
+msgid "Download the data model::"
+msgstr "Download des Datenmodells"
+
+#: ../../en/installation-guide/database-initialization.rst:145
+msgid ""
+"Setup the ``pg_service.conf`` file and add the ``pg_qgep`` service as in the"
+" :ref:`pg_service-linux` section."
+msgstr "Anpassen des Konfigurationsfile \"pg_service.conf\" und setzen des Service auf \"pg_qgep\", siehe \"pg_service-linux\""
+
+#: ../../en/installation-guide/database-initialization.rst:148
+msgid "Create the database::"
+msgstr "Erzeugen der Datenbank"
+
+#: ../../en/installation-guide/database-initialization.rst:152
+msgid "Run the generation script::"
+msgstr "Starten Sie das Skript:"
+
+#: ../../en/installation-guide/database-initialization.rst:156
+msgid ""
+"If you want to use a different SRID you need to use the ``-s`` option. For "
+"instance, run ``./scripts/db_setup.sh -s 2056`` for the **2056** SRID."
+msgstr "Wenn Sie eine andere SRID verwenden möchten, dann benutzen Sie die ``-s`` option. Zum Beispiel ``./scripts/dbsetup.sh -s 2056`` für SRID **2056**."
+
+#: ../../en/installation-guide/database-initialization.rst:159
+msgid ""
+"If you already have a data model and you want to force the regeneration of "
+"the model you can also use the ``-f`` option: ``./scripts/db_setup.sh -f``."
+msgstr "Wenn Sie schon ein Datenmodell haben und dieses erneut erzeugen möchten, dann nutzen Sie die `-f`` Option: ``./scripts/db_setup.sh -f``."
+
+#: ../../en/installation-guide/database-initialization.rst:162
+msgid ""
+"You can use the ``-r`` option to add roles (``qgep_viewer``, ``qgep_user``, "
+"``qgep_manager``, ``qgep_sysadmin``)."
+msgstr "Sie können die ``-r`` Option nutzen, um die folgenden Rollen hinzuzufügen (``qgep_viewer``, ``qgep_user``, ``qgep_manager``, ``qgep_sysadmin``)."
+
+#: ../../en/installation-guide/database-initialization.rst:164
+msgid "Viewer: Can consult tables and views."
+msgstr "Viewer: Kann Tabellen und Views anschauen."
+
+#: ../../en/installation-guide/database-initialization.rst:165
+msgid "User: Can edit data."
+msgstr "User: Kann Daten editieren."
+
+#: ../../en/installation-guide/database-initialization.rst:166
+msgid "Manager: Can edit data and value lists."
+msgstr "Manager: Kann Daten und Wertebereiche bearbeiten."
+
+#: ../../en/installation-guide/database-initialization.rst:167
+msgid "Admin: Database administrator."
+msgstr "Admin: Datenbank Administrator."
+
+#: ../../en/installation-guide/index.rst:4
+msgid "QGEP Installation Guide"
+msgstr "Leitfaden QGEP Installation"
+
+#: ../../en/installation-guide/index.rst:7
+msgid ""
+"This will guide you through the setup of required applications and services "
+"to get your system ready for running QGEP."
+msgstr "Dieser Leitfaden beschreibt die Installation und Vorbereitung ihres Systems um QGEP anzuwenden."
+
+#: ../../en/installation-guide/index.rst:12
+msgid ""
+"You also have the option of downloading a :ref:`Demo-VM` that has a working "
+"QGEP demo."
+msgstr "Sie können dies a :ref:`Demo VM` auch herunterladen inkl. QGEP Demo"
+
+#: ../../en/installation-guide/requirements.rst:4
+msgid "Requirements"
+msgstr "Voraussetzungen "
+
+#: ../../en/installation-guide/requirements.rst:6
+msgid ""
+"The following Python packages (installed using `pip "
+"<https://pypi.org/project/pip/>`_) are required:"
+msgstr "Die nachfolgenden Python-Pakete (zu installieren über `pip <https://pypi.org/project/pip/>`_) werden benötigt:"
+
+#: ../../en/installation-guide/requirements.rst:8
+msgid "`Psycopg2 <https://www.psycopg.org/>`_ as database adapter"
+msgstr "`Psycopg2 <https://www.psycopg.org/>`_ als Datenbank Adapter"
+
+#: ../../en/installation-guide/requirements.rst:9
+msgid ""
+"`Pirogue <https://github.com/opengisch/pirogue>`_ for model generation and "
+"upgrades"
+msgstr "`Pirogue <https://github.com/opengisch/pirogue>`_ für Modellerstellung und -aktualisierungen "
+
+#: ../../en/installation-guide/requirements.rst:10
+msgid "`PUM <https://github.com/opengisch/pum>`_ for model upgrades"
+msgstr "`PUM <https://github.com/opengisch/pum>`_ für Modellaktualisierungen"
+
+#: ../../en/installation-guide/server.rst:2
+msgid "Setup database server"
+msgstr "Datenbankserver aufsetzen"
+
+#: ../../en/installation-guide/server.rst:4
+msgid ""
+"If you expect to access the data from several different workstations, you "
+"can install the database on a network accessible server. If it is just a "
+"single desktop you are working on, this can be installed on the same "
+"machine."
+msgstr "Wenn von verschiedenen Arbeitsplätzen auf die gleiche Datenbank zugegriffen werden soll, kann sie auch auf einem Server im Netz installiert werden. Dies im Gegensatz zu einer lokalen Einplatz-Installation"
+
+#: ../../en/installation-guide/server.rst:9
+msgid "Required Software"
+msgstr "Benötigte Software"
+
+#: ../../en/installation-guide/server.rst:12
+msgid "Server installation"
+msgstr "Server installation"
+
+#: ../../en/installation-guide/server.rst:14
+msgid "Install PostgreSQL (>=9.6)"
+msgstr "PostgreSQL (>=9.6) installieren"
+
+#: ../../en/installation-guide/server.rst:16
+msgid "`Download page <http://www.postgresql.org/download>`_"
+msgstr "`Download von <http://www.postgresql.org/download>`_"
+
+#: ../../en/installation-guide/server.rst:18
+msgid "Install PostGIS (>=2.4)"
+msgstr "PostGIS (>=2.4) installieren"
+
+#: ../../en/installation-guide/server.rst:20
+msgid ""
+"by using the (Application) Stack Builder shipped with the EnterpriseDB "
+"version of posgreSQL on Windows and macOS"
+msgstr "mit der (Application) Stack Builder, die zusammen mit der EnterpriseDB Version von PostgreSQL für Windows und MacOS vertrieben wird."
+
+#: ../../en/installation-guide/server.rst:24
+msgid "The following instructions are **optional**:"
+msgstr "Die folgenden Anleitungen sind **optional**:"
+
+#: ../../en/installation-guide/server.rst:26
+msgid ""
+"In a single desktop environment (no network database server) you can setup "
+"your database to trust local connections."
+msgstr "Bei einer Einzelplatzinstallation (ohne Datenbank im Netzwerk) kann man die Datenbank so aufsetzen, dass sie lokalen Verbindungen vertraut."
+
+#: ../../en/installation-guide/server.rst:29
+msgid ""
+"This way, the database won't ask for a password if you're connecting from "
+"your local workstation while no password is written  anywhere. You even can "
+"do with no database password at all."
+msgstr "In diesem Fall wird überhaupt kein Passwort benötigt."
+
+#: ../../en/installation-guide/server.rst:33
+msgid ""
+"This can be done by editing the database access configuration file "
+"`pg_hba.conf <http://www.postgresql.org/docs/devel/static/auth-pg-hba-"
+"conf.html>`_ and set the auth-options from ``md5`` to ``trust``. A database "
+"service reload is required to activate changes."
+msgstr "Editieren Sie dafür die Datei der Datenbank Zugriffskonfiguration `pg_hba.conf <http://www.postgresql.org/docs/devel/static/auth-pg-hba-conf.html>`_ und setzen Sie die auth-options von``md5`` auf ``trust``. Laden Sie den Datenbankdienst neu damit die Änderungen übernommen werden."
+
+#: ../../en/installation-guide/server.rst:38
+msgid ""
+"To optimise RAM size etc. of your machine postgreSQL is running on you can "
+"use `pgtune <http://www.pgtune.leopard.in.ua/#/>`_. Adapt your "
+"postgresql.conf file."
+msgstr "Um die RAM-Grösse etc. Ihres Rechners, auf dem postgreSQL läuft, zu optimieren, können Sie `pgtune <http://www.pgtune.leopard.in.ua/#/>`_ verwenden. Passen Sie Ihre postgresql.conf-Datei an."
+
+#: ../../en/installation-guide/workstation.rst:2
+msgid "Setup workstation"
+msgstr "Arbeitsplatzrechner Einrichten"
+
+#: ../../en/installation-guide/workstation.rst:5
+msgid "Database configuration"
+msgstr "Konfiguration der Datenbank"
+
+#: ../../en/installation-guide/workstation.rst:7
+msgid ""
+"To tell a workstation, where the database is (on the local system or on a "
+"network server) you will have to create some files initially on every device"
+" on which you will have QGIS/QGEP running (client). It is not required to do"
+" that on the server itself."
+msgstr "Um einer Arbeitsstation zu sagen, wo sich die Datenbank befindet (im lokalen System oder auf einem Netzwerkserver) müssen Sie zu Beginn auf jedem System auf dem QGIS/QGEP läuft (Client), einige Dateien erzeugen. Die muss nicht auf dem Server selber gemacht werden."
+
+#: ../../en/installation-guide/workstation.rst:12
+msgid "These instructions depend on your operating system."
+msgstr "Diese Anweisungen sind abhängig vom Betriebssystem."
+
+#: ../../en/installation-guide/workstation.rst:15
+msgid "Windows pg_service"
+msgstr "Windows pg_service"
+
+#: ../../en/installation-guide/workstation.rst:17
+msgid ""
+"Create a new directory where you want to store the configuration in. (E.g. a"
+" new folder ``pgconfig`` in your home folder). This directory will be "
+"referred to as ``PGSYSCONFDIR`` in this guide."
+msgstr "Erstellen Sie ein neues Verzeichnis indem Sie die Konfigurationen ablegen möchten (z.B. ein neues Verzeichnis ``pgconfig` in ihrem Stammverzeichnis). Diese Anleitung wird jeweils mit  ``PGSYSCONFDIR`` darauf verweisen."
+
+#: ../../en/installation-guide/workstation.rst:19
+msgid ""
+"Set the environment variable ``PGSYSCONFDIR`` to the path to "
+"``PGSYSCONFDIR``."
+msgstr "Setzen Sie die Umgebungsvariable ``PGSYSCONFDIR`` auf den Dateipfad von ``PGSYSCONFDIR``."
+
+#: ../../en/installation-guide/workstation.rst:21
+msgid ""
+"Search for environment variable in your windows system settings, then click "
+"one of the following options, for either a user or a system variable:"
+msgstr "Suchen sie Umgebungsvariablen in den Windows Systemeinstellungen, dann klicken sie auf eine der folgenden Optionen, entweder für Benutzer- oder Systemvariablen:"
+
+#: ../../en/installation-guide/workstation.rst:23
+msgid ""
+"Click ``New`` to add a new variable name and value. Click an existing "
+"variable, and then click ``Edit`` to change its name or value. Click an "
+"existing variable, and then click ``Delete`` to remove it."
+msgstr "Klicke ``Neu`` um eine neue Variable hinzuzufügen. Klicke eine bestehende Variable und dann auf ``Bearbeiten`` um den Variablennamen oder den Wert zu ändern. Klicke eine bestehende Variable und dann auf ``Löschen`` um die Variable zu entfernen."
+
+#: ../../en/installation-guide/workstation.rst:29
+msgid ""
+"You can check your environment variables also within QGIS: Menu ``Settings``"
+" --> ``Options...`` --> ``System`` Tab  --> ``Environment``"
+msgstr "Sie können die Umgebungsvariablen auch in QGIS kontrollieren: Menü ``Einstellungen`` --> ``Optionen...``  --> ``System`` Tab --> ``Umgebung``"
+
+#: ../../en/installation-guide/workstation.rst:31
+msgid "Inside this folder, there will be two files"
+msgstr "In diesem Verzeichnis werden zwei Dateien sein"
+
+#: ../../en/installation-guide/workstation.rst:33
+msgid "``pg_service.conf``"
+msgstr "``pg_service.conf``"
+
+#: ../../en/installation-guide/workstation.rst:34
+msgid ""
+"``pgpass`` (If you do not want to enter the password for the db every time)"
+msgstr "``pgpass`` (Um das Passwort nicht jedes Mal eingeben zu müssen)"
+
+#: ../../en/installation-guide/workstation.rst:38
+msgid ""
+"On Windows, you need to save ``pg_service.conf`` in Unix format in order to "
+"work. One way to do it is to open it with `Notepad++ <https://notepad-plus-"
+"plus.org/>`_ and ``Edit`` --> ``EOL Conversion`` --> ``UNIX Format`` --> "
+"``File save`` ."
+msgstr "In Windows müssen Sie ``pg_service.conf`` im Unix Format speichern damit es funktioniert. Eine Möglichkeit dafür bietet `Notepad++ <https://notepad-plus-plus.org/>`_ im Menü ``Bearbeiten`` --> ``Format Zeilenende`` --> ``Konvertiere zu UNIX (LF)`` --> `Sichern`` ."
+
+#: ../../en/installation-guide/workstation.rst:45
+msgid "Linux/macOS pg_service"
+msgstr "Linux/macOS pg_service"
+
+#: ../../en/installation-guide/workstation.rst:47
+msgid ""
+"On Unix systems (linux/macOS etc.) you may put the files "
+"``.pg_service.conf`` and ``.pgpass`` into your home folder (normally "
+"``/home/[username]``). Pay attention to the starting . (<> Windows)!"
+msgstr "Auf Unix Systemen (linux/macOS etc.) platzieren Sie die Dateien `.pg_service.conf`` und ``.pgpass`` in ihren home folder (üblicherweise``/home/[username]``). Beachten Sie den . am Anfang (<> Windows)!"
+
+#: ../../en/installation-guide/workstation.rst:50
+msgid ""
+"If your QGIS doesn't find the ``.pg_service.conf`` file, set the environment"
+" variable PGSYSCONFDIR:"
+msgstr "Wenn QGIS die ``.pg_service.conf`` Datei nicht findet, muss die Umgebungsvariable PGSYSCONFDIR definiert werden:"
+
+#: ../../en/installation-guide/workstation.rst:53
+msgid ""
+"In QGIS go to ``Settings`` > ``Options`` > ``System`` tab. Near the bottom "
+"you'll find ``Environment``. Tick ``Use custom variables`` and click on the "
+"plus on the right. Add the PGSYSCONFDIR variable using Append (to make sure "
+"you don't delete anything - doesn't matter probably) and its value (probably"
+" ``/home/[username]`` see above). Then click ``OK`` at  the bottom right."
+msgstr "In QGIS gehe zu ``Einstellungen`` > ``Optionen...`` > ``System`` Tab. Fast zuunterst gibt es ``Umgebung``. Klicke ``Benutzerdefinierte umgebungsvariablen verwenden`` und klicke auf plus auf der rechten Seite. Füge PGSYSCONFDIR als Variable ein and den Wert (vermutlich ``/home/[username]`` siehe oben). Dann klicke ``OK`` unten rechts."
+
+#: ../../en/installation-guide/workstation.rst:57
+msgid ""
+"After closing and reopening QGIS, you should be able to see the added "
+"PGSYSCONFDIR at the bottom of the same window under ``Current environment "
+"variables``. .. figure:: images/macEnvVarCheck.png"
+msgstr "Nachdem Schliessen und erneuten Starten von QGIS, sollte der Eintrag PGSYSCONFDIR zuunterst im gleichen Fenster unter ``Aktuelle Umgebungsvariablen`` sichtbar sein. .. figure:: images/macEnvVarCheck.png"
+
+#: ../../en/installation-guide/workstation.rst:61
+msgid "All systems"
+msgstr "Auf allen Systemen"
+
+#: ../../en/installation-guide/workstation.rst:63
+msgid ""
+"Put the following content in the file ``pg_service.conf`` or "
+"``.pg_service.conf``. You may have to adapt the variables for your setup."
+msgstr "Schreiben Sie folgenden Text in die Datei ``pg_service.conf`` oder ``.pg_service.conf``. Allenfalls müssen Sie diesen für Ihre Installation adaptieren."
+
+#: ../../en/installation-guide/workstation.rst:74
+msgid ""
+"To save the password as well on the system you may use the file `pgpass "
+"<http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_."
+msgstr "Um das Passwort auch auf dem System zu speichern können Sie die Datei `pgpass <http://www.postgresql.org/docs/current/static/libpq-pgpass.html>`_ benutzen."
+
+#: ../../en/installation-guide/workstation.rst:80
+msgid ""
+"If you don't have the database on your local machine replace any occurence "
+"of ``localhost`` with the network address of your database server."
+msgstr "Falls die Datenbank nicht auf dem lokalen Rechner läuft muss in den Anweisungen oben jeweils ``localhost`` mit der Netzwerkadresse des Datenbankservers ersetzt werden."
+
+#: ../../en/installation-guide/workstation.rst:84
+msgid ""
+"Alternative: put your password directly into the ``pg_service.conf`` (on "
+"Windows) / ``.pg_service.conf`` (on *nix) file:"
+msgstr "Alternative: Passwort direkt in die Datei ``pg_service.conf`` (in Windows) / ``.pg_service.conf`` (in Unix) eintragen:"
+
+#: ../../en/installation-guide/workstation.rst:96
+msgid "Install QGIS"
+msgstr "QGIS installieren"
+
+#: ../../en/installation-guide/workstation.rst:98
+msgid "Minimum requirement 3.4"
+msgstr "minimale Voraussetzung 3.4"
+
+#: ../../en/installation-guide/workstation.rst:100
+msgid ""
+"We recommend using the latest master build (called qgis-dev on Windows) "
+"which often offers a better experience in combination with QGEP. For Windows"
+" installation, download the `OSGeo4W Installer "
+"<http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_ choose "
+"*advanced installation* and install qgis-dev."
+msgstr "Wir empfehlen die Verwendung der aktuellsten master builds (unter Windows sind diese als `qgis-dev` verfügbar). Diese offerieren oft die beste Integration in Kombination mit QGEP. Für die Windows Installation, laden sie den `OSGeo4W Installer <http://download.osgeo.org/osgeo4w/osgeo4w-setup-x86_64.exe>`_ runter und wählen SIe *advanced Installation* und installieren Sie qgep-dev."
+
+#: ../../en/installation-guide/workstation.rst:106
+msgid "Install QGEP plugin"
+msgstr "Installation des QGEP Plugins"
+
+#: ../../en/installation-guide/workstation.rst:108
+msgid "Plugin requirements:"
+msgstr "Plugin Voraussetzungen "
+
+#: ../../en/installation-guide/workstation.rst:110
+msgid "`networkx <https://pypi.org/project/networkx/>`_ >= 2.1"
+msgstr ""
+
+#: ../../en/installation-guide/workstation.rst:112
+msgid "You can install them on Debian based systems with::"
+msgstr ""
+
+#: ../../en/installation-guide/workstation.rst:117
+msgid "Or for Windows users, directly in QGIS via the Python Console with::"
+msgstr ""
+
+#: ../../en/installation-guide/workstation.rst:121
+msgid "Open QGIS"
+msgstr "QGIS öffnen"
+
+#: ../../en/installation-guide/workstation.rst:123
+msgid "Go to ``Plugins``"
+msgstr "Gehen sie zu ``Erweiterungen``"
+
+#: ../../en/installation-guide/workstation.rst:125
+msgid "``Manage and Install Plugins``"
+msgstr "``Erweiterungen verwalten und installieren...``"
+
+#: ../../en/installation-guide/workstation.rst:127
+msgid "``Settings``"
+msgstr "``Einstellungen``"
+
+#: ../../en/installation-guide/workstation.rst:129
+msgid "Enable ``Show also experimental plugins``"
+msgstr "``Auch experimentelle Erweiterungen anzeigen`` aktivieren"
+
+#: ../../en/installation-guide/workstation.rst:131
+msgid "Activate the plugin (see image below):"
+msgstr "Plugin aktivieren (siehe untenstehendes Bild)"
+
+#: ../../en/installation-guide/workstation.rst:133
+msgid "All"
+msgstr "Alle"
+
+#: ../../en/installation-guide/workstation.rst:135
+msgid "Search `QGEP`"
+msgstr "`QGEP` suchen"
+
+#: ../../en/installation-guide/workstation.rst:137
+msgid "Click the checkbox next to it"
+msgstr "Aktivieren Sie das Kontrollkästchen daneben"
+
+#: ../../en/installation-guide/workstation.rst:141
+msgid "**Add the QGEP plugin**"
+msgstr "**QGEP Zusatzprogramm hinzufügen**"
+
+#: ../../en/installation-guide/workstation.rst:146
+msgid ""
+"QGEP uses a data historization process. The ``pg history viewer`` `plugin "
+"<http://plugins.qgis.org/plugins/pg_history_viewer/>`_ allows you to view "
+"the changes made and replay some of them."
+msgstr "QGEP verwendet einen Datenhistorisierungsprozess. Das ``pg history viewer`` `plugin <http://plugins.qgis.org/plugins/pg_history_viewer/>`_ ermöglicht es Ihnen, die vorgenommenen Änderungen zu sehen und einige von ihnen wiederzugeben."
+
+#: ../../en/installation-guide/workstation.rst:149
+msgid "Install the demo data"
+msgstr "Demodaten installieren"
+
+#: ../../en/installation-guide/workstation.rst:151
+msgid ""
+"as described `here<https://qgep.github.io/docs/installation-guide/database-"
+"initialization.html#restore-demo-datamodel>`"
+msgstr "wie `hier<https://qgep.github.io/docs/installation-guide/database-initialization.html#restore-demo-datamodel>` beschrieben"
+
+#: ../../en/installation-guide/workstation.rst:154
+msgid "Install the demo project"
+msgstr "Das Demo Projekt installieren"
+
+#: ../../en/installation-guide/workstation.rst:156
+msgid ""
+"Download from https://github.com/QGEP/qgep/releases/latest the qgep.zip"
+msgstr "`qgep.zip` von https://github.com/QGEP/qgep/releases/latest herunterladen"
+
+#: ../../en/installation-guide/workstation.rst:158
+msgid "Extract the file"
+msgstr "Die Datei entpacken"
+
+#: ../../en/installation-guide/workstation.rst:160
+msgid ""
+"If you leave the qgep_[language].qm files in the same directory as the "
+"qgep.qgs file and start QGIS with one of these languages, your qgep-project "
+"will be translated to that langue when you start the project. E.g. you start"
+" qgep.qgs with a QGIS Installation that is set to German, then the qgep.qgs "
+"project will appear in German."
+msgstr "Wenn Sie die qgep_[language].qm Dateien im gleichen Verzeichnis wie die qgep.qgs Datei belassen und QGIS mit einer dieser Sprachen starten, wird Ihr qgep-Projekt in diese Sprache übersetzt, wenn Sie das Projekt starten. Wenn Sie z.B. qgep.qgs mit einer QGIS Installation starten, die auf Deutsch eingestellt ist, dann wird das qgep.qgs Projekt in Deutsch erscheinen."
+
+#: ../../en/installation-guide/workstation.rst:162
+msgid ""
+"You need to explicitly set the language in QGIS in settings. If QGIS is "
+"configured to take the system language, the QGEP translation is not loaded."
+msgstr "Sie müssen die Sprache in QGIS explizit in den Einstellungen festlegen. Wenn QGIS so konfiguriert ist, dass es die Systemsprache übernimmt, wird die QGEP-Übersetzung nicht geladen."
+
+#: ../../en/installation-guide/workstation.rst:166
+msgid "Open `project/qgep.qgs` with QGIS"
+msgstr "Öffnen Sie `project/qgep.qgs` mit QGIS"
+
+#: ../../en/installation-guide/workstation.rst:167
+msgid ""
+"When you save that project it will keep it's language and it cannot be "
+"changed in the same way."
+msgstr "Wenn Sie das Projekt speichern, wird die Sprache beibehalten und kann nicht mehr auf dieselbe Weise geändert werden."
+
+#: ../../en/installation-guide/workstation.rst:171
+msgid "If you are a data owner: Add your own OID to the project"
+msgstr "Wenn Sie Datenherr sind: Die eigene OID in das Projekt eintragen"
+
+#: ../../en/installation-guide/workstation.rst:173
+msgid ""
+"If you are a data owner (Datenherr), you should add your OID data in the "
+"table qgep_sys.oid_prefixes:"
+msgstr "Wenn Sie Datenherr (data owner) sind, sollten Sie Ihre OID Daten in der Tabelle qgep_sys.oid_prefixes hinzufügen:"
+
+#: ../../en/installation-guide/workstation.rst:177
+msgid ""
+"Edit ``02_oid_generation.sql`` with your OID if you want it permanently in "
+"the QGEP project and hand in a pull request"
+msgstr "Fügen Sie Ihre OID zu ``02_oid_generation.sql`` hinzu und machen Sie einen pull request, wenn Sie sie permanent im QGEP Projekt haben wollen."
+
+#: ../../en/installation-guide/workstation.rst:179
+msgid "https://github.com/QGEP/datamodel/blob/master/02_oid_generation.sql"
+msgstr "https://github.com/QGEP/datamodel/blob/master/02_oid_generation.sql"
+
+#: ../../en/installation-guide/workstation.rst:188
+msgid "and set the OID you want to use in your project to TRUE."
+msgstr "und setze die gewünschte OID für das aktuelle Projekt auf TRUE."
+
+#: ../../en/installation-guide/workstation.rst:190
+msgid "or add it locally to your project with an INSERT statement."
+msgstr "oder füge die OID für das Projekt in der Tabelle oid_prefix in der Zeile mit der id = 1 hinzu."
+
+#: ../../en/installation-guide/workstation.rst:192
+msgid ""
+"OID prefixes have to be ordered at https://www.interlis.ch/en/dienste/oid-"
+"bestellen"
+msgstr "Ein OID-Prefix kann bestellt werden bei https://www.interlis.ch/en/dienste/oid-bestellen"
+
+#: ../../en/installation-guide/workstation.rst:194
+msgid ""
+"If you work with different databases for different communities, you should "
+"use different OID prefixes for each database."
+msgstr "Wenn sie mit verschiedenen Datenbank für verschiedene Gemeinden arbeiten, sollten sie unterschiedliche OID Prefixe für jede Datenbank benützen."
+
+#: ../../en/installation-guide/workstation.rst:198
+msgid "Working with more than one database"
+msgstr "Mit mehreren Datenbank-Operaten arbeiten"
+
+#: ../../en/installation-guide/workstation.rst:200
+msgid "Create a new database in pgAdmin with a new name, e.g. communityA"
+msgstr "Eine neue Database in pgAdmin erzeugen mit neuem Namen, z.B. communityA"
+
+#: ../../en/installation-guide/workstation.rst:202
+msgid ""
+"Create a new schema qgep in this database (do not choose another name, "
+"because all scripts works with the schema-name qgep)"
+msgstr "Ein neues Schema qgep in der Database erstellen (den Namen qgep nicht ändern, da in vielen Scripten der Schemanamen qgep verwendet wird)"
+
+#: ../../en/installation-guide/workstation.rst:204
+msgid "Go further on as described in 1.2 Database initialization"
+msgstr "Weiter wie in 1.2 Initialisierung der Datenbank beschrieben."
+
+#: ../../en/installation-guide/workstation.rst:206
+msgid "Change the ``pg_service.conf`` - file"
+msgstr "Die ``pg_service.conf`` - Datei anpassen"
+
+#: ../../en/installation-guide/workstation.rst:221
+msgid ""
+"Search and replace in the copy of ``qgep_en.qgs`` all 'pg_qgep' with "
+"'pg_communityA'"
+msgstr "In einer Kopie des Projektdatei ``qgep_en.qgs`` alle Vorkommnisse von 'pg_qgep' suchen und mit  'pg_communityA' ersetzen"

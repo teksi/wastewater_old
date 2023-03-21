@@ -1,0 +1,249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module
+# This file is distributed under the same license as the QGEP package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Arnaud Poncet-Montanges, 2022
+# valentine arrieta <valentine.arrieta@geoconseils.ch>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGEP 0.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-11 14:38+0000\n"
+"PO-Revision-Date: 2022-04-22 07:26+0000\n"
+"Last-Translator: valentine arrieta <valentine.arrieta@geoconseils.ch>, 2022\n"
+"Language-Team: French (https://www.transifex.com/qgep/teams/40646/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../en/features-guide/index.rst:2
+msgid "QGEP / TEKSI wastewater module"
+msgstr "QGEP / Module TEKSI assainissement"
+
+#: ../../en/features-guide/index.rst:4
+msgid ""
+"TEKSI wastewater module (project name: QGEP) is a selection of tools and a "
+"database implementation that allows you to:"
+msgstr ""
+"Le module TEKSI assainissement (nom de projet : QGEP) est une sélection "
+"d'outils et une implémentation de base de donnée qui vous permet de :"
+
+#: ../../en/features-guide/index.rst:6
+msgid ""
+"manage and map your sewer network data with all its components in compliance"
+" with Swiss standards"
+msgstr ""
+"gérer et cartographier les données de votre réseau d’assainissement avec "
+"tous ses composants comme par exemple les collecteurs, les chambres, les "
+"déversoirs d’orage, les bassins de rétention des eaux pluviales, les "
+"exutoires, etc."
+
+#: ../../en/features-guide/index.rst:7
+msgid ""
+"indicate the characteristics of networks objects in the form of attributes "
+"such as diameter, material, depth, damages, construction year, etc."
+msgstr ""
+"indiquer les caractéristiques des objets du réseau sous forme d’attributs "
+"comme le diamètre, le matériau, la profondeur de pose, les défauts, la date "
+"de pose, etc."
+
+#: ../../en/features-guide/index.rst:8
+msgid ""
+"produce plans and extract statistics from the database such as network "
+"values, total length of pipes, identification of future interventions, etc."
+msgstr ""
+"produire des plans et extraire des statistiques de la base de données comme "
+"la valeur du réseau, la longueur totale des conduites, l’identification des "
+"futures interventions, etc."
+
+#: ../../en/features-guide/index.rst:9
+msgid "export geodata in compliance with Swiss standards"
+msgstr ""
+"Exporter les données géographiques en accord avec les standards suisses"
+
+#: ../../en/features-guide/index.rst:12
+msgid "Main features"
+msgstr "Fonctionnalités principales"
+
+#: ../../en/features-guide/index.rst:14
+msgid "**Network objects**"
+msgstr "**Objets réseaux**"
+
+#: ../../en/features-guide/index.rst:16
+msgid ""
+"Creation, information and management of network elements according to the "
+"VSA-DSS model:"
+msgstr ""
+"Création, renseignement et gestion des éléments du réseau conformément au "
+"modèle VSA-DSS."
+
+#: ../../en/features-guide/index.rst:18
+msgid "Wastewater structures"
+msgstr "Structures du réseau d'assainissement"
+
+#: ../../en/features-guide/index.rst:19
+msgid "Special structures"
+msgstr "Structures spéciales"
+
+#: ../../en/features-guide/index.rst:20
+msgid "Primary collectors"
+msgstr "Collecteurs primaires"
+
+#: ../../en/features-guide/index.rst:21
+msgid "Secondary collectors (ex : private connection)"
+msgstr "Collecteurs secondaires (ex: connections privées)"
+
+#: ../../en/features-guide/index.rst:22
+msgid "Catchments"
+msgstr "Bassins versants"
+
+#: ../../en/features-guide/index.rst:23 ../../en/features-guide/index.rst:71
+msgid "GEP mesures"
+msgstr "Mesures PGEE"
+
+#: ../../en/features-guide/index.rst:24
+msgid "Maintenances"
+msgstr "Maintenances"
+
+#: ../../en/features-guide/index.rst:25
+msgid "Network inspection (VSA-DSS model extension VSA-KEK)"
+msgstr "Inspection du réseau (VSA-KEK, extension du modèle VSA-DSS)"
+
+#: ../../en/features-guide/index.rst:27
+msgid "**Viewing and editing**"
+msgstr "**Visualisation et édition**"
+
+#: ../../en/features-guide/index.rst:29
+msgid ""
+"A preconfigured QGIS project including the symbology, the forms and the "
+"relation between the objets is provided."
+msgstr ""
+"Un projet QGIS préconfiguré incluant la symbologie, les formulaires et les "
+"relations entre les tables est mis à disposition."
+
+#: ../../en/features-guide/index.rst:31
+msgid ""
+"The editing can be done directly using the QGIS natives tools and the QGEP "
+"complementary toolbox (ex : inversion of the direction of the pipes and its "
+"related altitudes)."
+msgstr ""
+"L'édition des données est effectuée avec les outils natifs de QGIS et la "
+"boîte à outil QGEP complémentaire (par exemple: inversion de la direction "
+"des conduites et des altitudes relatives)."
+
+#: ../../en/features-guide/index.rst:33
+msgid "**Files**"
+msgstr "**Fichiers**"
+
+#: ../../en/features-guide/index.rst:35
+msgid "Documents, pictures and videos can be linked to the network elements."
+msgstr "Documents, photos et vidéos peuvent être liés aux éléments du réseau."
+
+#: ../../en/features-guide/index.rst:37
+msgid "**Networks following tools**"
+msgstr "Outils de poursuite de réseau"
+
+#: ../../en/features-guide/index.rst:39
+msgid "Network topology management:"
+msgstr "Gestion de la topologie du réseau"
+
+#: ../../en/features-guide/index.rst:41
+msgid "Topology creation between pipes, structures and catchments"
+msgstr ""
+"Création de la topologie entre les éléments du réseau (conduites, structures"
+" et bassins versants)."
+
+#: ../../en/features-guide/index.rst:42
+msgid "Upstream and downstream network tracking tools (water drop)"
+msgstr "Outil de poursuite du réseau amont et aval (goutte d'eau)"
+
+#: ../../en/features-guide/index.rst:43
+msgid "Length profiles display"
+msgstr "Affichage des profils en long"
+
+#: ../../en/features-guide/index.rst:45
+msgid "**Mapping and statistics production**"
+msgstr "**Cartographie et production de statistiques**"
+
+#: ../../en/features-guide/index.rst:47
+msgid "Map production with pre-configured layout"
+msgstr "Création de carte avec des mises en page préconfigurées"
+
+#: ../../en/features-guide/index.rst:48
+msgid "Serial plotting of structures protocole"
+msgstr "Création de protocoles automatique pour les éléments du réseau"
+
+#: ../../en/features-guide/index.rst:49
+msgid "Statistics production on all or part of the network"
+msgstr "Production de statistiques sur tout ou partie du réseau"
+
+#: ../../en/features-guide/index.rst:51
+msgid "**Data import**"
+msgstr "**Import de données**"
+
+#: ../../en/features-guide/index.rst:53
+msgid "Field survey import tools [specific development in progress]"
+msgstr "Outil pour l'import des relevés terrain [développement en cours]"
+
+#: ../../en/features-guide/index.rst:54
+msgid ""
+"Data survey with a mobile device and semi-automatic insertion of the "
+"informations"
+msgstr ""
+"Relevé de données avec un appareil mobile et insertion semi-automatique des "
+"informations"
+
+#: ../../en/features-guide/index.rst:55
+msgid "Data import in INTERLIS format"
+msgstr "Import de données au format Interlis"
+
+#: ../../en/features-guide/index.rst:57
+msgid "**Data export**"
+msgstr "**Export des données**"
+
+#: ../../en/features-guide/index.rst:59
+msgid ""
+"Direct connection with the network simulating software SWMM (Storm Water "
+"Management Model)"
+msgstr ""
+"Interopérabilité avec le logiciel de simulation de réseau SWMM (Storm Water "
+"Management Model)"
+
+#: ../../en/features-guide/index.rst:60
+msgid "Data export in CAD (dxf) and GIS format (all open data formats)"
+msgstr ""
+"Export des données au format CAD (dxf) et SIG (tous les formats open source)"
+
+#: ../../en/features-guide/index.rst:61
+msgid "Data export in interlis format"
+msgstr "Export de données au format Interlis"
+
+#: ../../en/features-guide/index.rst:63
+msgid "**Historisation**"
+msgstr "**Historisation**"
+
+#: ../../en/features-guide/index.rst:65
+msgid "Modifications history viewer and possibility to roll back"
+msgstr "Historique des modifications et possibilité de revenir en arrière"
+
+#: ../../en/features-guide/index.rst:68
+msgid "More to come"
+msgstr "Plus à venir"
+
+#: ../../en/features-guide/index.rst:70
+msgid ""
+"Automatic integration of pipe inspection according to Wincan VX and VSA-DSS "
+"KEK format"
+msgstr ""
+"Intégration automatique des inspections des conduites au format Wincan VX "
+"and VSA-DSS KEK"
+
+#: ../../en/features-guide/index.rst:72
+msgid "Log Cards (log_card, bio_ecol_assessment and catchment_area_totals)"
+msgstr "Log Cards (log_card, bio_ecol_assessment and catchment_area_totals)"

@@ -1,0 +1,38 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  translations-push:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Requirements
+        run: |
+          sudo apt-get install -y qttools5-dev-tools
+          curl -OL https://github.com/transifex/cli/releases/download/v1.6.5/tx-linux-amd64.tar.gz
+          tar -xvzf tx-linux-amd64.tar.gz
+          pip3 install qgis-plugin-ci==2.7.*
+
+      - name: Extract strings (qgepplugin)
+        working-directory: ./plugin
+        run: |
+          pylupdate5 $(find ./qgepplugin -type f -name "*.py") -ts qgepplugin/i18n/qgep-plugin.ts 
+
+      - name: Extract strings (project)
+        working-directory: ./project
+        run: |
+          docker run --init -v "$(pwd):/usr/src/" opengisch/qgis:3.28-jammy xvfb-run python3 /usr/src/scripts/create_ts_files.py
+
+      - name: Extract strings (docs)
+        working-directory: ./doc
+        run: |
+          make gettext
+
+      - name: Push Translations
+        env:
+          TX_TOKEN: ${{ secrets.TX_TOKEN }}
+        run: ./tx push --source

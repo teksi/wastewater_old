@@ -1,0 +1,283 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module
+# This file is distributed under the same license as the QGEP package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Urs Kaufmann <urs.kaufmann@holinger.com>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGEP 0.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-11 14:38+0000\n"
+"PO-Revision-Date: 2019-09-23 15:00+0000\n"
+"Last-Translator: Urs Kaufmann <urs.kaufmann@holinger.com>, 2019\n"
+"Language-Team: German (https://www.transifex.com/qgep/teams/40646/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../en/wincan2qgep/fixing-issues.rst:4
+msgid "Fixing issues"
+msgstr "Problemlösungen"
+
+#: ../../en/wincan2qgep/fixing-issues.rst:7
+msgid "Length issues"
+msgstr "Probleme mit Längenangabe"
+
+#: ../../en/wincan2qgep/fixing-issues.rst:9
+msgid ""
+"If the length of the channel is longer in the data than in the map, a "
+"warning will occur. This should be fixed in the data or can be forced in the"
+" observation table by checking the corresponding column."
+msgstr ""
+"Wenn ein Untersuchungsbericht eine grössere Länge hat als die Haltung im "
+"Plan, erscheint eine Warnung.  Dies sollte in den Daten festgelegt sein oder"
+" kann in den Untersuchungsdaten erzwungen werden, indem die entsprechende "
+"Spalte markiert wird"
+
+#: ../../en/wincan2qgep/fixing-issues.rst:13
+msgid ""
+"One channel in the inspection data corresponds to several channels in the "
+"QGEP data"
+msgstr ""
+"Ein Kanal/Bericht in den Inspektionsdaten entspricht mehreren Kanälen in den"
+" QGEP-Daten"
+
+#: ../../en/wincan2qgep/fixing-issues.rst:15
+msgid ""
+"It may happen that one channel in the inspection data corresponds to several"
+" channels in the QGEP data. To fix this, you can select up to 3 channels in "
+"the widgets. Observation lengths will be accordingly shifted."
+msgstr ""
+"Ein Bericht in den Kanalfernsehdaten kann mehrere Haltungen/Kanäle in den "
+"QGEP-Daten entsprechen. In diesem Fall können bis zu 3 Haltungen im Widget "
+"gewählt werden. Die Beobachtungslängen werden entsprechend angepasst."
+
+#: ../../en/wincan2qgep/fixing-issues.rst:20
+msgid ""
+"Several channels in the inspection data correspond to a single channel in "
+"the QGEP data"
+msgstr ""
+"Mehrere Berichte in den Kanalfernsehdaten entsprechen einer einzelnen "
+"Haltung in QGEP"
+
+#: ../../en/wincan2qgep/fixing-issues.rst:22
+msgid ""
+"It may happen that several channels in the inspection data correspond to a "
+"single channel in the QGEP data. To fix this, you can select \"Reuse "
+"previous channel\" checkbox. Observation lengths will be accordingly "
+"shifted."
+msgstr ""
+"Ein Bericht in den Kanalfernsehdaten kann mehrere Haltungen/Kanäle in den "
+"QGEP-Daten entsprechen. In diesem Fall kann die Checkbox  \"Reuse previous "
+"channel\" selektiert werden. Die Beobachtungslängen werden entsprechend "
+"angepasst."
+
+#: ../../en/wincan2qgep/import-data.rst:2
+msgid "Import data"
+msgstr "Datenimport"
+
+#: ../../en/wincan2qgep/import-data.rst:4
+msgid ""
+"Once the matching achieved, data can be imported using the ``Import "
+"button``. A check will be first performed and the process will be stopped if"
+" any issue is found. See :ref:`wincan2qgep-fixing-issues`."
+msgstr ""
+"Sobald die Übereinstimmung erreicht ist, können die Untersuchungsdaten mit "
+"dem ``Import Knopf`` importiert werden. Es wird ein Check durchgeführt und "
+"der Import gestopt, wenn ein Problem gefunden wird. Siehe  "
+":ref:`wincan2qgep-fixing-issues`."
+
+#: ../../en/wincan2qgep/import-data.rst:8
+msgid ""
+"Once every selected channels and observations are correctly filled, data is "
+"imported within QGEP data model in the VSA-DSS KEK extension."
+msgstr ""
+"Wenn alle selektierten Haltungen und Untersuchungsberichte korrekt sind, "
+"werden die Daten im QGEP-Datenmodell in der VSA-DSS KEK Erweiterung "
+"importiert."
+
+#: ../../en/wincan2qgep/import-data.rst:10
+msgid ""
+"be aware that imported data is not easily removed at the moment, meaning "
+"there is no \"Undo\" button. Furthermore, if you import again, inspection "
+"data will just be inserted once again and therefore duplicated."
+msgstr ""
+"Achtung: Importierte Daten können im Moment nicht einfach wieder gelöscht "
+"werden, es gibt kein \"Wiederrufen/Zurück/Undo\". Wenn die Daten noch einmal"
+" importiert werden, werden sie noch einmal eingefügt und sind dann doppelt "
+"vorhanden."
+
+#: ../../en/wincan2qgep/index.rst:4
+msgid "Wincan 2 QGEP plugin"
+msgstr "Wincan 2 QGEP plugin"
+
+#: ../../en/wincan2qgep/index.rst:7
+msgid ""
+"This will guide you to use Wincan 2 QGEP plugin for QGIS to import "
+"inspection data from Wincan."
+msgstr ""
+"Diese Anleitung zeigt, wie mit dem Wincan 2 QGEP plugin für QGIS "
+"Kanalfernsehdaten aus Wincan importiert werden können."
+
+#: ../../en/wincan2qgep/introduction.rst:2
+msgid "Introduction"
+msgstr "Einleitung"
+
+#: ../../en/wincan2qgep/introduction.rst:4
+msgid ""
+"`Wincan 2 QGEP <https://github.com/QGEP/qgis_wincan2qgep>`_ is a QGIS plugin"
+" to import inspection data from Wincan to QGEP. It currently works with "
+"Wincan 8 format only, but it is planned to upgrade it to support Wincan VX "
+"and/or pure `VSA-DSS <https://www.vsa.ch/en/fachbereiche-"
+"cc/siedlungsentwaesserung/vsa-dss/datenmodell/>`_ KEK format."
+msgstr ""
+"`Wincan 2 QGEP <https://github.com/QGEP/qgis_wincan2qgep>`_ ist ein QGIS "
+"plugin für den Import von Kanalfernsehdaten aus Wincan in QGEP. Im Moment "
+"funktioniert das nur mit Wincan 8 Daten, aber es ist geplant, auch Wincan VX"
+" und/oder direkt das `VSA-DSS <https://www.vsa.ch/en/fachbereiche-"
+"cc/siedlungsentwaesserung/vsa-dss/datenmodell/>`_ KEK Format zu "
+"unterstützen."
+
+#: ../../en/wincan2qgep/introduction.rst:7
+msgid ""
+"It can be seen a matching procedure between the inspection TV data and the "
+"network data."
+msgstr ""
+"Das Plugin erlaubt das einfache Zuordnen der Kanalfernsehdaten zu den "
+"Kanalnetzdaten (Haltungen)."
+
+#: ../../en/wincan2qgep/introduction.rst:9
+msgid ""
+"The plugin will read the XML file from the data and offer an interface to "
+"search and select on map the corresponding channels from the inspection "
+"data. Once this matching achieved, data can be imported within QGEP."
+msgstr ""
+"Das Plugin liest die XML-Datei mit den Kanalfernsehdaten (nicht die mdb-"
+"Datei) und stellt ein Interface bereit, um in der GIS-Karte die zugehörigen "
+"Haltungen zu suchen und zu selektieren. Wenn diese Zuordnung erfolgt ist, "
+"können die Kanalfernsehdaten in QGEP importiert werden."
+
+#: ../../en/wincan2qgep/match-channels.rst:2
+msgid "Match channels"
+msgstr "Haltungen abgleichen"
+
+#: ../../en/wincan2qgep/match-channels.rst:4
+msgid ""
+"To import the inspection data, the inspected channels have to be matched "
+"with the QGEP channels. This process can be done semi-automatically or "
+"manually. As long as channels are not matched to existing data, they will be"
+" highlighted in red in the main table."
+msgstr ""
+"Um die Untersuchungsdaten zu importieren, müssen die Untersuchungsberichte "
+"den QGEP-Haltungen zugeordnet werden. Das kann halb-automatisch oder manuell"
+" geschehen. Noch nicht zugeordnete Untersuchungsberichte werden in der "
+"Haupttabelle rot dargestellt."
+
+#: ../../en/wincan2qgep/match-channels.rst:9
+msgid "Automatic matching"
+msgstr "Automatischer Abgleich"
+
+#: ../../en/wincan2qgep/match-channels.rst:11
+msgid ""
+"An automatic matching can be performed by looking for a pattern in manhole "
+"identifiers. Enter a channel identifier in the corresponding field, and the "
+"plugin will search for the channels connecting the manhole as follows: "
+"``{channel_id} - {manhole_id}`` (the manhole id being taken from the "
+"inspection data)."
+msgstr ""
+"Ein automatischer Abgleich kann durchgeführt werden, indem nach einem Muster"
+" in den Schachtbezeichnungen gesucht wird. Geben Sie eine Kanal-ID in das "
+"entsprechende Feld ein und das Plugin sucht nach den Kanälen, die mit  "
+"Schacht verbinden, wie folgt: `` {channel_id} - {manhole_id} `` (die "
+"Schacht-Bezeichnungwird aus den Inspektionsdaten entnommen)."
+
+#: ../../en/wincan2qgep/match-channels.rst:17
+msgid "Manual matching"
+msgstr "Manueller Abgleich"
+
+#: ../../en/wincan2qgep/match-channels.rst:19
+msgid "Manual matching can be performed as follows:"
+msgstr "Der manuelle Abgleich geht wie folgt:"
+
+#: ../../en/wincan2qgep/match-channels.rst:21
+msgid "Select the desired channel in the table"
+msgstr "Den gewünschten Untersuchungsbericht in der Tabelle auswählen"
+
+#: ../../en/wincan2qgep/match-channels.rst:22
+msgid "In the first channel widget, click on the ``Select on map`` button"
+msgstr "In der ersten Haltungszeile auf den ``Select on map`` Knopf klicken"
+
+#: ../../en/wincan2qgep/match-channels.rst:26
+msgid "Find and click on the corresponding channel on the map."
+msgstr "Den zugehörigen Kanal in der Karte suchen und anklicken."
+
+#: ../../en/wincan2qgep/match-channels.rst:27
+msgid ""
+"The channel ID is now listed and the line in the table is not highlighted "
+"anymore."
+msgstr ""
+"Die Haltungs ID erscheint jetzt in der Liste und der Untersuchungsbericht "
+"ist nicht mehr rot hinterlegt."
+
+#: ../../en/wincan2qgep/match-channels.rst:32
+msgid "Skipping channels or observations"
+msgstr "Untersuchungsbericht oder Beobachtungen weglassen"
+
+#: ../../en/wincan2qgep/match-channels.rst:34
+msgid ""
+"If you want to skip some of the inspected channels, they simply need to be "
+"unchecked in the channel table and similarly for observations."
+msgstr ""
+"Mit der Checkbox ganz links können ganze Untersuchungsbericht oder einzelne "
+"Beobachtungen einer Untersuchung weggelassen werden."
+
+#: ../../en/wincan2qgep/open-inspection.rst:2
+msgid "Open inspection"
+msgstr "Untersuchungsdatei öffnen"
+
+#: ../../en/wincan2qgep/open-inspection.rst:4
+msgid ""
+"From the plugin menu (``Plugins > Wincan or from the plugin toolbar, select "
+"``Open an inspection``) and select the XML file generally located in ``XML >"
+" Project.xml``."
+msgstr ""
+"Im Plugin Menu (``Plugins > Wincan oder aus der  Plugin Toolbar), wähle "
+"``Open an inspection`` und wähle die XML Datei, welche normalerweise in "
+"``XML > Project.xml`` in den Wincan-Daten abgelegt ist."
+
+#: ../../en/wincan2qgep/open-inspection.rst:9
+msgid ""
+"You first have to specify the report document location by setting it in the "
+"PDF field. This will allow linking it in the feature forms."
+msgstr ""
+"Zuerst muss die Kanalfernsehreport-Datei gewählt werden im Feld PDF, damit "
+"diese Datei in den Feature Forms gelinkt werden kann."
+
+#: ../../en/wincan2qgep/open-inspection.rst:11
+msgid ""
+"Channels are listed in red in the main table since they have to be matched "
+"with the QGEP data before being imported."
+msgstr ""
+"Die Bericht erscheinen in der Haupttabelle rot hinterlegt weil sie zuerst "
+"den QGEP-Haltungen zugeordnet werden müssen, bevor sie importiert werden "
+"können."
+
+#: ../../en/wincan2qgep/viewing-data-qgep.rst:2
+msgid "Viewing data in QGEP"
+msgstr "Daten in QGEP anschauen"
+
+#: ../../en/wincan2qgep/viewing-data-qgep.rst:4
+msgid ""
+"Once imported, the inspection data can be seen in feature forms in QGIS. The"
+" maintenance events, inspections and observations can be seen in the channel"
+" layer."
+msgstr ""
+"Einmal importiert, erscheinen die Kanalfernsehdaten in den Feature Forms von"
+" QGEP. Die Erhaltungsereignisse, Untersuchungen und Beobachtungen erscheinen"
+" im Layer vw_qgep_reach."

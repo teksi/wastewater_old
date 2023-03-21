@@ -105,11 +105,14 @@ jobs:
       - name: Install qgis-plugin-ci
         run: pip3 install qgis-plugin-ci==2.7.*
 
-      - name: Release
+      - name: Compile translations
+        run: lrelease $(find ./plugin -type f -name "*.ts")
+
+      - name: Release plugin
         run: |
           qgis-plugin-ci -v release $(echo "${GITHUB_REF_NAME}" | cut -d+ -f1) \
             --release-tag ${GITHUB_REF_NAME} \
-            --transifex-token ${{ secrets.TX_TOKEN }} \
+            # --transifex-token ${{ secrets.TX_TOKEN }} \  # this is done separately
             --github-token ${{ secrets.GITHUB_TOKEN }} \
             --osgeo-username ${{ secrets.OSGEO_USERNAME }} \
             --osgeo-password ${{ secrets.OSGEO_PASSWORD }} \

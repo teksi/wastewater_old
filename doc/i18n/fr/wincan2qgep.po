@@ -1,0 +1,286 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module
+# This file is distributed under the same license as the QGEP package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# DanBing <daniel.binggeli@pully.ch>, 2019
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGEP 0.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-11 14:38+0000\n"
+"PO-Revision-Date: 2019-09-23 15:00+0000\n"
+"Last-Translator: DanBing <daniel.binggeli@pully.ch>, 2019\n"
+"Language-Team: French (https://www.transifex.com/qgep/teams/40646/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../en/wincan2qgep/fixing-issues.rst:4
+msgid "Fixing issues"
+msgstr "Résoudre les problèmes"
+
+#: ../../en/wincan2qgep/fixing-issues.rst:7
+msgid "Length issues"
+msgstr "Problèmes de longueur"
+
+#: ../../en/wincan2qgep/fixing-issues.rst:9
+msgid ""
+"If the length of the channel is longer in the data than in the map, a "
+"warning will occur. This should be fixed in the data or can be forced in the"
+" observation table by checking the corresponding column."
+msgstr ""
+"Si la longueur de la conduite est plus grande dans les données que sur la "
+"carte, un avertissement va apparaître. Cela peut être corrigé dans les "
+"données ou être contraint en cochant la colonne correspondante dans la table"
+" observations."
+
+#: ../../en/wincan2qgep/fixing-issues.rst:13
+msgid ""
+"One channel in the inspection data corresponds to several channels in the "
+"QGEP data"
+msgstr ""
+"Une conduite dans les données d'inspection correspond à plusieurs conduites "
+"dans les données QGEP"
+
+#: ../../en/wincan2qgep/fixing-issues.rst:15
+msgid ""
+"It may happen that one channel in the inspection data corresponds to several"
+" channels in the QGEP data. To fix this, you can select up to 3 channels in "
+"the widgets. Observation lengths will be accordingly shifted."
+msgstr ""
+"Il est possible qu'une conduite dans les données d'inspection corresponde à "
+"plusieurs conduites dans les données QGEP. Pour corriger cela, vous pouvez "
+"sélectionner jusqu'à 3 conduites dans les widgets. Les longueurs "
+"d'inspection seront modifiées en conséquence."
+
+#: ../../en/wincan2qgep/fixing-issues.rst:20
+msgid ""
+"Several channels in the inspection data correspond to a single channel in "
+"the QGEP data"
+msgstr ""
+"Plusieurs conduites dans les données d'inspection correspondent à une seule "
+"conduite dans les données QGEP"
+
+#: ../../en/wincan2qgep/fixing-issues.rst:22
+msgid ""
+"It may happen that several channels in the inspection data correspond to a "
+"single channel in the QGEP data. To fix this, you can select \"Reuse "
+"previous channel\" checkbox. Observation lengths will be accordingly "
+"shifted."
+msgstr ""
+"Il est possible que plusieurs conduites dans les données d'inspection "
+"correspondent à une seule conduite dans les données QGEP. Pour corriger "
+"cela, sélectionnez la boîte à cocher \"Réutiliser conduite précédente\". Les"
+" longueurs d'inspection seront modifiées en conséquence."
+
+#: ../../en/wincan2qgep/import-data.rst:2
+msgid "Import data"
+msgstr "Importer les données"
+
+#: ../../en/wincan2qgep/import-data.rst:4
+msgid ""
+"Once the matching achieved, data can be imported using the ``Import "
+"button``. A check will be first performed and the process will be stopped if"
+" any issue is found. See :ref:`wincan2qgep-fixing-issues`."
+msgstr ""
+"Une fois la correspondance établie, les données peuvent être importées en "
+"utilisant le bouton ``Import``. Un contrôle préalable va être effectué et la"
+" tâche sera interrompue si le moindre problème est découvert. Voir "
+":ref:`wincan2qgep-fixing-issues`."
+
+#: ../../en/wincan2qgep/import-data.rst:8
+msgid ""
+"Once every selected channels and observations are correctly filled, data is "
+"imported within QGEP data model in the VSA-DSS KEK extension."
+msgstr ""
+"Une fois que toutes les conduites et observations sélectionnées sont "
+"correctement renseignées, les données sont importées dans l'extension VSA-"
+"DSS KEK du modèle de données QGEP."
+
+#: ../../en/wincan2qgep/import-data.rst:10
+msgid ""
+"be aware that imported data is not easily removed at the moment, meaning "
+"there is no \"Undo\" button. Furthermore, if you import again, inspection "
+"data will just be inserted once again and therefore duplicated."
+msgstr ""
+"Soyez attentif au fait que les données importées ne sont que difficilement "
+"supprimables pour le moment, comprenez par là qu'il n'existe pas de bouton "
+"\"Annuler\". De plus, si vous importez à nouveau les données d'inspection, "
+"celles-ci seront insérées une nouvelle fois et par conséquent dupliquées."
+
+#: ../../en/wincan2qgep/index.rst:4
+msgid "Wincan 2 QGEP plugin"
+msgstr "Plugin Wincan 2 QGEP"
+
+#: ../../en/wincan2qgep/index.rst:7
+msgid ""
+"This will guide you to use Wincan 2 QGEP plugin for QGIS to import "
+"inspection data from Wincan."
+msgstr ""
+"Ce tutoriel va vous guider dans l'utilisation du plugin Wincan 2 QGEP, "
+"destiné à l'import des données d'inspection de Wincan."
+
+#: ../../en/wincan2qgep/introduction.rst:2
+msgid "Introduction"
+msgstr "Introduction"
+
+#: ../../en/wincan2qgep/introduction.rst:4
+msgid ""
+"`Wincan 2 QGEP <https://github.com/QGEP/qgis_wincan2qgep>`_ is a QGIS plugin"
+" to import inspection data from Wincan to QGEP. It currently works with "
+"Wincan 8 format only, but it is planned to upgrade it to support Wincan VX "
+"and/or pure `VSA-DSS <https://www.vsa.ch/en/fachbereiche-"
+"cc/siedlungsentwaesserung/vsa-dss/datenmodell/>`_ KEK format."
+msgstr ""
+"`Wincan 2 QGEP <https://github.com/QGEP/qgis_wincan2qgep>`_ est un plugin QGIS pour l'import des données d'inspection Wincan dans QGEP. \n"
+"A l'heure actuelle, il fonctionne uniquement avec le format Wincan 8, mais une mise à niveau est prévue pour supporter Wincan VX et/ou le format pur  `VSA-DSS <https://www.vsa.ch/en/fachbereiche-cc/siedlungsentwaesserung/vsa-dss/datenmodell/>`_ KEK."
+
+#: ../../en/wincan2qgep/introduction.rst:7
+msgid ""
+"It can be seen a matching procedure between the inspection TV data and the "
+"network data."
+msgstr ""
+"Ce plugin peut être décrit comme une procédure de mise en correspondance "
+"entre les données d'inspection TV et les données du réseau. "
+
+#: ../../en/wincan2qgep/introduction.rst:9
+msgid ""
+"The plugin will read the XML file from the data and offer an interface to "
+"search and select on map the corresponding channels from the inspection "
+"data. Once this matching achieved, data can be imported within QGEP."
+msgstr ""
+"Le plugin va lire le fichier XML à partir des données et offrir une "
+"interface pour rechercher et sélectionner sur la carte les conduites "
+"correspondantes à celles provenant des données d'inspection. Une fois cette "
+"correspondance établie, les données pourront être importées dans QGEP."
+
+#: ../../en/wincan2qgep/match-channels.rst:2
+msgid "Match channels"
+msgstr "Faire correspondre les conduites"
+
+#: ../../en/wincan2qgep/match-channels.rst:4
+msgid ""
+"To import the inspection data, the inspected channels have to be matched "
+"with the QGEP channels. This process can be done semi-automatically or "
+"manually. As long as channels are not matched to existing data, they will be"
+" highlighted in red in the main table."
+msgstr ""
+"Afin d'importer les données de l'inspection, les conduites inspectées "
+"doivent être mises en correspondance avec les conduites QGEP. Cette tâche "
+"peut être effectuée de manière manuelle ou semi-automatique. Tant que les "
+"conduites ne sont pas mises en correspondance avec les données existantes, "
+"elles sont surlignées en rouge dans la table principale."
+
+#: ../../en/wincan2qgep/match-channels.rst:9
+msgid "Automatic matching"
+msgstr "Correspondance automatique"
+
+#: ../../en/wincan2qgep/match-channels.rst:11
+msgid ""
+"An automatic matching can be performed by looking for a pattern in manhole "
+"identifiers. Enter a channel identifier in the corresponding field, and the "
+"plugin will search for the channels connecting the manhole as follows: "
+"``{channel_id} - {manhole_id}`` (the manhole id being taken from the "
+"inspection data)."
+msgstr ""
+"Une correspondance automatique peut être effectuée en recherchant une suite "
+"de caractéristique dans les identifiants du regard. Entrez un identifiant de"
+" conduite dans le champ correspondant et le plugin va rechercher les "
+"conduites connectées à ce regard de la manière suivante: ``{channel_id} - "
+"{manhole_id}`` (l'identifiant du regard est repris des données "
+"d'inspection)."
+
+#: ../../en/wincan2qgep/match-channels.rst:17
+msgid "Manual matching"
+msgstr "Correspondance manuelle"
+
+#: ../../en/wincan2qgep/match-channels.rst:19
+msgid "Manual matching can be performed as follows:"
+msgstr "La correspondance manuelle peut être réalisée de la façon suivante:"
+
+#: ../../en/wincan2qgep/match-channels.rst:21
+msgid "Select the desired channel in the table"
+msgstr "Sélectionnez la conduite désirée dans la table"
+
+#: ../../en/wincan2qgep/match-channels.rst:22
+msgid "In the first channel widget, click on the ``Select on map`` button"
+msgstr ""
+"Dans le premier widget de la conduite, cliquez sur le bouton ``Sélectionner "
+"dans la carte``"
+
+#: ../../en/wincan2qgep/match-channels.rst:26
+msgid "Find and click on the corresponding channel on the map."
+msgstr "Trouvez et sélectionnez la conduite correspondante dans la carte."
+
+#: ../../en/wincan2qgep/match-channels.rst:27
+msgid ""
+"The channel ID is now listed and the line in the table is not highlighted "
+"anymore."
+msgstr ""
+"L'identifiant de la conduite est maintenant listé et la ligne n'est plus "
+"surlignée dans la table."
+
+#: ../../en/wincan2qgep/match-channels.rst:32
+msgid "Skipping channels or observations"
+msgstr "Ignorer des conduites ou des observations"
+
+#: ../../en/wincan2qgep/match-channels.rst:34
+msgid ""
+"If you want to skip some of the inspected channels, they simply need to be "
+"unchecked in the channel table and similarly for observations."
+msgstr ""
+"Si vous souhaitez ignorer certaines des conduites inspectées, décochez-les "
+"simplement dans la table conduites. Procédez de la même manière pour les "
+"observations."
+
+#: ../../en/wincan2qgep/open-inspection.rst:2
+msgid "Open inspection"
+msgstr "Ouvrir une inspection"
+
+#: ../../en/wincan2qgep/open-inspection.rst:4
+msgid ""
+"From the plugin menu (``Plugins > Wincan or from the plugin toolbar, select "
+"``Open an inspection``) and select the XML file generally located in ``XML >"
+" Project.xml``."
+msgstr ""
+"Depuis le menu du plugin (``Plugins > Wincan`` ou à partir de la barre "
+"d'outils du plugin, sélectionner ``Ouvrir une inspection``), sélectionner le"
+" fichier XML généralement situé dans ``XML > Project.xml``."
+
+#: ../../en/wincan2qgep/open-inspection.rst:9
+msgid ""
+"You first have to specify the report document location by setting it in the "
+"PDF field. This will allow linking it in the feature forms."
+msgstr ""
+"Vous devez spécifier au préalable l'emplacement du document de report en le "
+"définissant dans le champ PDF. Ceci permettra de le lier dans le formulaire "
+"d'entité."
+
+#: ../../en/wincan2qgep/open-inspection.rst:11
+msgid ""
+"Channels are listed in red in the main table since they have to be matched "
+"with the QGEP data before being imported."
+msgstr ""
+"Les conduites sont répertoriées en rouge dans la table principale car elles "
+"doivent être liées avec les données QGEP avant d'être importées."
+
+#: ../../en/wincan2qgep/viewing-data-qgep.rst:2
+msgid "Viewing data in QGEP"
+msgstr "Visualiser les données dans QGEP"
+
+#: ../../en/wincan2qgep/viewing-data-qgep.rst:4
+msgid ""
+"Once imported, the inspection data can be seen in feature forms in QGIS. The"
+" maintenance events, inspections and observations can be seen in the channel"
+" layer."
+msgstr ""
+"Une fois importées, les données d'inspection peuvent être visualisées dans "
+"les formulaires d'entité de QGIS. Les événements de maintenance, les "
+"inspections et les observations peuvent être visualisés dans la couche "
+"conduites."

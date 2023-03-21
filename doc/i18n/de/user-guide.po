@@ -1,0 +1,3331 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module
+# This file is distributed under the same license as the QGEP package.
+# 
+# Translators:
+# Allgemein Fischer <arbon@fischering.ch>, 2016
+# signedav <david@opengis.ch>, 2019
+# Georg Weickelt <georg.weickelt@web.de>, 2016
+# Sebastian Schoeller, 2019
+# Stefan <stefan.burckhardt@gmx.ch>, 2015-2016
+# Stefan <stefan.burckhardt@gmx.ch>, 2021
+# Urs Kaufmann <urs.kaufmann@holinger.com>, 2017-2018
+# Urs Kaufmann <urs.kaufmann@holinger.com>, 2017
+# Urs Kaufmann <urs.kaufmann@holinger.com>, 2018-2022
+msgid ""
+msgstr ""
+"Project-Id-Version: QGEP Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-11 14:38+0000\n"
+"PO-Revision-Date: 2015-11-27 10:08+0000\n"
+"Last-Translator: Urs Kaufmann <urs.kaufmann@holinger.com>, 2018-2022\n"
+"Language-Team: German (http://www.transifex.com/qgep/qgep-documentation/language/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../en/user-guide/How-To/index.rst:2
+msgid "How To"
+msgstr "How To"
+
+#: ../../en/user-guide/How-To/index.rst:3
+msgid "This represents a guide on different themes about configuring in QGEP."
+msgstr "Eine Anleitung zu verschiedenen Themen um die Konfiguration von QGEP."
+
+#: ../../en/user-guide/How-To/index.rst:6
+msgid "Manual Label-positioning for different scales"
+msgstr "Manuelle Beschriftungspositionen für unterschiedliche Massstäbe"
+
+#: ../../en/user-guide/How-To/index.rst:7
+msgid ""
+"QGIS label definition can handle different labels for different scales. This"
+" works very well if you work on the screen. If you have to print plans with "
+"labels or if you have to export labels for data exchange (e.g. exchange with"
+" RegioGIS-platform), it will often be necessary to determine the label "
+"positions manually. If a label is positioned manually in QGIS, this fixed "
+"position applies to every scale. And that's not always a good result."
+msgstr "In QGIS können verschiedene Beschriftungsdefinitionen für verschiedene Massstäbe definiert werden. Bei der Arbeit am Bildschirm funktioniert das gut. Aber soll ein Plan mit Beschriftung gedruckt oder ein Datenexport der Beschriftungen (z.B. für ins Regio-GIS) gemacht werden, ist es oft nötig, die Beschriftungspositionen manuell zu definieren. Wenn eine Beschriftung manuell platziert wird in QGIS, dann gilt diese fixe Position aber für jeden Massstab. Und das führt nicht immer zu guten Resultaten."
+
+#: ../../en/user-guide/How-To/index.rst:11
+msgid "Solution"
+msgstr "Lösung"
+
+#: ../../en/user-guide/How-To/index.rst:13
+msgid ""
+"Extend the Auxiliary Storage File with new fields for different "
+"labelpositions"
+msgstr "Erweitern der Hilfsspeichertabellen (Auxiliary Storage) mit neuen Feldern für verschiedene Beschriftungspositionen"
+
+#: ../../en/user-guide/How-To/index.rst:15
+msgid ""
+"Use Rule-based labeling, then you can define different labelpositions for "
+"every rule"
+msgstr "Regelbasierte Beschriftungen verwenden, dann kann für jede Regel eine unterschiedliche Beschriftungsposition definiert werden"
+
+#: ../../en/user-guide/How-To/index.rst:17
+msgid ""
+"In the example below, we want to label the wastewater-structures with a "
+"detailed label for network_plan (1:500) and for overviewmap (1:2000). In the"
+" Auxiliary Storage we use the standard fields PositionX and PositionY for "
+"the  network_plan labels. For the overviewmap labels we add two new fields. "
+"We name this fields posx2000 and posy2000."
+msgstr "Im untenstehenden Beispiel soll für die Abwasserbauwerke je eine Beschriftung für den Werkplan (1:500) und für den Übersichtsplan (1:2000) erstellt werden. In den Hilfsspeichertabellen benutzen wir die Standardfelder PositionX und PositionY für die Werkplan-Beschriftung. Für die Übersichtsplan-Beschriftung braucht es zwei neue Felder. Wir benennen sie posx2000 und posy2000."
+
+#: ../../en/user-guide/How-To/index.rst:23
+msgid ""
+"Define now rule-based labeling with two rules. In the example the first rule"
+" is called WP-Labels (WP = Werkplan = network_plan). You have not the change"
+" something in the placement, because this rule uses the standard "
+"positioning-fields."
+msgstr "Jetzt definieren wir zwei regelbasierte Beschriftungen. Im Beispiel heisst die erste Regel WP-Labels (WP=Werkplan). Bei der Platzierung muss nichts geändert werden, weil für die Regel die Standard Positionsfelder verwendet werden."
+
+#: ../../en/user-guide/How-To/index.rst:28
+msgid ""
+"The second rule is called UP-Labels (UP = Uebersichtsplan = overviewmap). In"
+" this rule, you have to change the coordinate fields in the placement-tab."
+msgstr "Die zweite Regel nennen wir UP-Labels (UP=Uebersichtsplan). In dieser Regel müssen die Koordinaten-Felder im Reiter Platzierung geändert werden."
+
+#: ../../en/user-guide/How-To/index.rst:34
+msgid ""
+"Click on Coordinate X menutool and choose in the field type-menu the "
+"auxiliary_storage_user_custom_posx2000 field. Then the similar for Y."
+msgstr "Klicke auf das Koordinate X - Menütool und wähle im Feldtype-Menü das Feld auxiliary_storage_user_custom_posx2000. Dann analog das gleiche für die Y Koordinate."
+
+#: ../../en/user-guide/How-To/index.rst:36
+msgid ""
+"Do not use the **Edit...** menu for defining the coordinate-field. If you "
+"use a formula or choose the field via the Edit... menu, QGIS will overwrite "
+"the definition everytime you do a manual positioning."
+msgstr "Für die Definition des Koordinaten-Feldes darf nicht das **Bearbeiten...** Menü verwendet werden. Wenn der Formel-Editor verwendet wird oder das Feld mit dem Bearbeiten...-Menü bestimmt wird, wird QGIS die Auswahl jedesmal überschreiben, wenn eine manuelle Positionierung verwendet wird."
+
+#: ../../en/user-guide/How-To/index.rst:38
+msgid ""
+"Now you can move or fix your labels for every rule with different positions "
+"with the QGIS **Moves a Label or Diagram**-Tool."
+msgstr "Jetzt können mit dem QGIS Tool **Verschiebt Beschriftung oder Diagramm** die Beschriftungen für jede Regel unterschiedlich positioniert werden. "
+
+#: ../../en/user-guide/How-To/index.rst:42
+msgid "Your changes are only saved if you save the QGIS-project!"
+msgstr "Die Änderungen werden nur gespeichert, wenn das QGIS-Projekt gespeichert wird!"
+
+#: ../../en/user-guide/How-To/index.rst:46
+msgid "How to import existing label-positions"
+msgstr "Importieren von bestehenden Beschriftungspositionen"
+
+#: ../../en/user-guide/How-To/index.rst:47
+msgid "Good label-positions can be hard work. So you don't want to loose it."
+msgstr "In guten Beschriftungspositionen kann viel Arbeit stecken. Diese Arbeit soll nicht verloren gehen."
+
+#: ../../en/user-guide/How-To/index.rst:49
+msgid ""
+"Export your label-positions from your old system in the form obj_id, "
+"coordinateX (east), coordinateY (north)."
+msgstr "Exportieren der Beschriftungsposition im alten GIS in der Form Obj_ID, KoordinateX(Ost), KoordinateY(Nord)."
+
+#: ../../en/user-guide/How-To/index.rst:51
+msgid ""
+"Add the **.qgd**-file of your project with **Add Vector Layer...** to your "
+"project and open the attribute table."
+msgstr "Füge das**.qgd**-File vom aktuellen Projekt mit **Vektorlayer hinzufügen...** im Projekt ein und öffne die Attributtabelle."
+
+#: ../../en/user-guide/How-To/index.rst:55
+msgid ""
+"If you can not find a .qgd-file, then you have probably not moved or rotated"
+" a label before."
+msgstr "Wenn noch kein .qgd-File vorhanden ist, dann wurde vermutlich noch nie in diesem Projekt eine Beschriftung manuell verschoben oder gedreht."
+
+#: ../../en/user-guide/How-To/index.rst:57
+msgid ""
+"Change the field-names in your export-data to the field-names in the qgd-"
+"file. In the example the obj_id-field must have the name **ASPK**, the "
+"coordinate-fields must have the names **labeling_positionx** and "
+"**labeling_positiony**."
+msgstr "Ändere die Feldnamen in der Exportdatei in die Feldnamen aus der .qgd-Datei. Im Beispiel muss dass Obj_ID-Feld den Namen **ASPK** haben, die Koordinaten-Felder müssen **labeling_positionx** und **labeling_positiony** heissen."
+
+#: ../../en/user-guide/How-To/index.rst:59
+msgid ""
+"Open the export-file in the QGIS-project and copy the rows you want to the "
+"table of the qgd-file (this file must be editable)."
+msgstr "Öffne das Export-File im QGIS-Projekt und kopiere die gewünschten Zeilen in die Tabelle der qgd-Datei (diese Tabelle muss editierbar sein)."
+
+#: ../../en/user-guide/How-To/index.rst:61
+msgid ""
+"Save the qgd-file and remove it from your project, before you remove labels,"
+" because QGIS can not save manual label-positions, if the qgd-file is a "
+"layer in the project."
+msgstr "Speichere das qgd-File und lösche es aus dem Projekt, bevor Beschriftungen verschoben werden, weil QGIS nicht manuelle Beschriftungs-Positionen sichern kann, solange das qgd-File als Layer im Projekt geöffnet ist."
+
+#: ../../en/user-guide/How-To/index.rst:63
+msgid ""
+"If necessary define the horizontal/vertical alignment of your label-"
+"coordinates in the placement of the label definition."
+msgstr "Falls notwendig definiere die Ausrichtung horizontal und vertikal der Beschriftungen im Platzierungs-Reiter der Beschriftungsdefinition."
+
+#: ../../en/user-guide/How-To/index.rst:66
+msgid "How to translate a label prefix"
+msgstr "Übersetzen von Beschriftungs-Prefix"
+
+#: ../../en/user-guide/How-To/index.rst:68
+msgid ""
+"QGEP automatically creates labels for wastewater-structures and reaches:"
+msgstr "QGEP erstellt automatisch Beschriftungen für Abwasserbauwerke und Haltungen:"
+
+#: ../../en/user-guide/How-To/index.rst:72
+msgid ""
+"To easily translate label prefixes a series of QGIS project variables have "
+"been added. If you want to change the prefixes for cover level, bottom level"
+" and entry and exit levels, change the following project settings:"
+msgstr "Um die Kurzeichen in den Beschriftungen zu übersetzen sind im QGIS-Projekt entsprechende Variablen definiert. Um die Buchstaben für Deckel-Koten, Sohlenkoten und Ein- und Auslaufkoten zu ändern, müssen diese Projekt-Einstellungen geändert werden:"
+
+#: ../../en/user-guide/How-To/index.rst:78
+msgid "How to run symbology functions manually"
+msgstr "Symbologie-Funktion manuell anstossen"
+
+#: ../../en/user-guide/How-To/index.rst:80
+msgid ""
+"Sometimes the labels such as bottom, cover or entry/exit levels are not "
+"correctly displayed, even if the corresponding attribut is filled in. This "
+"happens for example when you import data by INTERLIS Import or another way. "
+"May be you also decativated the triggers to speed up the import process."
+msgstr "Manchmal werden die berechneten Beschriftungen Deckel-, Einlauf-, Auslauf-, Sohlenkote nicht richtig dargestellt, obwohl sie in der Datenbank entsprechend eingetragen sind.  Das kann vorkommen, wenn zum Beispiel Daten importiert wurden. Oder wenn für das Beschleunigen eines Import's die Trigger deaktiviert wurden."
+
+#: ../../en/user-guide/How-To/index.rst:83
+msgid "Activate / Deactivate symbology triggers::"
+msgstr "Aktivieren/Deaktivieren der Symbologie-Trigger:"
+
+#: ../../en/user-guide/How-To/index.rst:89
+msgid ""
+"Run **label function** for all entities (_label, _cover_label, "
+"_bottom_label, _input_label and _output_label)::"
+msgstr "Starte **label function** für alle Daten (_label, _cover_label, _bottom_label, _input_label und_output_label):"
+
+#: ../../en/user-guide/How-To/index.rst:89
+msgid "SELECT qgep_od.update_wastewater_structure_label(NULL, true)"
+msgstr "SELECT qgep_od.update_wastewater_structure_label(NULL, true)"
+
+#: ../../en/user-guide/How-To/index.rst:94
+msgid "Run depth calculation for all entities (wastewater_structure._depth)::"
+msgstr "Starte die Berechnung der Schacht-Tiefe für alle Daten (wastewater_structure._depth)::"
+
+#: ../../en/user-guide/How-To/index.rst:94
+msgid "SELECT qgep_od.update_depth(NULL, true);"
+msgstr "SELECT qgep_od.update_depth(NULL, true);"
+
+#: ../../en/user-guide/How-To/index.rst:98
+msgid ""
+"For symbolizing point elements (manholes, special structures etc. and  "
+"wastewater_nodes)  with _function_hierarchic and _usage_current the "
+"following two functions calculate the two qgep attributes from the connected"
+" reach(es)."
+msgstr "Für die Symbolisierung von Schächten und Abwasserknoten mit _function_hierarchic und _usage_current berechnen die folgenden beiden Funktionen die QGEP-Attribute mit den verknüpften Haltungen"
+
+#: ../../en/user-guide/How-To/index.rst:100
+msgid ""
+"Run **symbology function** for all entites (calculates function_hierarchic "
+"and usage_current from connected reach(es) and adds result to  "
+"wastewater_structure._function_hierarchic and _usage_current)::"
+msgstr "Starte **Symbologie  Funktion\" für alle Datensätze (berechnet Funktion_Hierarchisch und Nutzungsart_Ist aus den verknüpften Haltungen und berechnet damit die Felder wastewater_structure._function_hierarchic und_usage_current):"
+
+#: ../../en/user-guide/How-To/index.rst:104
+msgid ""
+"Run **wastewater node symbology** for all entities (calculates "
+"function_hierarchic and usage_current from connected reaches and adds result"
+" to  wastewater_node._function_hierarchic and   _usage_current)::"
+msgstr "Starte **Abwasserknoten Symbologie\" für alle Datensätze (berechnet Funktion_Hierarchisch und Nutzungsart_Ist aus den verknüpften Haltungen und berechnet damit die Felder wastewater_node._function_hierarchic und_usage_current):"
+
+#: ../../en/user-guide/How-To/index.rst:110
+msgid ""
+"Collecting a hydr_geometry (corresponds to a basin geometry in MikeUrban)"
+msgstr "Erfassen einer Hydr_Geometrie (entspricht einer Beckengeometrie in MikeUrban)"
+
+#: ../../en/user-guide/How-To/index.rst:111
+#: ../../en/user-guide/How-To/index.rst:139
+msgid "Note:"
+msgstr "Hinweis:"
+
+#: ../../en/user-guide/How-To/index.rst:113
+msgid ""
+"Wastewater structures with a hydr_geometry have to be defined as special "
+"structures (and not as standard manholes)."
+msgstr "Schächte mit einer Hydr_Geometrie sind als Spezialbauwerke (und nicht als Normschächte) zu erfassen."
+
+#: ../../en/user-guide/How-To/index.rst:115
+msgid ""
+"The detail geometry can be graphically drawn with the **Digitize action**."
+msgstr "Die Schachtgeometrie kann graphisch mit **Aktion Digitize** gezeichnet werden."
+
+#: ../../en/user-guide/How-To/index.rst:117
+#: ../../en/user-guide/How-To/index.rst:149
+msgid "Action:"
+msgstr "Vorgehen:"
+
+#: ../../en/user-guide/How-To/index.rst:119
+#: ../../en/user-guide/How-To/index.rst:154
+msgid "Select the wastewater structure with the i-button"
+msgstr "Abwasserbauwerk mit i-Knopf auswählen"
+
+#: ../../en/user-guide/How-To/index.rst:121
+#: ../../en/user-guide/How-To/index.rst:156
+msgid "Select the wastewater nodes tab in the Feature Attributes window"
+msgstr "Im Fenster Objektattribute den Reiter Abwasserknoten wählen"
+
+#: ../../en/user-guide/How-To/index.rst:123
+msgid ""
+"Select a hydr_geometry in the fk_hydr_geometry field or use the + button to "
+"create a new hydr_geometry."
+msgstr "Im Feld fs_Hydr_Geometrie eine Beckengeometrie wählen oder mit dem + Knopf eine neue Hydr_Geometrie erstellen."
+
+#: ../../en/user-guide/How-To/index.rst:127
+msgid ""
+"Enter a description in the hydr_geometry - Feature Attributes window. This "
+"name is also the name of the table in MikeUrban."
+msgstr "Im Fenster Hydr-Geometrie – Objektattribute eine Bezeichnung erfassen. Diese Bezeichnung ist auch die Bezeichnung der Tabelle in MikeUrban. "
+
+#: ../../en/user-guide/How-To/index.rst:129
+msgid ""
+"Before you can create a hydr: geom_relation, the new record hydr_geometry "
+"must be saved: -> click OK"
+msgstr "Bevor ein hydr:geom_relation erfasst werden kann, muss der neue Datensatz Hydro_Geometrie gespeichert werden: -> OK klicken"
+
+#: ../../en/user-guide/How-To/index.rst:131
+msgid ""
+"Go back to the hydr_geometry you just created with the button **switch to "
+"form view** in the field fk_hydr_geometry ."
+msgstr "Mit dem Knopf **auf Formularansicht umschalten** beim Feld fs_Hydr_Geometrie wieder zurück zur eben erstellten Hydr_Geometrie"
+
+#: ../../en/user-guide/How-To/index.rst:135
+msgid ""
+"With the **Add child object** button, you can now generate the records with "
+"which the hydr_geometry is defined analogously to the basin geometry of "
+"MikeUrban (H, As surface, Ac cross-sectional area)."
+msgstr "Mit dem **Kindobjekt hinzufügen** Knopf können nun die Datensätze erzeugt werden, mit denen die Beckengeometrie analog der Beckengeometrie von MikeUrban (H, As Oberfläche, Ac Querschnittsfläche) definiert wird."
+
+#: ../../en/user-guide/How-To/index.rst:141
+msgid ""
+"The water depth is the value above the bottom level or the outlet. A "
+"hydr_geometry can thus be used for several wastewater structure if they are "
+"built similar."
+msgstr "Als Wassertiefe ist der Werte über der Sohlenkote resp. dem Auslauf anzugeben. Eine Beckengeometrie kann so bei gleichen Schächten für mehrere Schächte verwendet werden."
+
+#: ../../en/user-guide/How-To/index.rst:143
+msgid "In the table view, the overview of the values is easier."
+msgstr "In der Tabellendarstellung ist der Überblick über die Werte einfacher."
+
+#: ../../en/user-guide/How-To/index.rst:147
+msgid "Hydraulic modeling of an overflow (prank weir / leapingweir / pump)"
+msgstr "Hydraulische Modellierung eines Überlaufes (Streichwehr/Leapingwehr/Förderanlage)"
+
+#: ../../en/user-guide/How-To/index.rst:151
+msgid ""
+"In the case of weirs, a second sewage junction has to be created in the "
+"wastewater structure. A second outlet has already been created (green = "
+"discharged combined wastewater) and has not yet been linked to any "
+"wastewater node in the overflow structure."
+msgstr "Bei Wehren ist ein zweiter Abwasserknoten im Bauwerk zu erstellen. Ein zweiter Auslauf ist bereits erstellt (grün = entlastetes Mischabwasser) und beim Überlaufbauwerk noch mit keinem Abwasserknoten verknüpft."
+
+#: ../../en/user-guide/How-To/index.rst:158
+msgid ""
+"Create a second wastewater node with the **Add point child object** button. "
+"The light blue note at the top of the map tells you what to do!"
+msgstr "Mit dem **Punktkindobjekt hinzufügen** Knopf kann ein zweiter Abwasserknoten erzeugt werden. Der hellblaue Hinweis oben in der Karte sagt, was zu tun ist!"
+
+#: ../../en/user-guide/How-To/index.rst:162
+msgid "Click next to outlet 2 to place the second wastewater node."
+msgstr "Mit Klick beim Auslauf 2 wird der zweite Abwasserknoten platziert."
+
+#: ../../en/user-guide/How-To/index.rst:164
+msgid ""
+"The Feature Attributes window for this wastewater node appears. Enter a "
+"meaningful identifier (e.g. BSP001-WN2 for wastewater node 2 of the BSP001 "
+"special structure). This designation also appears in MikeUrban. The new "
+"wastewater node is saved with OK."
+msgstr "Es erscheint das Eingabefenster für diesen Abwasserknoten. Es ist eine sinnvolle Bezeichnung zu wählen (zB. BSP001-AK2 für Abwasserknoten 2 des Schachtes BSP001). Diese Bezeichnung erscheint auch in MikeUrban. Mit OK wird der neue Abwasserknoten gespeichert."
+
+#: ../../en/user-guide/How-To/index.rst:168
+msgid ""
+"In the next picture, the 2nd node is marked in yellow on the map and in the "
+"Feature Attributes window."
+msgstr "Im nächsten Bild ist der 2. Knoten in der Karte und im Objektattribute-Fenster gelb markiert."
+
+#: ../../en/user-guide/How-To/index.rst:172
+msgid "We define now a prank weir:"
+msgstr "Wir definieren jetzt ein Streichwehr:"
+
+#: ../../en/user-guide/How-To/index.rst:174
+msgid "Choose prank weir in the overflow tabs"
+msgstr "Bei den Überlauf-Reitern wählen wir Streichwehr"
+
+#: ../../en/user-guide/How-To/index.rst:176
+msgid "Create a weir with the **Add child object** button"
+msgstr "Mit dem **Kindobjekt hinzufügen** Knopf erzeugen wir ein Streichwehr"
+
+#: ../../en/user-guide/How-To/index.rst:178
+msgid ""
+"The prank weir Feature Attributes window opens. The attributes in the upper "
+"hydraulic section must be filled in, they will be transferred to MikeUrban. "
+"The field fk_overflow_to must be filled manually. The Obj_ID of the "
+"previously created second wastewater node can be seen in the rear window."
+msgstr "Es öffnet das Streichwehr Objektattribute Fenster. Die Attribute im oberen Teil Hydraulik sind auszufüllen, sie werden in MikeUrban übernommen.\nDas Feld fs_UeberlaufNach muss manuell ausgefüllt werden. Die Obj_ID des zuvor erstellten zweiten Abwasserknoten ist im hinteren Fenster ersichtlich"
+
+#: ../../en/user-guide/How-To/index.rst:183
+msgid ""
+"This information is sufficient for the calculation in MikeUrban with the "
+"weir formula."
+msgstr "Für die Berechnung in MikeUrban mit der Wehrformel sind diese Angaben ausreichend."
+
+#: ../../en/user-guide/How-To/index.rst:185
+msgid "Now only the 2nd outlet has to be linked to the 2nd wastewater node:"
+msgstr "Jetzt muss nur noch der 2. Auslauf mit dem 2. Abwasserknoten verknüpft werden:"
+
+#: ../../en/user-guide/How-To/index.rst:187
+msgid "Close all open Feature Attributes window."
+msgstr "Alle offenen Objektattribute Fenster schliessen. "
+
+#: ../../en/user-guide/How-To/index.rst:189
+msgid "Select the QGEP tool **Connect wastewater networkelements**."
+msgstr "Das QGEP-Werkzeug **Connect wastewater networkelements** wählen."
+
+#: ../../en/user-guide/How-To/index.rst:191
+msgid "Click on the reach near to the outlet"
+msgstr "Klick auf der Haltung beim Auslauf"
+
+#: ../../en/user-guide/How-To/index.rst:193
+msgid "Click on the wastewater node"
+msgstr "Klick auf dem Abwasserknoten"
+
+#: ../../en/user-guide/How-To/index.rst:195
+msgid "Confirm that the connection is created for the **from reach point**."
+msgstr "Bestätigen, dass die Verknüpfung für den **von Haltungspunkt** erstellt wird"
+
+#: ../../en/user-guide/How-To/index.rst:200
+msgid "Overflow characteristic"
+msgstr "Überlaufcharakteristik"
+
+#: ../../en/user-guide/How-To/index.rst:202
+msgid ""
+"In the case of a leaping weir, a pump or under special conditions, an "
+"overflow characteristic can be defined for the overflow:"
+msgstr "Bei einem Leaping-Wehr, einem Förderaggregat oder bei speziellen Verhältnissen kann bei einem Überlauf eine Überlaufcharakteristik definiert werden:"
+
+#: ../../en/user-guide/How-To/index.rst:204
+msgid ""
+"You can select an existing characteristic in the field fk_overflow_char or "
+"you creat a new one characteristic with the green + button."
+msgstr "Beim Feld fs_Ueberlaufcharakteristik kann eine bereits vorhandene Charakteristik gewählt werden oder eine Neue erstellt werden mit dem grünen + Knopf."
+
+#: ../../en/user-guide/How-To/index.rst:206
+msgid "The Feature Attributes window for the overflow characteristic appears:"
+msgstr "Es erscheint das Objektattribute Fenster für die Ueberlaufcharakteristik:"
+
+#: ../../en/user-guide/How-To/index.rst:210
+msgid ""
+"Here too, the identifer is later adopted in MikeUrban as a table name for a "
+"QH relationship, which is used, for example, in a local controller."
+msgstr "Auch hier wird die Bezeichnung später in MikeUrban übernommen als Tabellenbezeichnung für eine QH-Beziehung, welche z.B. in einer lokalen Steuerung benutzt wird."
+
+#: ../../en/user-guide/How-To/index.rst:212
+msgid ""
+"Because the new record overflow characteristic has not yet been saved, it "
+"must first be saved with OK before the records of the HQ relation can be "
+"created."
+msgstr "Weil der Datensatz Überlaufcharakteristik noch nicht gesichert ist, muss er zuerst mit OK gespeichert werden, bevor die Datensätze der HQ-Relation erstellt werden können."
+
+#: ../../en/user-guide/How-To/index.rst:214
+msgid ""
+"Go back in the field fk_overflow characteristic of the just created overflow"
+" characteristic with the button **switch to form view** and define the "
+"necessary HQ or QQ values with the **add child object** button."
+msgstr "Mit dem Knopf **auf Formularansicht umschalten** beim Feld fs_ Ueberlaufcharakteristik wieder zurück zur eben erstellten Überlaufcharakteristik und mit dem **Kindobjekt hinzufügen** Knopf die notwendigen HQ oder QQ-Werte definieren."
+
+#: ../../en/user-guide/How-To/index.rst:217
+msgid "Further informations"
+msgstr "Weitere Infos"
+
+#: ../../en/user-guide/How-To/index.rst:219
+msgid ""
+"Further Q & A's you can find in the `QGEP Discussion section "
+"<https://github.com/QGEP/QGEP/discussions/categories/q-a>`_"
+msgstr "Weiter Q & A's gibt es hier: `QGEP Discussion section <https://github.com/QGEP/QGEP/discussions/categories/q-a>`_"
+
+#: ../../en/user-guide/digitizing/dataentry.rst:2
+msgid "Data entry"
+msgstr "Datenerfassung"
+
+#: ../../en/user-guide/digitizing/dataentry.rst:4
+msgid "There are basically two ways:"
+msgstr "Es gibt grundsätzlich zwei Arten der Datenerfassung:"
+
+#: ../../en/user-guide/digitizing/dataentry.rst:6
+msgid ""
+"Data entry by constructing or digitizing in the QGEP with the QGEP-wizard or"
+" QGIS-tools itself"
+msgstr "Datenerfassung in der QGEP GIS Fachschale durch konstruieren oder digitalisieren mit dem QGEP-Wizard oder QGIS-Standard Werkzeugen."
+
+#: ../../en/user-guide/digitizing/dataentry.rst:7
+msgid ""
+"Data entry in an external program or software and then importing the "
+"position and/or technical data into QGEP e.g.:"
+msgstr "Datenerfassung in einem externen Programm oder Software mit nachfolgendem Import der Lage und/oder der Sachinformation in QGEP. Zum Beispiel:"
+
+#: ../../en/user-guide/digitizing/dataentry.rst:9
+msgid "coordinates from manholes from measurement"
+msgstr "Schachtkoordinaten aus der Vermessung"
+
+#: ../../en/user-guide/digitizing/dataentry.rst:10
+msgid "position and/or technical data from another GIS or CAD system"
+msgstr "Lage und/oder Sachinformationen aus einem anderen GIS oder CAD System"
+
+#: ../../en/user-guide/digitizing/dataentry.rst:11
+msgid ""
+"using data from the surveyor (e.g. property boundaries) as a basis for "
+"defining catchment borders"
+msgstr "Nutzung von Vermessungsdaten (zum Beispiel Grundstücksgrenzen) als Basis für die Definition von Einzugsgebieten"
+
+#: ../../en/user-guide/digitizing/dataentry.rst:12
+msgid "other"
+msgstr "andere"
+
+#: ../../en/user-guide/digitizing/dataentry.rst:14
+msgid ""
+"Data entry in QGEP needs some understanding of the underlying data model "
+"`VSA-DSS <http://dss.vsa.ch>`_, but is supported with some great data "
+"collecting wizards and forms that link the different tables correctly "
+"together. Especially the linking of manholes and reaches to a complete sewer"
+" network is highly automated and can be controlled with the network "
+"following tool."
+msgstr "Die Datenerfassung in QGEP benötigt etwas Verständnis des zugrundeliegenden Datenmodells `VSA-DSS <http://dss.vsa.ch>`, wird aber erleichtert durch einen Datenerfassungsassistenten und Formulare, welche die verschiedenen Tabellen korrekt miteinander verbinden. Vor allem die Verknüpfung von Schächten und Haltungen zu einem kompletten Kanalisationsnetzwerk ist automatisiert und kann mit dem Netz-Verfolgungswerkzeug kontrolliert werden."
+
+#: ../../en/user-guide/digitizing/dataentry.rst:19
+msgid "The QGEP wizard"
+msgstr "Der QGEP Wizard (Zauberer)"
+
+#: ../../en/user-guide/digitizing/dataentry.rst:21
+msgid ""
+"The QGEP wizard helps digitizing manholes and reaches with just a few "
+"clicks."
+msgstr "Mit dem QGEP Wizard können Schächte und Kanäle mit wenigen Mausklicks digitalisiert werden."
+
+#: ../../en/user-guide/digitizing/dataentry.rst:23
+msgid "To start with data entry select the QGEP button **Wizard**."
+msgstr "Um mit der Datenerfassung zu starten wählen Sie den QGEP Knopf **Wizard**"
+
+#: ../../en/user-guide/digitizing/dataentry.rst:27
+msgid "On the left side bottom, **QGEP Data Entry** window appears:"
+msgstr "Auf der linken unteren Seite erscheint das **QGEP Digitizing** Fenster."
+
+#: ../../en/user-guide/digitizing/dataentry.rst:31
+msgid "Click **Start Data entry** to enter the edit mode."
+msgstr "Klicken Sie auf **Start Data entry** um den Bearbeitungsmodus zu starten."
+
+#: ../../en/user-guide/digitizing/dataentry.rst:33
+msgid ""
+"Choose **Wastewater Structure** or **Reach**. Start adding new feature in "
+"vw_qgep_wastewater_structure or vw_qgep_reach."
+msgstr "Wähle **Wastewater Structure** oder **Reach**. Starte mit dem Erfassen neuer Datensätze in vw_qgep_wastewater_structure oder vw_qgep_reach."
+
+#: ../../en/user-guide/digitizing/dataentry.rst:35
+msgid ""
+"There is no need to select the correct layer in the layers-window, you do "
+"not need to toggle editing or to choose the add feature tool."
+msgstr "Es ist nicht notwendig, den entsprechenden Layer im Layer-Fenster auszuwählen, der Bearbeitungsstatus muss nicht umgeschaltet werden und es muss kein Objekt hinzufügen-Werkzeug gewählt werden."
+
+#: ../../en/user-guide/digitizing/dataentry.rst:37
+msgid ""
+"When adding **new wastewater structures**, the wizard has no additional "
+"functionality. To **Reuse the last entered attribute values**, it is "
+"necessary (and recommended) to enable this option in "
+":menuselection:`Settings --> Options --> Digitizing`."
+msgstr "Wenn in **vw_qgep_wastewater_structure** neue Schächte hinzugefügt werden, hat der Wizard keine zusätzlichen Funktionen. Es ist nützlich (und empfohlen), die Option **Letzte Attributeingabe wiederverwenden** in :menuselection:`Einstellungen--> Optionen --> Digitisierung` einzuschalten."
+
+#: ../../en/user-guide/digitizing/dataentry.rst:39
+msgid ""
+"When adding **new reaches**, the wizard has some additional functionality:"
+msgstr "Wenn in **vw_qgep_Haltung** neue Haltungen hinzugefügt werden, hat der Wizard einige zusätzliche Funktionen."
+
+#: ../../en/user-guide/digitizing/dataentry.rst:41
+msgid ""
+"Snapping on wastewater nodes and other reaches is on, even if QGIS **Enable "
+"Snapping** is off."
+msgstr "Schnappen auf Abwasserknoten und Haltungen ist aktiv, sogar wenn QGIS **Einrasten einschalten** ausgeschaltet ist."
+
+#: ../../en/user-guide/digitizing/dataentry.rst:42
+msgid "Snapping on nodes is always preferred to snapping on reaches."
+msgstr "Schnappen auf Abwasserknoten hat immer höhere Priorität als das Schnappen auf Haltungen."
+
+#: ../../en/user-guide/digitizing/dataentry.rst:43
+msgid ""
+"When the new reach snaps, then the obj_id_links are automatically entered in"
+" the fk_fields of the reach points."
+msgstr "Wenn die neue Haltung schnappt, dann wird die Verknüpfungs-Obj_id automatisch in die Fremdschlüsselfelder fk* der Haltungspunkt eingetragen."
+
+#: ../../en/user-guide/digitizing/dataentry.rst:44
+msgid ""
+"The **Reuse the last entered attribute values** - option of QGIS does not "
+"work. But the standard-fields on the general-tab (and only those fields) do "
+"reuse the last entered attribute value."
+msgstr "Die QGIS-Option **Letzte Attributeingaben wiederverwenden** funktioniert grundsätzlich nicht. Aber für die Standard-Felder im Allgemein Tab (und nur für diese Felder) werden die letzten Eingabewerte vom Wizard eingetragen. "
+
+#: ../../en/user-guide/digitizing/dataentry.rst:46
+msgid ""
+"If you use another tool (e.g. the **Identify Features** tool) and then want "
+"to continue digitizing with the wizard, you can not select the wizard again."
+" You have to click **Stop Data Entry** and then **Start Data Entry** and you"
+" can continue."
+msgstr "Wenn während dem Digitalisieren ein anderes Tool benutzt wird (z.B. das **Objekte abfragen** Tool), dann genügt es nicht, den Wizard anzuklicken um mit dem Wizard weiter zu digitalisieren. Es muss **Stop Data Entry** und danach **Start Data Entry** angeklickt werden bevor weiter digitalisiert werden kann."
+
+#: ../../en/user-guide/digitizing/dataentry.rst:48
+msgid ""
+"If you change from digitizing wastewater structures to digitizing reaches, "
+"it is recommended to  stop and start data entry also. This saves the new "
+"manholes and enables the reaches to snap also on new digitized manholes."
+msgstr "Wenn vom Digitalisieren der Schächte vw_qgep_Abwasserbauwerk zum Digitalisieren der Haltungen vw_qgep_Haltung gewechselt wird, ist es empfehlenswert, Stop und Start Data Entry anzuklicken. Damit werden die neuen Schächte gespeichert und beim Digitalisieren der Haltungen kann auf diese neuen Schächte resp. deren Abwasserknoten geschnappt werden."
+
+#: ../../en/user-guide/digitizing/dataentry.rst:50
+msgid ""
+"When digitizing, it is recommended to start with the point elements "
+"(wastewater structures such as manholes, special structures). Afterwards its"
+" easy to connect those points with line elements (channels with reaches)."
+msgstr "Beim Digitalisieren ist es empfehlenswert, zuerst die Schächte zu erfassen. Danach kann mit den Haltungen einfach auf die Schächte geschnappt werden. "
+
+#: ../../en/user-guide/digitizing/dataentry.rst:52
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:29
+msgid ""
+"It is possible to use the **Advanced Digitizing** tools together with the "
+"wizard."
+msgstr "Die **Advanced Digitizing** Werkzeuge können zusammen mit dem Wizard eingesetzt werden."
+
+#: ../../en/user-guide/digitizing/dataentry.rst:56
+msgid "QGIS standard tools"
+msgstr "QGIS Standard Werkzeuge"
+
+#: ../../en/user-guide/digitizing/dataentry.rst:58
+msgid ""
+"To digitize in other layers than vw_qep_wastewater_structure or "
+"vw_qgep_reach, you work with the standard QGIS tools:"
+msgstr "Wenn in anderen Layern als  vw_qgep_wastewater_structure oder vw_qgep_reach digitalisiert wird, werden die QGIS Standard Werkzeuge verwendet:"
+
+#: ../../en/user-guide/digitizing/dataentry.rst:60
+msgid "Select the layer you want to edit"
+msgstr "Wähle den Layer der bearbeitet werden soll"
+
+#: ../../en/user-guide/digitizing/dataentry.rst:61
+msgid "Toggle Editing if necessary"
+msgstr "Mit **Bearbeitungsstatus umschalten** die Bearbeitung starten falls notwendig"
+
+#: ../../en/user-guide/digitizing/dataentry.rst:62
+msgid "Enable snapping if necessary"
+msgstr "**Einrasten einschalten**  falls notwendig"
+
+#: ../../en/user-guide/digitizing/dataentry.rst:63
+msgid "Choose the add feature tool"
+msgstr "Wähle das **Objekt hinzufügen** Werkzeug"
+
+#: ../../en/user-guide/digitizing/dataentry.rst:65
+msgid ""
+"It is also possible to use the standard QGIS tools with the two vw_qgep main"
+" layers. But there will be no automatic value in the fk-fields of the reach-"
+"points and no preferred snapping to wastewater nodes."
+msgstr "Es ist auch möglich, in den beiden QGEP Hauptlayern mit den QGIS Standardwerkzeugen zu arbeiten. Aber dann gibt es keine automatische Verknüpfung von Abwassenetzelementen in den fk-Feldern der Haltungspunkte und kein bevorzugtes Schnappen auf Abwasserknoten."
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:2
+msgid "Deleting objects"
+msgstr "Objekte löschen"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:4
+msgid ""
+"You can delete point or line objects (with all associated objects) through "
+"the **vw_qgep_(wastewater_structure/reach)** layers. You can also pick and "
+"delete only a specific object (e.g. cover)."
+msgstr "Sie können Punkt- oder Linienobjekte (mit allen zugehörigen Objekten) mit den **vw_ggep_(Abwasserbauwerk/Haltung)** Layern löschen. Sie können auch nur ein spezifisches Objekt auswählen und löschen (z.B. einen Deckel)."
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:8
+msgid "Delete Reaches"
+msgstr "Haltungen löschen"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:10
+msgid "Select **vw_qgep_reach** and change to edit mode."
+msgstr "Wählen Sie **vw_qgep_Haltung** und wechseln Sie zum Bearbeitungsmodus."
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:12
+msgid ""
+"Select the reach(es) you want to delete. You can click on an object or draw "
+"an area."
+msgstr "Wählen Sie die Haltung(en), die Sie löschen möchten, z.B. mit Einzelklick oder mit einem Auswahlwerkzeug."
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:16
+msgid "Use the top menu **Edit** --> **Delete Selected** to delete."
+msgstr "Benutzen Sie das Menü **Bearbeiten** --> **Ausgewähltes löschen**  zum löschen."
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:20
+msgid ""
+"The easiest way is to simply press the **Delete** key on your keyboard. "
+"Another way is to press the **Delete** button located in the **Digitizing "
+"toolbar**."
+msgstr "Am einfachsten ist es, die **Delete** Taste auf Ihrer Tastatur zu drücken. Oder Sie können den **Ausgewähltes löschen** Knopf anklicken, welcher sich in der **Digitalisierungswerkzeugleiste** befindet."
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:25
+msgid ""
+"Depending on how you customized QGIS the **Digitizing toolbar** may be "
+"hidden or located elsewhere."
+msgstr "Abhängig von ihren QGIS-- Einstellungen kann die **Digitalisierungswerkzeugleiste** versteckt sein oder sich an einem anderen Ort befinden."
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:28
+#: ../../en/user-guide/digitizing/deletingobjects.rst:57
+msgid ""
+"Deselect the edit mode and confirm changes to layer. All changes will be "
+"saved to database."
+msgstr "Deaktivieren Sie den Bearbeitungsmodus und bestätigen Sie die Änderungen an den Layern. Alle Änderungen werden in der Datenbank gespeichert."
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:32
+msgid ""
+"Delete reaches deletes also all connected structure parts. The connected "
+"channel is only deleted if there is no other wastewater networkelement is "
+"connected. If there are two reaches connected to one channel, the channel is"
+" only deleted if both reaches are deleted."
+msgstr "Das Löschen von Haltung entfernt ebenfalls verbundene Bauwerke. Der verknüpfte Kanal wird nur gelöscht, falls kein weiteres Abwassernetzelement verbunden ist. Wenn zwei Haltungen mit einen Kanal verknüpft sind, wird der Kanal nur gelöscht, wenn beide Haltungen entfernt wurden."
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:35
+msgid "Delete Manholes and other Wastewater Structures"
+msgstr "Normschächte und andere Abwasserbauwerke löschen"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:37
+#: ../../en/user-guide/digitizing/deletingobjects.rst:47
+#: ../../en/user-guide/digitizing/deletingobjects.rst:64
+msgid "Select **vw_qgep_wastewater_structure** and change to edit mode"
+msgstr "Wählen Sie **vw_qgep_Abwasserbauwerk** und wechseln Sie zum Bearbeitungsmodus."
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:38
+msgid ""
+"Select the objects (**manholes**, **special structures** etc.) you want to "
+"delete"
+msgstr "Wählen Sie das Schachtobjekt aus, welches Sie löschen möchten"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:39
+msgid "Use **Edit** --> **Delete Selected** to delete."
+msgstr "Zum löschen benutzen Sie **Bearbeiten** -->**Ausgewähltes löschen** ."
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:40
+#: ../../en/user-guide/digitizing/deletingobjects.rst:71
+#: ../../en/user-guide/digitizing/deletingobjects.rst:81
+msgid ""
+"Stop the editing mode and confirm changes to layer. All changes will be "
+"saved to database."
+msgstr "Beenden Sie den Bearbeitungsmodus und bestätigen Sie die Änderungen an den Layern. Alle Änderungen werden in der Datenbank gespeichert."
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:42
+msgid ""
+"Delete wastewater structures deletes also all connected structure parts and "
+"all connected wastewater nodes."
+msgstr "Wenn ein Abwasserbauwerk gelöscht wird, werden auch alle verknüpften Bauwerksteile und Abwasserknoten gelöscht."
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:45
+msgid "Delete Covers"
+msgstr "Deckel löschen"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:48
+msgid ""
+"Select the object (**manholes**, **special structures** etc.) from which you"
+" want the cover deleted"
+msgstr "Wählen Sie das Schachtobjekt aus, von welchem Sie den/einen Deckel löschen möchten."
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:49
+#: ../../en/user-guide/digitizing/deletingobjects.rst:66
+msgid "Use the **Identify Features** tool to open the form"
+msgstr "Benutzen Sie das Werkzeug **Objekte abfragen**, um das Formular zu öffnen"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:50
+msgid "Switch to the covers tab"
+msgstr "Wechseln Sie zum Deckel -Reiter"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:51
+msgid "Select the cover(s) you want to delete"
+msgstr "Wählen Sie den(die) Deckel, welche Sie löschen möchten"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:52
+msgid "Click the red x button to delete the covers"
+msgstr "Klicken Sie auf den roten X Knopf, um die Deckel zu löschen"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:56
+#: ../../en/user-guide/digitizing/deletingobjects.rst:70
+msgid "Click save on the form"
+msgstr "Klicken Sie im Formular auf Speichern"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:59
+msgid ""
+"Second way to delete a cover: select the **vw_cover** layer and change to "
+"edit mode, select the cover, use **Edit** --> **Delete Selected**, stop the "
+"editing mode"
+msgstr "Ein 2. Möglichkeit einen Deckel zu löschen: Den Layer **vw_qgep_cover** auswählen und den Bearbeitungsmodus starten, den Deckel auswählen, im Menü **Bearbeiten** --> **Ausgewähltes löschen** wählen, den Bearbeitungsmodus beenden"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:62
+msgid "Delete Structure parts"
+msgstr "Bauwerksteile löschen"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:65
+msgid ""
+"Select the object (**manholes**, **special structures** etc.) from which you"
+" want to delete a structure part"
+msgstr "Wählen Sie das Schachtobjekt aus, von welchem Sie Bauwerksteile löschen möchten."
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:67
+msgid "Switch to the structure parts tab"
+msgstr "Wechseln Sie zum Reiter \"Bauwerksteile\""
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:68
+msgid "Select the structure part you want to delete"
+msgstr "Wählen Sie die Bauwerksteile, welche Sie löschen möchten"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:69
+msgid "Click the red x button to delete the structure parts"
+msgstr "Klicken Sie auf den roten X Knopf um die Bauwerksteile zu löschen"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:74
+msgid "Delete detailed geometries"
+msgstr "Detailgeometrie löschen"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:76
+msgid ""
+"Deleting features directly from **wastewater_structure** will remove the "
+"complete wastewater structure from the database and not only the geometry of"
+" the wastewater structure!"
+msgstr "Wenn ein Objekt im Layer **vw_qgep_Abwasserbauwerk** gelöscht wird, wird das ganze Abwasserbauwerk mit den zugehörigen Datensätzen in der Datenbank gelöscht und nicht nur die Detailgeometrie des Bauwerks!"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:78
+msgid "Select **wastewater_structure** and change to edit mode"
+msgstr "Wähle \"Abwasserbauwerke / od_Abwasserbauwerk\" (nicht vw_qgep_Abwasserbauwerke) und wechsle in den Bearbeitungsmodus"
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:79
+msgid "Activate the **Remove part** tool from the Advanced digitizing toolbar"
+msgstr "Benutze das **Teil löschen** Tool aus der **Erweiterte Digitalisierungswerkzeugleiste** "
+
+#: ../../en/user-guide/digitizing/deletingobjects.rst:80
+msgid "Click on the parts you want to delete"
+msgstr "Klicke auf die Detailgeometrieflächen, die gelöscht werden sollen"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:2
+msgid "Digitizing Catchment Areas"
+msgstr "Digitalisierung der Einzugsgebiete"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:5
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:5
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:5
+#: ../../en/user-guide/digitizing/digitizingdrainagechannel.rst:5
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:7
+#: ../../en/user-guide/digitizing/importingdata.rst:8
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:9
+#: ../../en/user-guide/editing/maintenance_events.rst:10
+#: ../../en/user-guide/editing/moving.rst:9
+#: ../../en/user-guide/length-profile/index.rst:7
+#: ../../en/user-guide/plan-plotting/index.rst:8
+msgid "General"
+msgstr "Allgemeines"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:7
+msgid "Catchments can be digitized with QGIS standard tools."
+msgstr "Die Einzugsgebiete können mit den QGIS Standard Werkzeugen digitalisiert werden."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:11
+msgid ""
+"Catchment areas should not overlap and can have 4 connections to wastewater "
+"nodes."
+msgstr "Einzugsgebiete dürfen sich nicht überlappen und können 4 Verknüpfungen zu Abwasserknoten haben."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:14
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:19
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:17
+msgid "Digitizing"
+msgstr "Digitalisieren"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:15
+msgid "Select the **Enable Snapping** button"
+msgstr "Wähle den **Einrasten einschalten** Knopf"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:19
+msgid ""
+"Open the **Project Snapping Option Settings**, check the "
+"**od_catchment_area** layer and check the **avoid intersection** checkbox "
+"for the od_catchment_area layer"
+msgstr "Öffne die **Projekt Objektfang Einstellungen**, schalte den Layer **Einzugsgebiet** und schalte die **Schnittpunkte vermeiden** Checkbox für den Layer Einzugsgebiet ein "
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:23
+msgid ""
+"New digitized catchment areas will not overlap with existing areas with this"
+" settings."
+msgstr "Neu erfasst Einzugsgebiete überlappen nicht mit bestehenden Einzugsgebieten dank diesen Einstellungen."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:25
+msgid "Set the layer ``od_catchment_area`` into the edit mode."
+msgstr "Setzen Sie den Layer ``Einzugsgebiet`` in den Bearbeitungsmodus"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:26
+msgid "Use the **Add Feature** tool to digitize a new area."
+msgstr "Benützen Sie das **Objekt hinzufügen** Werkzeug, um eine neue Fläche zu digitalisieren."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:30
+msgid ""
+"Start digitizing with left click and continue with left click for every "
+"vertex of the polygon"
+msgstr "Starte das Digitalisieren mit einem Links-Klick und fahre mit Links-Klick für jeden Stützpunkt des Polygons fort"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:34
+msgid "Stop digitizing with right click"
+msgstr "Beende das Digitalisieren mit einem Rechts-Klick"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:36
+msgid ""
+"Keep in mind, that the finishing point of the polygon is the last point "
+"where you **left** clicked."
+msgstr "Beachte, dass der Endpunkt des Polygon der letzte Punkt ist, wo ein Links-Klick verwendet wurde."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:38
+msgid "The **od_catchment_area** form appears"
+msgstr "Das **Einzugsgebiet Objektattribute** Fenster erscheint"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:42
+msgid "When finished editing attributes, click the **OK** button"
+msgstr "Wenn Sie fertig sind klicken Sie den **OK** Knopf"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:44
+msgid "The new area does not overlap the old areas."
+msgstr "Das neue Einzugsgebiet überlappt nicht mit den bestehenden Einzugsgebieten."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:48
+msgid ""
+"To control the exact area of a selected polygon, see in the **Identify "
+"Results** window under **(Derived)**."
+msgstr "Um die Fläche eines ausgewählten Einzugsgebietes zu kontrollieren, kann im **Abfrageergebnisse** Fenster unter **(abgeleitet)** nachgeschaut werden."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:50
+msgid ""
+"To connect the area with wastewater nodes, see chapter :ref:`connect-"
+"wastewater-network-elements`."
+msgstr "Für das Verknüpfen der Einzugsgebiete mit Abwasserknoten, vgl. das Kapitel :ref:`connect-wastewater-network-elements`."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:53
+#: ../../en/user-guide/editing/maintenance_events.rst:64
+msgid "Editing"
+msgstr "Bearbeitung"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:55
+msgid "You can edit existing areas with the **Identify features** tool."
+msgstr "Sie können bestehende Bereiche mit dem **Objekte abfragen** Werkzeug bearbeiten."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:59
+msgid ""
+"There are ideas to have a menu in the feature attribute window, that allows "
+"you to copy all current-values to the planned-fields. Not realized yet."
+msgstr "Es ist die Absicht, ein Menu im Eingabefenster zu erstellen, mit dem alle Ist-Zustand-Werte einfach in die Planungszustand-Felder übernommen werden können. Noch nicht realisiert."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:62
+msgid "Split Areas"
+msgstr "Einzugsgebiete teilen"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:64
+msgid "You can split existing areas with the **Split** tool."
+msgstr "Einzugsgebiete können mit dem **Objekte zerteilen** Werkzeug geteilt werden."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:68
+msgid ""
+"There is no need to select the area first. Left clicks to define the "
+"splitting line. Right click after having defined the last point of the "
+"splitting line."
+msgstr "Das Einzugsgebiet muss nicht zuerst selektiert werden. Mit Links-Klicks wird die Trennlinie definiert. Mit einem Rechts-Klick wird abgeschlossen, wenn der letzte Punkt der Trennlinie abgesetzt ist."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:71
+msgid "Merge Areas"
+msgstr "Einzugsgebiet zusammenführen"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:73
+msgid "You can merge existing areas with the **Merge selected Feature** tool."
+msgstr "Einzugsgebiet können mit dem **Gewählte Objekte verschmelzen** Tool zusammengeführt werden."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:77
+msgid "Selected the **od_catchment_area** layer an set it into the edit mode"
+msgstr "Wählen Sie den Layer **Einzugsgebiet** und wechseln Sie zum Bearbeitungsmodus"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:78
+msgid "Select at least two areas you want to merge"
+msgstr "Mindestens zwei Einzugsgebiet auswählen, die zusammengeführt werden sollen"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:79
+msgid ""
+"Click the ``Merge selected Feature`` tool. -> The **Merge Feature "
+"Attributes** windows appears."
+msgstr "Klicke das **Gewählte Objekte verschmelzen** Tool. ->  Das **Objektattribute verschmelzen** Fenster erscheint."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:83
+msgid ""
+"Choose which values will be taken from which old record and click **OK**."
+msgstr "Wähle welche Werte von den alten Datensätzen übernommen werden sollen und klicke **OK**."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:85
+msgid ""
+"If you select one of the records and click on the **Take attributes from the"
+" selected feature** button, then the **obj_id** field will be skipped by "
+"default and the database will not accept the changes. After using this "
+"button, you have to choose one of the values in the **obj_id** field "
+"manually."
+msgstr "Wenn einer der Datensätze gewählt wird und der Knopf **Attribute des gewählten Objektes übernehmen** geklickt wird, dann wird das Feld **obj_id** standardmässig übersprungen und die Datenbank wird die Änderung nicht akzeptieren. Wenn dieser Knopf benutzt wird, muss für das **obj_id**-Feld manuell ein Wert definiert werden."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:88
+msgid "Connect Catchment area to Wastewater Network Nodes"
+msgstr "Einzugsgebiete mit Abwasserknoten verbinden"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:90
+msgid ""
+"You connect catchment areas with the tool **Connect wastewater "
+"networkelements** (it's the same tool to connect reaches and nodes described"
+" in the chapter Editing in QGEP)."
+msgstr "Einzugsgebiete werden mit dem Tool **Connect wastewater networkelements** verknüpft (es ist das gleiche Tool mit dem Haltungen und Abwasserknoten verknüpft werden, vgl. den Beschrieb im Kapitel Bearbeiten in QGEP)."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:94
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:18
+#: ../../en/user-guide/network-following/index.rst:17
+msgid "It does not matter, which layer is selected"
+msgstr "Es spielt keine Rolle, welcher Layer ausgewählt ist"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:95
+msgid "The **catchment_area** layer has to be in edit mode"
+msgstr "Der Layer **Einzugsgebiet** muss im Bearbeitungsmodus sein"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:96
+msgid "Click the **Connect wastewater networkelements** button"
+msgstr "Klicke den **Verbinde Abwassernetzwerkelement** Knopf"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:97
+msgid ""
+"If you move the mouse over an catchment area near the border of the "
+"catchment area, it is marked: you can click to choose this record"
+msgstr "Wenn der Mausezeiger über eine Einzugsgebiets-Grenze fährt,  dann wird das Einzugsgebiet markiert: jetzt kann man klicken"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:98
+msgid ""
+"Move the mouse to the networkelement, to which the catchment area will by "
+"connected (again: selectable objects get marked) and click again"
+msgstr "Den Mausezeiger zu einem Abwassernetzelement führen, mit dem das Einzugsgebiet verknüpft werden soll (wieder werden wählbare Objekte markiert) und dort wieder klicken"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:102
+msgid ""
+"A window appears, where you can choose, which connection(s) will be defined."
+msgstr "Ein Fenster erscheint, in dem gewählt werden kann, welche Verknüpfung(en) definiert wird. "
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:106
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:30
+msgid ""
+"If everything is ok, you will see a message in a blue bar on top of the map-"
+"window"
+msgstr "Wenn die Verknüpfung gespeichert wurde, erscheint ein blauer Mitteilungsbalken oben im Kartenfenster"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:110
+msgid ""
+"In the VSA-DSS-Datamodel, it is possible to connect catchment_areas to "
+"wastewater nodes or to reaches. Because a lot of hydraulic calculation do "
+"not support connections to reaches, this tool in qgep connects only to "
+"wastewater nodes and not to reaches."
+msgstr "Im VSA-DSS-Datenmodell können Einzugsgebiete mit Abwasserknoten oder mit Haltungen verknüpft werden. Weil viele Hydraulikprogramme die Verknüpfung mit Haltungen nicht unterstützen, verknüpft dieses QGEP-Tool nur mit Abwasserknoten und nicht mit Haltungen."
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:112
+msgid ""
+"The tool does not check, if your choosen wastewater node is a part of the "
+"pwwf-network (primary network). It's only the user who decides, if a node is"
+" ok or not. If you are not sure, please check the **VSA Wegleitung GEP-"
+"Daten**, part **Erfassungsgrundsätze**"
+msgstr "Das Tool prüft nicht, ob der gewählte Abwasserknoten im PAA-Netz (primäre Abwasseranlage) ist. Es ist Aufgabe des Benutzers, den richtigen Abwasserknoten zu wählen. Hinweise dazu finden sie in **VSA Wegleitung GEP-Daten**, Teil **Erfassungsgrundsätze**"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:114
+msgid ""
+"You can not connect multiple areas with the tool to a wastewater node at "
+"once. If you want to do so, you have to select the catchment areas, open the"
+" attribute table and then start the multi edit mode. There you can choose "
+"the wastewater node from the list of all nodes."
+msgstr "Mit dem Tool können nicht mehrere Einzugsgebiete auf einmal mit einem Abwasserknoten verknüpft werden. Wenn das gewünscht ist, müssen die Einzugsgebiet ausgewählt werden, dann die Attributtabelle öffnen und den Mehrfach-Editier-Modus starten. Der gewünschte Abwasserknoten kann dann aus der Liste der vorhandenen Abwasserknoten gewählt werden"
+
+#: ../../en/user-guide/digitizing/digitizingcatchments.rst:116
+msgid ""
+"Do delete a connection to a wastewater node, you can edit the area with the "
+"**Identify features** tool."
+msgstr "Um eine Verknüpfung mit einem Abwasserknoten zu löschen, kann das Einzugsgebiet mit dem **Objekte abfragen** Werkzeug bearbeiten werden."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:2
+msgid "Digitizing Channels"
+msgstr "Kanäle Digitalisieren"
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:7
+msgid ""
+"QGEP has a wizard to correctly build channels and connect them to wastewater"
+" structures respectively to wastewater nodes or other reaches (building up "
+"the topology for waste water nodes and reaches). See the :ref:`wizard` "
+"chapter."
+msgstr "QGEP hat einen Assistenten, um Kanäle korrekt zu erfassen und diese mit Schächten respektive Abwasserknoten oder Haltungen zu verbinden (und dabei die Abwasserknoten- und Haltungs-Topologie aufzubauen). Siehe Kapitel :ref:`wizard`."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:9
+msgid ""
+"Select the **Wizard** button, then click **Start Data Entry** and choose "
+"**Reach** in the pull down menu."
+msgstr "Wählen Sie die **Wizard** Schaltfläche, drücken **Start Data Entry** und wählen **Reach** im Pulldown-Menü."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:15
+msgid ""
+"Start digitizing in the direction of the flow by starting with the **from "
+"manhole node** and finishing with the **to manhole node**."
+msgstr "Erfassen Sie Haltungen/Kanäle immer in Fliessrichtung des Kanales, indem sie beim **von Abwasserknoten** starten und beim **nach Abwasserknoten** aufhören."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:21
+msgid ""
+"In digitizing mode the cursor will automatically snap to the nearest "
+"wastewater node or reach. When left clicking a line starts to draw."
+msgstr "Im Digitalisierungsmodus schnappt der Cursor automatisch auf das nächstgelegene Abwasserbauwerk oder Haltung zu. Mit einem Linksklick wird ein Linienanfang gezeichnet."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:26
+msgid ""
+"With further left clicks anywhere you can define intermediary points of the "
+"reach progression. You can also directly select another manhole to draw a "
+"straight channel."
+msgstr "Mit beliebigen weiteren Klicks können Sie Zwischenpunkte des Haltungsverlaufs definieren. Sie können auch direkt einen anderen Kanalschacht anwählen, um einen geraden Kanal zu zeichnen."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:33
+msgid ""
+"You finish digitizing the line by right clicking. This will make the "
+"**vw_qep_reach** form appear and you can start adding data in the "
+"**General** tab:"
+msgstr "Mit einem Rechtsklick wird die Linienzeichnung beendet. Im Anschluss erscheint das **vw_qgep_reach** Formular in dem Sie Daten im Reiter **Allgemein** eingeben können:"
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:37
+msgid ""
+"Keep in mind that the finishing point of the line is the last point where "
+"you **left** clicked. Thus, for digitizing a simple line with 2 points you "
+"need two **left clicks** to digitize the line and one **right click** to "
+"finish the line digitizing."
+msgstr "Beachten Sie, dass der Endpunkt der Linie der Punkt ist, an welchem Sie zuletzt Links geklickt haben. Deshalb benötigen Sie, für die Digitalisierung einer einfachen Linie mit 2 Punkten, zwei Links Klicks um die Linie zu digitalisieren und einen Rechts Klick, um die Digitalisierung der Linie zu beenden."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:41
+msgid ""
+"Control the snapping to wastewater nodes or other reaches in the fields "
+"**rp_from/to_fk_wastewater_networkelement**"
+msgstr "Das Schnappen auf Abwasserknoten oder andere Haltungen kann in den Feldern **HP_von/nach_FS_Abwassernetzelement** kontrolliert werden."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:43
+msgid ""
+"If you do not enter an `identifier` (reach-identifier) in the General tab, "
+"QGEP will enter the `obj_id` also as identifier (you can change later). As "
+"default, the `identifier` of the reach is also the `ws_identifier` of the "
+"channel. The reachpoint-identifier are build from the reach-identifier+'F' "
+"or +'T' (from- and to-reachpoint)."
+msgstr "Wenn im Feld Bezeichnung (reach-identifier) im Reiter Allgemein keine Eingabe gemacht wird, übernimmt QGEP die `obj_id` als Bezeichnung (kann später geändert werden). Als Vorgabewert ist die Bezeichnung der Haltung gleich dem `ws_identifier` des Kanals. Die Bezeichnung der Haltungspunkte wird aus der Haltungsbezeichnung+'F' oder +'T' (von und nach Haltungspunkt) gebildet."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:45
+msgid ""
+"See :ref:`reach_geometrysync` for automatic reachpoint levels when snapping "
+"to wastewater nodes with level."
+msgstr "Siehe :ref:`reach_geometrysync` für automatische Haltungspunkthöhen bei Schnappen auf Abwasserknoten mit Koten."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:47
+msgid ""
+"For the profile type you will get a list of defined profiles. You can edit "
+"those in **od_pipe_profile** table."
+msgstr "Für den Profiltyp erhalten Sie eine Liste von vordefinierten Profilen. Sie können diese in der **od_pipe_profile** Tabelle bearbeiten."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:53
+msgid "When finished, then click the **OK** button."
+msgstr "Wenn Sie fertig sind klicken Sie den **OK** Knopf"
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:55
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:49
+msgid "Save the information of this layer by stopping the data entry wizard."
+msgstr "Speichern Sie die Informationen des Layers, indem Sie auf **Stop Data Entry ** klicken."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:59
+msgid ""
+"The standard-fields on the **General** tab (and only those fields) do reuse "
+"the last entered attribute value when you add new reaches with the wizard. "
+"The QGIS option **Reuse the last entered attribute values** and the default "
+"values have no influence on these fields."
+msgstr "Bei Verwendung des Assistenten während der Erstellung von Haltungen verwenden die Vorgabefelder im Reiter Allgemein (und ausschliesslich diese Felder) den zuletzt eingegebene Wert. Die QGIS-Option *Letzte Attributeingaben wiederverwenden** und die Vorgabewerte haben keinen Einfluss auf diese Felder."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:61
+msgid ""
+"You can re-edit your object selecting the edit mode and then click with the "
+"info cursor on the object you want to edit."
+msgstr "Sie können einen Datensatz bearbeiten, indem Sie den Bearbeitungsmodus auswählen und dann mit dem Info Cursor auf das Objekt klicken, welches Sie bearbeiten möchten. "
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:62
+msgid ""
+"If you do not select the edit mode, you can just look at the existing data."
+msgstr "Wenn Sie den Bearbeitungsmodus nicht auswählen, können Sie nur die existierenden Daten anschauen."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:66
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:58
+msgid ""
+"For detailed information about editing see the :ref:`editing-data` chapter."
+msgstr "Detaillierte Informationen zum Bearbeiten siehe das Kapitel :ref:`editing-data`."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:70
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:61
+msgid "Further attributes and classes"
+msgstr "Weitere Attribute und Klassen"
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:72
+msgid ""
+"When a line object is digitized, a series of steps take place in the "
+"background in the QGEP database:"
+msgstr "Wenn eine Haltung digitalisiert wird, finden im Hintergrund eine Reihe von Schritten in der QGEP Datenbank statt:"
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:74
+msgid ""
+"a new object is added in the **wastewater structure** class "
+"(``od_wastewater_structure``)"
+msgstr "Ein neues Objekt wird in der Klasse **Abwasserbauwerk**  (\"od_wastewater_structure\") hinzugefügt"
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:75
+msgid ""
+"a new object is added and linked in the **channel** subclass "
+"(``od_channel``)"
+msgstr "Ein neues Objekt wird hinzugefügt und verknüpft in der Unterklasse **Kanal** (``od_channel``)"
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:76
+msgid ""
+"a new reach object is generated in the **wastewater network elements** class"
+" (``od_wastewater_networkelement``) and its subclass **reach** "
+"(``od_reach``)"
+msgstr "Ein neues Haltungsobjekt wird in der Tabelle  **Abwassernetzelement** (``od_wastewater_networkelement``) und dessen Unterklasse **Haltung** (``od_reach``) generiert."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:78
+msgid ""
+"two new reach point objects are added and linked to the reach "
+"(**rp_from_node**, **rp_to_node**)"
+msgstr "Zwei neue Haltungspunktobjekte werden hinzugefügt und verknüpft mit der Haltung (**rp_from_node**, **rp_to_node**)"
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:86
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:79
+msgid "Geometry synchronization"
+msgstr "Geometrieabgleichung"
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:88
+msgid ""
+"The start- and the end-point of the added feature's geometry defines the "
+"reach point's geometries. The altitude (Z value of geometry) of the added "
+"feature's start- and the end-point is defined by the level values "
+"`rp_from_level` and `rp_to_level`. This means, the Z values of the reach "
+"point's geometry is set by the level as well. These values could be filled "
+"up by the snapped features:"
+msgstr "Start- und Endpunkt der Linien-Geometrie bestimmen die Geometrie der Haltungspunkte. Die Höhe (Z Wert der Geometrie) des Start- und Endpunktes der hinzugefügten Linie wird über die Koten `HP_von_Kote` und `HP_nach_Kote` definiert. Das heisst, der Z Wert der Geometrie des Haltungspunktes wird ebenso über den Kote-Wert gesetzt. Diese Werte können über das \"geschnappte\" Objekt gesetzt werden:"
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:92
+msgid ""
+"The snapped features 9405 and 9390 have the altitude from the wastewater "
+"node bottom_level. These values are copied into the attributes "
+"`rp_from_level` and `rp_to_level` and can be edited there by the user. When "
+"the user changes these values, the Z value of the geometry of the digitized "
+"feature and its reach points will be changed as well."
+msgstr "Die geschnappten Punkte (Abwasserknoten) 9405 und 9390 beziehen ihre Höhen von den Sohlenkote der Abwasserknoten. Diese Werte werden in die Attribute `HP_von_Kote` und `HP_nach_Kote` eingefügt und können dort von Benutzer verändert werden. Bei Änderung durch den Benutzer, werden die Z-Werte der digitalisierten Linien-Geometrie sowie der korrespondierenden Haltungspunkte auch geändert."
+
+#: ../../en/user-guide/digitizing/digitizingchannels.rst:96
+msgid ""
+"If a reach point's level changes, the Z value of its geometry changes, and "
+"so does the start- or the end-point of the reach. When the Z value of the "
+"reach's geometry changes, the reach point's geometry and its level is "
+"ajusted as well. If both values change, the level takes precendence. On an "
+"insert it's like when both value change. Means the reach's geometry is set "
+"according to the reach point's levels and if they are NULL, the Z value of "
+"the reach's start- and end-point are set to NaN."
+msgstr "Wenn die Kote eines Haltungpunktes ändert, ändert sich auch der Z Wert seiner Punkt-Geometrie und somit auch die Geometrie des Start- bzw. Endpunktes der Haltungslinie. Wenn der Z Wert der Geometrie der Haltung ändert, ändert auch die Geometrie und die Kote der Haltungspunkte. Wenn beide Werte gleichzeitig ändern, hat das Feld Kote Vorrang. Beim Einfügen ist es wie wenn beide Werte ändern. Also wird die Geometrie der Haltung gemäss der Koten der Haltungspunkte gesetzt und falls diese NULL sind, werden die Z Werte des Start- und Endpunktes der Haltung auf NaN gesetzt."
+
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:2
+msgid "Digitizing detailed geometry"
+msgstr "Digitalisieren detaillierter Geometrie "
+
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:7
+msgid "You can add a detailed geometry to waste water structures."
+msgstr "Sie können für Abwasserbauwerke eine detaillierte Geometrie ( Polygon) hinzufügen "
+
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:9
+msgid "This is recommended for:"
+msgstr "Das ist empfohlen für:"
+
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:11
+msgid ""
+"Special structures and discharge points, because they are not normed "
+"structures like manholes, where you can define **dimension1** and "
+"**dimension2** to describe the extension."
+msgstr "Sonderbauwerken und Einleitstellen, wenn diese keine Standardbauwerke wie Normschächte sind, bei denen man **Dimension1** und **Dimension2** definieren kann, um die Geometrie zu beschreiben."
+
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:13
+msgid ""
+"Infiltration installations where **dimension1** and **dimension2** are not "
+"enough to describe the geometry"
+msgstr "Versickerungsanlagen bei welchen **Dimension1** und **Dimension2** nicht genügen, um die Geometrie zu beschreiben"
+
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:15
+msgid "Detailed geometry is usually not used for manholes or channels!"
+msgstr "Detaillierte Geometrie wird normalerweise nicht für Kanalschächte oder Kanäle benutzt."
+
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:19
+#: ../../en/user-guide/digitizing/digitizingdrainagechannel.rst:10
+msgid "Digitizing tool"
+msgstr "Digitalisierungswerkzeug "
+
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:21
+#: ../../en/user-guide/digitizing/digitizingdrainagechannel.rst:12
+#: ../../en/user-guide/editing/moving.rst:21
+msgid "Select the **vw_qgep_wastewater_structure** layer"
+msgstr "Wählen Sie den **vw_qgep_wastewater_structure** Layer"
+
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:22
+msgid ""
+"Select the object where you want to add a detailed geometry with the info "
+"tool"
+msgstr "Wählen Sie das Objekt, bei welchem Sie detaillierte Geometrie hinzufügen wollen mit dem Info Werkzeug"
+
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:23
+msgid "Right click the object"
+msgstr "Rechtsklick auf das Objekt"
+
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:24
+msgid ""
+"if there are several objects: select the **vw_qgep_wastewater_structure** "
+"layer"
+msgstr "Wenn mehrere Objekte vorhanden sind: wählen Sie den **vw_qgep_wastewater_structure** Layer"
+
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:25
+msgid "Choose **Digitize**"
+msgstr "Wählen Sie **Digitize**"
+
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:29
+msgid "You can now start digitizing the polygon."
+msgstr "Sie können nun mit der Digitalisierung des Polygons beginnen"
+
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:35
+msgid "Right click to stop."
+msgstr "Rechtsklick, um zu stoppen"
+
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:39
+msgid ""
+"An other way is to open the **vw_qgep_wastewater_structure** form with the "
+"info tool and then choose **Digitize** in the **Actions** menu of the form."
+msgstr "Eine andere Möglichkeit besteht darin, die **vw_qgep_wastewater_structure** Eingabemaske mit dem Info-Tool zu öffnen und dann im **Aktionen**-Menu der Eingabemaske **Digitize** wählen."
+
+#: ../../en/user-guide/digitizing/digitizingdetailedgeometry.rst:41
+msgid ""
+"If the geometry disappears after digitizing or if you get an message (like "
+"'Add part'), you have probably tried to digitize over a catchment area (or "
+"an other polygon theme) and the layer has set the avoid overlap option in "
+"the snapping settings. Do change the avoid overlap settings."
+msgstr "Wenn die Geometrie nach dem Digitalisieren verschwindet oder ein Meldung (z.B. 'Teil hinzufügen') erscheint, dann war vermutlich eine Einzugsgebietsfläche (oder ein anderes Flächenthema) bereits mit einem Datensatz an dieser Stelle vorhanden und für den Layer ist die Option Überlappung vermeiden in den Schnappen-Einstellungen  der Einrastwerkzeugleiste gewählt. Die Überlappung-Einstellungen in der Einrastwerkzeugleiste ändern hilft."
+
+#: ../../en/user-guide/digitizing/digitizingdrainagechannel.rst:2
+msgid "Digitizing Detailed Geometry as Drainage Channel"
+msgstr "Digitalisieren detaillierter Geometrie für Entwässerungsrinnen"
+
+#: ../../en/user-guide/digitizing/digitizingdrainagechannel.rst:7
+msgid ""
+"You can add a polygon to a wastewater structure just with drawing a simple "
+"line. The function creates a rectangle from the line with a width of 20cm. "
+"This is specially useful for manholes with function drainage channel."
+msgstr "Mit dem Zeichnen einer einfachen Linie kann eine Fläche zu einem Abwasserbauwerk hinzugefügt werden. Die Funktion erzeugt aus der Linie ein Rechteck mit 20cm Breite. Das ist speziell nützlich bei Entwässerungsrinnen (Klasse Normschacht)."
+
+#: ../../en/user-guide/digitizing/digitizingdrainagechannel.rst:13
+msgid ""
+"Use the **Identify features** tool on the object to which you want to add a "
+"drainage channel geometry"
+msgstr "Benutzen sie das **Objekte abfragen** Werkzeug auf dem Objekt, welchem Sie eine Entwässerungsrinnen-Geometrie hinzufügen wollen"
+
+#: ../../en/user-guide/digitizing/digitizingdrainagechannel.rst:14
+msgid ""
+"Right click the object and select the **vw_qgep_wastewater_structure** layer"
+msgstr "Rechtsklick auf das Objekt und wählen Sie den **vw_qgep_wastewater_structure** Layer"
+
+#: ../../en/user-guide/digitizing/digitizingdrainagechannel.rst:15
+msgid "Choose **Digitize Drainage Channel**"
+msgstr "Wählen Sie **Digitize Drainage Channel**"
+
+#: ../../en/user-guide/digitizing/digitizingdrainagechannel.rst:16
+msgid "You can now start digitizing: draw a simple line with two clicks."
+msgstr "Jetzt mit dem Digitalisieren beginnen: einfach eine Linie mit 2 Klicks definieren."
+
+#: ../../en/user-guide/digitizing/digitizingdrainagechannel.rst:17
+msgid "The polygon is created in the **od_wastewater_structure** layer"
+msgstr "Die Fläche wird im Layer **od_wastewater_structure** erstellt."
+
+#: ../../en/user-guide/digitizing/digitizingdrainagechannel.rst:19
+msgid ""
+"An other way is to open the vw_qgep_wastewater_structure form with the info "
+"tool and then choose **Digitize Drainage Channel** in the **Actions** menu "
+"of the form."
+msgstr "Eine andere Möglichkeit besteht darin, die **vw_qgep_wastewater_structure** Eingabemaske mit dem Info-Tool zu öffnen und dann im **Aktionen**-Menu der Eingabemaske **Digitize Drainage Channel** wählen."
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:4
+msgid "Digitizing Wastewater Structures"
+msgstr "Abwasserbauwerke digitalisieren"
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:9
+msgid ""
+"QGEP has a wizard to correctly collect manholes and special structures. see "
+"the :ref:`wizard` chapter."
+msgstr "QGEP verfügt über einen Assistenten, um Schächte und Sonderbauwerke einfach zu erfassen. Siehe dazu Kapitel :ref:`wizard`."
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:11
+msgid ""
+"Select the **Wizard** button, then click **Start Data Entry** and choose "
+"**Wastewater Structure** in the pull down menu."
+msgstr "Wähle den **Wizard** Knopf, klicke dann auf **Start Data Entry** und wähle dann **Wastewater Structure** im Dropdown-Menu"
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:19
+msgid ""
+"Now the cursor changes to the digitizing symbol and you can select the "
+"location of the new point element."
+msgstr "Der Cursor ändert  zum Digitalisierungssymbol und es kann der Standort des neuen Punktelementes festgelegt werden."
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:21
+msgid ""
+"Then the **vw_qgep_wastewater_structure** form opens and you can start "
+"adding data in the **General** tab:"
+msgstr "Es öffnet das **vw_gep_wastewater_structure** Formular und die Daten können im Reiter **Allgemein** eingetragen werden:"
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:25
+msgid "Select the ws_type you want (preselected is 'manhole'):"
+msgstr "Wähle den Abwasserbauwerk-Typ (vorgewählt ist 'Normschacht'):"
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:27
+msgid "manhole"
+msgstr "Normschacht"
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:28
+msgid "special_structure"
+msgstr "Spezialbauwerk"
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:29
+msgid "discharge_point"
+msgstr "Einleitstelle"
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:30
+msgid "infiltration_installation"
+msgstr "Versickerungsanlage"
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:32
+msgid ""
+"Depending on the **ws_type**, you will have different fields and tabs in the"
+" form."
+msgstr "Abhängig von **ws_type** gibt es unterschiedliche Felder und Reiter im Formular."
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:34
+msgid ""
+"Then add the identifier (this is the attribute that will be displayed on the"
+" map)."
+msgstr "Fügen Sie dann die Bezeichnung (identifier) hinzu (dies ist das Attribut, das auf der Karte angezeigt wird)."
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:36
+msgid ""
+"If you do not enter an identifier, QGEP will enter the obj_id also as "
+"identifier (you can change later). As default, the identifier of the "
+"wastewater structure is also the identifier of the cover and of the "
+"wastewater node."
+msgstr "Wenn keine Bezeichnung eingegeben wird, übernimmt QGEP die Obj_ID als Bezeichnung (kann später geändert werden). Die Bezeichnung des Abwasserbauwerks ist auch der Vorgabewert für die Bezeichnung des Deckels und die Bezeichnung des Abwasserknotens."
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:38
+msgid ""
+"Add other attributes in the **General** tab. You can also add attributes in "
+"the other tabs (Cover, Wastewater Structure, Manhole, WasteWater Node)."
+msgstr "Fügen Sie weitere Attributwerte im Reiter **Allgemein** hinzu. Sie können auch Attributwerte in anderen Reitern hinzufügen (Deckel, Abwasserbauwerk, Normschacht, Abwasserknoten). "
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:41
+msgid ""
+"The idea of the **General** tab is, that in the normal digitizing process "
+"(95% of the manholes) the user has not to change the tabs to enter the "
+"attributes that are necessary."
+msgstr "Die Idee hinter dem Reiter **Allgemein** ist, dass beim normalen Digitalisieren (95% der Normschächte) der Benutzer nicht zu einem anderen Reiter wechseln muss, um die notwendigen Felder abzufüllen."
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:43
+msgid ""
+"You can not add new records in the tabs **Covers**, **Structure Parts**, "
+"**Wastewater Nodes** and **Maintenance**, because you have to save first the"
+" Wastewater Structure-record to the database before you can add additional "
+"records. You can not use **Actions** for the same reason. First safe the "
+"record."
+msgstr "In den Reitern Deckel, Bauwerkteile, Abwasserknoten und Erhaltungsereignisse können keine neuen Datensätze hinzugefügt werden, weil zuerst der Abwasserbauwerk-Datensatz in der Datenbank gesichert werden muss. Die **Aktionen** können aus dem gleichen Grund auch noch nicht benutzen werden. Zuerst muss der Datensatz gesichert werden. "
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:45
+msgid "Click **OK** to close the form."
+msgstr "**OK** klicken um das Formular zu schliessen."
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:53
+msgid ""
+"You can re-edit your point object selecting the edit mode and then click "
+"with the info cursor on the object you want to edit. If you do not select "
+"the edit mode, you can just look at the existing data."
+msgstr "Sie können Ihr Punktobjekt bearbeiten, indem Sie den Bearbeitungsmodus auswählen und dann mit dem Info Tool auf das Objekt klicken, welches Sie bearbeiten möchten. Wenn Sie den  Bearbeitungsmodus nicht auswählen, können Sie nur die existierenden Daten anschauen."
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:63
+msgid ""
+"When a wastewater_structure object is digitized, a series of steps take "
+"place in the background in the QGIS database:"
+msgstr "Wenn ein Abwasserbauwerk-Punktobjekt digitalisiert wird, findet eine Reihe von Schritten im Hintergrund in der QGEP Datenbank statt:"
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:65
+msgid "an new object in the class wastewater structure is added"
+msgstr "ein neues Objekt Abwasserbauwerk wird hinzugefügt"
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:67
+msgid ""
+"a new object in the respective subclass [discharge_point, "
+"infiltration_installation, manhole, special_structure] is added and linked"
+msgstr "ein neues Objekt der entsprechenden Unterklasse [Normschacht, Spezialbauwerk, Versickerungsanlage, Einleitstelle] wird hinzugefügt und verknüpft"
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:69
+msgid "a new cover object is added and linked to the wastewater structure"
+msgstr "ein neuer Deckel-Bauwerksteil wird hinzugefügt und mit dem Abwasserbauwerk verknüpft"
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:71
+msgid ""
+"a new wastewater node object is generated in wastewater network elements and"
+" its subclass wastewater nodes"
+msgstr "ein neuer Abwasserknoten wird in den Abwassernetzelementen und dessen Unterklasse Abwasserknoten erstellt"
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:73
+msgid ""
+"To add additional objects such as structure parts (besides covers there are "
+"access aids, back flow prevention etc) you have to save first and then edit "
+"the point object (see the :ref:`editing-data` chapter)."
+msgstr "Wenn Sie zusätzliche Objekte (Bauwerkteile wie Einstiegshilfe, Bankett, Rückstauklappen usw.) hinzufügen wollen, dann müssen sie zuerst den Datensatz sichern und danach das Abwasserbauwerk editieren (vgl. das Kapitel :ref:`editing-data` )."
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:75
+msgid ""
+"To add a second cover or a second wastewater node to a wastewater structure,"
+" see the :ref:`editing-data` chapter."
+msgstr "Am einen zweiten/weiteren Deckel oder Abwasserknoten zum Abwasserbauwerk hinzuzufügen, vgl. Kapitel  :ref:`editing-data`."
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:81
+msgid ""
+"The added feature's geometry defines the geometry of the connected tables "
+"like cover and wastewater node. The vw_qgep_wastewater_structure-point "
+"itself has no Z value. When the level of the cover `co_level` is entered, "
+"this value is adapted to the Z value of the cover's geometry. The bottom "
+"level of the wastewater node `wn_bottom_level` defines the Z value of the "
+"wastewater node's geometry."
+msgstr "Der digitalisierte Punkt wird auch für die verknüpften Klassen Deckel und Abwasserknoten übernommen. Der vw_qgep_Abwasserbauwerk-Punkt selber hat aber keinen Z-Wert. Wenn die Deckelkote 'DE_Kote' erfasst wird, wird diese Kote als Z Wert bei der Deckelgeometrie verwendet. Der Wert aus dem Feld 'AK_Sohlenkote' wird als Z Wert der Abwasserknotengeometrie übernommen."
+
+#: ../../en/user-guide/digitizing/digitizingwastewaterstructures.rst:84
+msgid ""
+"If a cover level changes, the Z value of the cover's geometry will be "
+"adjusted. When the geometry changes, the co_level attribut is adjusted as "
+"well. If both values change, the level takes precedence. On an insert it's "
+"like when both value change. Means the cover's geometry is set according to "
+"the cover level and if it's NULL, the Z value is set to NaN. The same "
+"situation is on editing the wastewater node directly."
+msgstr "Wenn die Kote eines Deckels ändert, ändert sich auch der Z Wert seiner Geometrie. Wenn der Z Wert der Geometrie des Deckels ändert, ändert auch die Kote des Deckel. Wenn beide Werte gleichzeitig ändern, hat die Kote Vorrang. Beim Einfügen ist es wie wenn beide Werte ändern. Also wird die Geometrie des Deckels gemäss der Kote des Deckels gesetzt und falls diese NULL ist, wird der Z Werte der Geometrie auf NaN gesetzt. Das gleiche gilt für Abwasserknoten. "
+
+#: ../../en/user-guide/digitizing/importingdata.rst:2
+msgid "Importing data"
+msgstr "Datenimport"
+
+#: ../../en/user-guide/digitizing/importingdata.rst:4
+msgid ""
+"It is quite easy to import data (geometry and attributes) from an external "
+"software. Here is a general description and a specific example."
+msgstr "Es ist recht einfach, Daten (Lage und Attribute) aus externen Quellen zu importieren. Hier eine allgemeine Beschreibung und ein Beispiel."
+
+#: ../../en/user-guide/digitizing/importingdata.rst:10
+msgid ""
+"You have to add the data you want to import as (vector) layer into the QGEP "
+"project."
+msgstr "Die zu importierenden Daten sind als (Vektor-)Layer im QGEP Projekt hinzuzufügen."
+
+#: ../../en/user-guide/digitizing/importingdata.rst:11
+msgid ""
+"The field names of the attributes have to be the same as the field names of "
+"the QGEP Layer. Therefore it is normally not a good idea the use shp-files, "
+"because of the 10 letters limitation of the dbf-format (Alias field names do"
+" not work)."
+msgstr "Die Feldnamen der Attribute müssen gleich sein wie die Feldnamen im QGEP Layer. Deshalb sind Shp-Dateien meist nicht geeignet wegen der Beschränkung der Feldnamen im dbf-Format auf 10 Stellen (und Alias-Feldnamen funktionieren leider nicht)."
+
+#: ../../en/user-guide/digitizing/importingdata.rst:13
+msgid ""
+"If you have a translated project, be sure to take the English field names "
+"(not the translated name that you find as Alias of the field)."
+msgstr "Wenn das QGEP Projekt ein übersetztes Projekt ist, müssen trotzdem die englischen Feldnamen verwendet werden (und nicht die übersetzten Feldnamen aus dem Alias)."
+
+#: ../../en/user-guide/digitizing/importingdata.rst:14
+msgid ""
+"If there is a field with value list, you have to use the code, not the plain"
+" text."
+msgstr "Wenn ein Attribut eine Werteliste hat, muss der Code-Wert verwendet werden und nicht der Volltext."
+
+#: ../../en/user-guide/digitizing/importingdata.rst:15
+msgid ""
+"If your fields are prepared as described above, then just copy and paste in "
+"the QGEP-layer."
+msgstr "Wenn die Felder entsprechend vorbereitet sind, dann können die Daten einfach kopiert und im QGEP-Layer eingefügt werden."
+
+#: ../../en/user-guide/digitizing/importingdata.rst:18
+msgid "Example Importing manholes from a TXT-File:"
+msgstr "Beispiel Import Schächte mit einer TXT-Datei:"
+
+#: ../../en/user-guide/digitizing/importingdata.rst:20
+msgid "Change the field names to identifier, x, y, co_level"
+msgstr "Ändern der Feldnamen auf identifier, x, y, co_level  (englische Feldnamen für Bezeichnung, X, Y, Deckelkote)"
+
+#: ../../en/user-guide/digitizing/importingdata.rst:24
+msgid ""
+"Open the txt-file with :menuselection:`Layer --> Add Layer --> Add Delimited"
+" Text Layer...`."
+msgstr "Das Textfile öffnen mit :menuselection:`Layer --> Layer hinzufügen -->  Textdatei als Layer importieren...`."
+
+#: ../../en/user-guide/digitizing/importingdata.rst:28
+msgid "You have now a vector-layer with your points in the QGEP-project"
+msgstr "Es gibt jetzt einen Vektor-Layer mit den Punkten im QGEP-Projekt"
+
+#: ../../en/user-guide/digitizing/importingdata.rst:29
+msgid "Select the points of the new layer"
+msgstr "Die Punkt im neuen Layer auswählen"
+
+#: ../../en/user-guide/digitizing/importingdata.rst:33
+msgid "Choose :menuselection:`Edit --> Copy Features`."
+msgstr "Wähle :menuselection:`Bearbeiten --> Objekte kopieren`."
+
+#: ../../en/user-guide/digitizing/importingdata.rst:34
+msgid "Select the vw_qgep_wastewater_structure layer and set it editable"
+msgstr "Wählen Sie vw_qgep_wastewater_structure und wechseln Sie zum Bearbeitungsmodus."
+
+#: ../../en/user-guide/digitizing/importingdata.rst:35
+msgid "Choose :menuselection:`Edit --> Paste Features`."
+msgstr "Wähle :menuselection:`Bearbeiten --> Objekte einfügen`."
+
+#: ../../en/user-guide/digitizing/importingdata.rst:41
+msgid ""
+"The ws_type is set as default to manhole. The identifier is used not only "
+"for the wastewater_structure, but also as cover_identifier and as "
+"wastewaternode_identifier."
+msgstr "Als ws_type (Abwasserbauwerk-Subklasse) wird standardmässig Normschacht verwendet. Die Bezeichnung wird nicht nur für das Abwasserbauwerk, sondern auch für den Deckel und den Abwasserknoten verwendet."
+
+#: ../../en/user-guide/digitizing/importingdata.rst:44
+msgid "Example Importing manholes with attributes:"
+msgstr "Beispiel Import Schächte mit Attributen:"
+
+#: ../../en/user-guide/digitizing/importingdata.rst:46
+msgid "Example to add additional attributes"
+msgstr "Beispiel für den Import weiterer Attribute"
+
+#: ../../en/user-guide/digitizing/importingdata.rst:50
+msgid ""
+"The field ws_type is an exception. Possible values are manhole, "
+"special_structure, infiltration_installation, discharge_point."
+msgstr "Das Feld ws_type ist eine Ausnahme. Mögliche Werte sind manhole, special_structure, infiltration_installation, discharge_point."
+
+#: ../../en/user-guide/digitizing/importingdata.rst:51
+msgid "For other fields with value lists you have to use the code."
+msgstr "Für andere Felder mit einer Werteliste muss der Code-Wert verwendet werden."
+
+#: ../../en/user-guide/digitizing/importingdata.rst:52
+msgid ""
+"In the example above, the values for ma_function in the row discharge_point "
+"or special_structure has no effect."
+msgstr "Im obigen Beispiel hat der Wert im Feld ma_function (Normschacht-Funktion) in den Zeilen mit discharge_point oder special_structure (also nicht Normschacht) keinen Effekt."
+
+#: ../../en/user-guide/digitizing/index.rst:2
+msgid "Digitizing in QGEP"
+msgstr "Digitalisieren in QGEP"
+
+#: ../../en/user-guide/digitizing/index.rst:4
+msgid ""
+"This represents a guide on how to correctly collect and digitize data of "
+"sewer networks including building the topology."
+msgstr "Eine Anleitung wie man richtig Kanalnetze erfasst."
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:4
+msgid "Connect Wastewater Network Elements"
+msgstr "Abwassernetzwerkselemente verbinden"
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:6
+msgid ""
+"This represents a guide on how to connect wastewater network elements in "
+"QGEP."
+msgstr "Eine Anleitung zur Verbindung von Abwassernetzelementen in QGEP"
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:11
+msgid "QGEP has a tool to connect wastewater network elements"
+msgstr "QGEP verfügt über ein Werkzeug um Abwassernetzelemente zu verbinden"
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:16
+msgid "How to connect reaches to nodes or reaches to reaches"
+msgstr "Ein Haltung mit einem Knoten oder einer anderen Haltung verbinden"
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:19
+msgid "The **vw_qgep_reach** layer has to be in edit mode"
+msgstr "Der Layer **vw_qgep_reach** muss im Bearbeitungsmodus sein"
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:20
+msgid "Click the **Connect wastewater network elements** button"
+msgstr "Klicke den **Connect wastewater network elements** Knopf"
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:21
+msgid ""
+"If you move the mouse over an reach, that can be connected, it is marked: "
+"you can click"
+msgstr "Wenn der Mausezeiger über ein Haltung fährt, die verknüpft werden kann, dann wird die Haltung markiert: jetzt kann man klicken"
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:22
+msgid ""
+"Move the mouse to the network element, to which the first object will be "
+"connected (again: selectable objects get marked) and click again"
+msgstr "Den Mausezeiger zu einem Abwassernetzelement führen, mit dem das erste Objekt verknüpft werden soll (wieder werden wählbare Objekte markiert) und dort wieder klicken"
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:26
+msgid ""
+"A window appears, where you can choose, which connection will be defined. If"
+" you connect a reach, the window looks like this:"
+msgstr "Ein Fenster erscheint, in dem gewählt werden kann, welche Verknüpfung definiert wird. Wenn eine Haltung verknüpft wird, sieht das Fenster so aus:"
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:35
+#: ../../en/user-guide/editing/moving.rst:51
+msgid "Video Tutorial"
+msgstr "Video Tutorial"
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:37
+msgid ""
+"See `this video tutorial (QGIS version 2): <https://vimeo.com/171536774>`_"
+msgstr "Vgl `das Video Tutorial (QGIS version 2): <https://vimeo.com/171536774>`_"
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:41
+msgid "How to delete a connection"
+msgstr "Eine Verknüpfung löschen"
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:43
+msgid ""
+"There is no special tool in the moment to delete a connection between "
+"network elements."
+msgstr "Zur Zeit gibt es kein spezielles Werkzeug, um eine Verknüpfung zwischen Abwassernetzwerkelementen zu löschen."
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:45
+msgid "Select the **vw_qgep_reach** layer and set it to edit mode"
+msgstr "Wähle den Layer **vw_qgep_reach** und aktiviere den Bearbeitungsmodus"
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:46
+msgid ""
+"Click on the **Identify Features** button and select the reach to modify by "
+"double clicking"
+msgstr "Wähle das **Info** Werkzeug und doppelklicke die Haltung, welche geändert werden soll"
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:47
+msgid ""
+"Delete the value in the **rp_..._fk_wastewater_networkelement** field to "
+"delete the connection"
+msgstr "Lösche den Wert in Feld **rp_..._fk_wastewater_networkelement**, um die Verknüpfung zu löschen"
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:51
+msgid ""
+"Be aware of the 'VSA Erfassungsgrundsätze': A reach point from "
+"(rp_from_fk_wastewater_networkelement) should never be connected to another "
+"reach."
+msgstr "Beachte die 'VSA Erfassungsgrundsätze': Ein von-Haltungspunkt (rp_from_fk_wastewater_networkelement) soll nie mit einer anderen Haltung verknüpft werden."
+
+#: ../../en/user-guide/editing/connect_wastewater_network_elements.rst:52
+msgid ""
+"For example, when you have a reach discharging directly into another one "
+"without a structure between the two, the upstream reach should be connected "
+"to the downstream reach (rp_from_fk_wastewater_networkelement = downstream "
+"reach). But inversely, the downstream reach shouldn't be connected to the "
+"upstream one. This rule is for swwf-channels (secondary network). In pwwf-"
+"network, there must be always a node between to reaches."
+msgstr "Beispiel: Wenn eine Haltung direkt mit einer anderen Haltung verknüpft ist ohne ein Schachtbauwerk, dann soll die obere Haltung mit der unteren Haltung verknüpft werden (rp_from_fk_wastewater_networkelement = downstream reach). Aber die untere Haltung darf in diesem Fall nicht mit der oberen Haltung verknüpft werden. Diese Regel gilt für SAA-Kanäle (sekundäres Netzwerk). In einem PAA-Netzwerk sind immer Knoten zwischen den Haltungen verknüpft."
+
+#: ../../en/user-guide/editing/editing.rst:4
+msgid "Editing of existing data"
+msgstr "Bearbeiten von bestehenden Daten"
+
+#: ../../en/user-guide/editing/editing.rst:6
+msgid "This represents a guide on how to edit existing data in QGEP."
+msgstr "Eine Anleitung zum Bearbeiten von vorhandenen Daten in QGEP."
+
+#: ../../en/user-guide/editing/editing.rst:9
+msgid "Demo project"
+msgstr "Demoprojekt "
+
+#: ../../en/user-guide/editing/editing.rst:11
+msgid ""
+"Make sure you have imported the demo project with pgAdminIII (see the "
+":ref:`database-initialization` chapter)"
+msgstr "Gehen Sie sicher, dass sie das Demoprojekt mit pgAdminIII (siehe :ref:`database-initialization` Kapitel) importiert haben"
+
+#: ../../en/user-guide/editing/editing.rst:12
+msgid ""
+"Open the demo project by going to the main menu and press **Project** --> "
+"**Open**  or by pressing ``CTRL`` + ``O`` at the same time."
+msgstr "Öffnen sie das Demoprojekt indem Sie ins Hauptmenu gehen und dann **Project** --> **Open** drücken oder indem sie \"STRG\" + \"O\" gemeinsam drücken."
+
+#: ../../en/user-guide/editing/editing.rst:18
+msgid "Login to the database"
+msgstr "In der Datenbank anmelden"
+
+#: ../../en/user-guide/editing/editing.rst:22
+msgid "You should now have the demo project loaded"
+msgstr "Sie sollten nun das Demoprojekt geladen haben"
+
+#: ../../en/user-guide/editing/editing.rst:26
+msgid ""
+"The project consists of different layers. Depending on your task what to "
+"edit or add you choose the layer."
+msgstr "Das Projekt besteht aus verschiedenen Layern. Je nach Aufgaben wählen Sie die Layer, um Objekte zu bearbeiten oder hinzuzufügen."
+
+#: ../../en/user-guide/editing/editing.rst:29
+msgid "Layers"
+msgstr "Layer"
+
+#: ../../en/user-guide/editing/editing.rst:31
+msgid ""
+"QGEP has different predefined layers. For explanations, see the :ref:`layer-"
+"explanation` chapter."
+msgstr "QGEP hat verschiedene vordefinierte Layer. Vgl. dazu das Kapitel :ref:`layer-explanation`."
+
+#: ../../en/user-guide/editing/editing.rst:35
+msgid "Changing attributes of point elements (manholes / special structures)"
+msgstr "Attribute der Punktelemente ändern (Normschächte / Spezialbauwerke)"
+
+#: ../../en/user-guide/editing/editing.rst:37
+msgid ""
+"To change an attribute you first need to select the "
+"**vw_qgep_wastewater_structure** layer."
+msgstr "Um einen Attribut zu ändern müssen Sie zuerst den **vw_qgep_wastewater_structure** Layer auswählen."
+
+#: ../../en/user-guide/editing/editing.rst:38
+msgid ""
+"Switch to the edit mode or start the **QGEP Wizard** and click on **Start "
+"Data Entry**."
+msgstr "Aktivieren sie den Bearbeitungsmodus oder starten Sie den **QGEP Wizard** und klicken sie auf **Start Data Entry**."
+
+#: ../../en/user-guide/editing/editing.rst:39
+msgid ""
+"Then click on the **Identify features** button and click on the element you "
+"want to edit."
+msgstr "Dann klicken Sie auf den **Objekte abfragen** Knopf und wählen das Element, welches Sie bearbeiten wollen, mit einem Klick"
+
+#: ../../en/user-guide/editing/editing.rst:43
+msgid "The **vw_qgep_wastewater_structure** form will open."
+msgstr "Das **vw_qgep_wastewater_structure** Formular öffnet sich."
+
+#: ../../en/user-guide/editing/editing.rst:47
+msgid "On the first tab (General) you can change the most common attributes"
+msgstr "Auf dem ersten Reiter (Allgemein) können Sie die am häufigsten benutzten Attribute erfassen"
+
+#: ../../en/user-guide/editing/editing.rst:48
+msgid ""
+"To change attributes of related tables (e.g. cover) you need to select the "
+"correspondent tab. Depending on the kind of wastewater structure you can "
+"edit additional attributes in the respective tab (**special structure**, "
+"**manhole**)."
+msgstr "Um die Attribute von in Verbindung stehenden Tabellen (z.B Deckel) zu ändern, müssen Sie den entsprechenden Reiter auswählen. Abhängig von der Art des Abwasserbauwerks können Sie zusätzliche Attribute im zugehörigen Reiter bearbeiten (**Spezialbauwerk**, **Normschacht**)."
+
+#: ../../en/user-guide/editing/editing.rst:51
+msgid ""
+"In **Structure parts** tab you can add further parts such as **access "
+"aids**, **backflow prevention**, **dryweather flume** etc."
+msgstr "Unter dem Reiter **Bauwerkteile/structure parts** können Sie weitere Bauwerksteile wie zum Beispiel **Einstiegshilfen/access aids**, **Rückstausicherung/backflow prevention**, **Trockenwetterrinne/dryweather flume** etc. hinzufügen"
+
+#: ../../en/user-guide/editing/editing.rst:55
+msgid ""
+"The **covers** and **wastewater nodes** tab allows you to look to all nodes "
+"or covers of a wastewater structure and to add further elements. See the "
+":ref:`Adding-additional-covers-and-nodes-to-an-existing-wastewater-"
+"structure` chapter below."
+msgstr "Die Reiter **Deckel** und **Abwasserknoten** zeigen alle Knoten und Deckel eines Abwasserbauwerks und erlauben, weitere Datensätze hinzuzufügen. Siehe dazu das Kapitel :ref:`Adding-additional-covers-and-nodes-to-an-existing-wastewater-structure` ."
+
+#: ../../en/user-guide/editing/editing.rst:59
+msgid "Changing attributes of linear elements (channels)"
+msgstr "Attribute der Linienelemente ändern (Kanäle)"
+
+#: ../../en/user-guide/editing/editing.rst:61
+msgid "To change an attribute you first need to select the **vw_qgep_reach**"
+msgstr "Um einen Attribut zu ändern müssen Sie zuerst den **vw_qgep_reach** Layer auswählen."
+
+#: ../../en/user-guide/editing/editing.rst:62
+msgid "Switch to the edit mode."
+msgstr "Aktivieren Sie den Bearbeitungsmodus."
+
+#: ../../en/user-guide/editing/editing.rst:63
+msgid ""
+"Then click on the **Identify features** button and click the reach you want "
+"to edit."
+msgstr "Dann klicken Sie auf den **Objekte abfragen** Knopf und wählen die Haltung, welches Sie bearbeiten wollen, mit einem Klick"
+
+#: ../../en/user-guide/editing/editing.rst:64
+msgid "The **vw_qgep_reach** form will open."
+msgstr "Das **vw_qgep_reach** Formular öffnet sich."
+
+#: ../../en/user-guide/editing/editing.rst:68
+msgid ""
+"On the first tab (**General**) you can change the most common attributes."
+msgstr "Auf dem ersten Reiter (**Allgemein**) können die am häufigsten benutzten Attribute geändert werden."
+
+#: ../../en/user-guide/editing/editing.rst:69
+msgid ""
+"To change attributes of related tables (e.g. **reach points**) select the "
+"correspondent tab."
+msgstr "Um die Attribute von in Verbindung stehenden Tabellen (z.B **Haltungspunkte/reach points**) zu ändern, wählen Sie den entsprechenden Reiter."
+
+#: ../../en/user-guide/editing/editing.rst:74
+msgid "Change reach direction"
+msgstr "Wechseln der Haltungs-Richtung"
+
+#: ../../en/user-guide/editing/editing.rst:76
+msgid ""
+"The definition in VSA-DSS is, that reaches have to be defined in the flow "
+"direction (the start node is where the water comes from, the end node is "
+"where the water flows)."
+msgstr "In der VSA-DSS ist definiert, dass Haltungen in Fliessrichtung gezeichnet werden müssen (der Start-Haltungspunkt ist dort wo das Abwasser zufliesst, der End-Haltungspunkt ist dort wo das Abwasser weiterfliesst)."
+
+#: ../../en/user-guide/editing/editing.rst:78
+msgid ""
+"QGEP has a tool to change the reach direction. With this tool you can change"
+" all selected reaches at once. Do not use the **Reverse line** button of "
+"QGIS, because this button do not change the reach points and their "
+"connection to wastewater network elements."
+msgstr "QGEP hat ein Tool um die Haltungs-Richtung zu wechseln. Mit diesem Tool können alle selektierten Haltungen zusammen geändert werden. Benutzen sie nicht den QGIS-Knopf **Linie umkehren**, weil dieser Befehl die Haltungspunkte und die Verknüpfungen zu den Abwassernetzelementen nicht richtig anpasst."
+
+#: ../../en/user-guide/editing/editing.rst:81
+msgid ""
+"To start you have to select all reaches that you want to change. There is no"
+" need to select the vw_qgep_reach layer or to set this layer to the edit "
+"mode."
+msgstr "Zuerst sind alle Haltungen zu selektieren, die geändert werden sollen. Es ist nicht notwendig den vw_qgep_reach Layer auszuwählen oder für diesen Layer  den Bearbeitungsstatus einzuschalten."
+
+#: ../../en/user-guide/editing/editing.rst:83
+#: ../../en/user-guide/editing/editing.rst:106
+msgid "Open the **Processing Toolbox**"
+msgstr "Öffnen sie die **Werkzeugkiste**"
+
+#: ../../en/user-guide/editing/editing.rst:87
+msgid "Double click the **Change reach direction** tool"
+msgstr "Doppelklick auf das Tool **Change reach direction**"
+
+#: ../../en/user-guide/editing/editing.rst:91
+msgid ""
+"In the tool window you have to choose the **vw_qgep_reach** - Layer and then"
+" click on **Run**"
+msgstr "Im Toolfenster muss der **vw_qgep_reach** - Layer gewählt werden, dann auf  **Starte** klicken"
+
+#: ../../en/user-guide/editing/editing.rst:93
+msgid ""
+"If you zoom in or out, you see, that the slope-arrow and the slope has "
+"changed. The reach points level have not changed."
+msgstr "Mit Ein- oder Auszoomen sieht man, dass die Fliessrichtungspfeile und das Gefälle der Haltungsbeschriftung geändert hat. Die Haltungspunkt-Koten haben nicht geändert."
+
+#: ../../en/user-guide/editing/editing.rst:95
+msgid "Refresh network topology."
+msgstr "Netzwerk Topologie aktualisieren."
+
+#: ../../en/user-guide/editing/editing.rst:97
+msgid "You can save now the change."
+msgstr "Die Änderung jetzt sichern."
+
+#: ../../en/user-guide/editing/editing.rst:101
+msgid "Snap reach geometry"
+msgstr "Schnappe auf Haltungsgeometrie"
+
+#: ../../en/user-guide/editing/editing.rst:102
+msgid ""
+"This tool snaps reaches graphically to the wastewater network element they "
+"are connected to. So they are not only logically, but also graphically "
+"connected."
+msgstr "Dieses Tool schnappt die Haltungen auch grafisch auf die Abwassernetzelemente mit denen sie verknüpft sind. Sie sind dann nicht nur logisch, sondern auch grafisch verbunden."
+
+#: ../../en/user-guide/editing/editing.rst:104
+msgid ""
+"To start you have to select all reaches that you want to snap. There is no "
+"need to select the vw_qgep_reach layer or to set this layer to the edit "
+"mode."
+msgstr "Zuerst sind alle Haltungen zu selektieren, die geschnappt werden sollen. Es ist nicht notwendig den vw_qgep_reach Layer auszuwählen oder für diesen Layer  den Bearbeitungsstatus einzuschalten."
+
+#: ../../en/user-guide/editing/editing.rst:110
+msgid "Double click the **Snap reach geometry** tool"
+msgstr "Doppelklick auf das **Snap reach geometry** Tool"
+
+#: ../../en/user-guide/editing/editing.rst:114
+msgid ""
+"In the tool window you have to choose the **vw_qgep_reach** - layer and the "
+"**vw_wastewater_node** - layer, then click on **Run**"
+msgstr "Im Toolfenster muss der **vw_qgep_reach** - Layer und der **vw_wastewater_node** - Layer gewählt werden, dann auf  **Starte** klicken"
+
+#: ../../en/user-guide/editing/editing.rst:116
+msgid "If you zoom in or out, you see the changes."
+msgstr "Mit Ein- oder Auszoomen sieht man die Änderungen."
+
+#: ../../en/user-guide/editing/editing.rst:118
+msgid ""
+"If the result is not what you expect, try with a greater snapping distance"
+msgstr "Wenn das Resultat nicht wie erwartet ist, versuchen sie erneut mit einer grösseren Schnapp-Distanz"
+
+#: ../../en/user-guide/editing/editing.rst:120
+msgid ""
+"If there are connections from reach to reach, the reach point moves at right"
+" angles to the other reach. If there is no way to do a right angle, it moves"
+" to the next end point of the reach."
+msgstr "Bei Verknüpfungen von Haltung zu Haltung wird der Haltungspunkt rechtwinklig auf die andere Haltung verschoben. Wenn es keine Möglichkeit für ein Verschieben mit rechtem Winkel gibt, wird zum nächsten Endpunkt der Haltung verschoben."
+
+#: ../../en/user-guide/editing/editing.rst:122
+msgid ""
+"If there is snapping from reach to reach, you will get not the expected "
+"result, if the first reach snaps to a second reach, and afterwards this "
+"second reach snaps to a node or a third reach, there will be no more "
+"graphical connection between reach 1 and reach 2. You have to rerun the "
+"command."
+msgstr "Wenn zwei Haltungen miteinander verknüpft sind (Blindanschluss ohne Abwasserknoten) wird das Resultat unter Umständen nicht den Erwartungen entsprechen. Wenn  Haltung 1 auf Haltung 2 schnappt, und danach Haltung 2 auch noch auf einen Knoten oder eine weitere Haltung schnappt, ist die graphische Verknüpfung zwischen Haltung 1 und 2 nicht mehr garantiert. Der Befehl muss noch einmal gestartet werden."
+
+#: ../../en/user-guide/editing/editing.rst:125
+msgid "Working with codes of value list"
+msgstr "Arbeiten mit den Codes der Wertelisten"
+
+#: ../../en/user-guide/editing/editing.rst:127
+msgid ""
+"The values of fields with value list are stored in the database with codes."
+msgstr "In der Datenbank werden die Werte der Felder mit Wertelisten mit Zahlencodes gespeichert."
+
+#: ../../en/user-guide/editing/editing.rst:129
+msgid ""
+"The codes are unique, also if there is the same text in different value "
+"lists. E.g. the code for \"rain_wastewater\" in the vl_channel_usage_current"
+" and in the vl_channel_usage_planned is different."
+msgstr "Die Zahlencodes sind einmalig, auch wenn in verschiedenen Wertelisten die gleichen Texte vorkommen. Beispiel: Der Zahlencode für \"Regenabwasser\" ist in den Wertelisten für Nutzungsart_Ist und Nutzungsart_geplant nicht gleich."
+
+#: ../../en/user-guide/editing/editing.rst:131
+msgid ""
+"In a qgep project with correct configuration you see in the table view or "
+"the form view the values in your language and not the codes."
+msgstr "In einem QGEP-Projekt mit richtiger Konfiguration erscheinen in den Attributtabellen oder den Eingabe-Fenstern die Werte in deiner Sprache und nicht als Zahlencode."
+
+#: ../../en/user-guide/editing/editing.rst:132
+msgid ""
+"But if you want to define a selection by expression or if you want to define"
+" a rule-based symbology for your layer, you have to know the codes or you "
+"use the following expression: **represent_value(\"field\")**"
+msgstr "Aber wenn du einen Auswahl mit einem Ausdruck oder eine regelbasierte Darstellung für einen Layer verwenden willst, musst du die Zahlencodes kennen oder du verwendest den folgenden Ausdruck: **represent_value(\"field\")**"
+
+#: ../../en/user-guide/editing/editing.rst:135
+msgid "Examples for using **represent_value**"
+msgstr "Beispiele für die Anwendung von **represent_value**"
+
+#: ../../en/user-guide/editing/editing.rst:137
+msgid ""
+"Search all primary wastewater facility reaches (function_hierarchic starts "
+"with pwwf)"
+msgstr "Suche alle primären Abwasserbauwerke / Haltungen (Funktion_Hierarchisch beginnt mit pwwf oder paa - je nach Sprache)"
+
+#: ../../en/user-guide/editing/editing.rst:141
+msgid ""
+"Search all reaches, that have not the same usage_planned as usage_current"
+msgstr "Suche alle Haltungen, bei denen Nutzungsart_Ist nicht gleich der Nutzungsart_geplant ist"
+
+#: ../../en/user-guide/editing/editing.rst:145
+msgid ""
+"The expression `\"ch_usage_current\" <> \"ch_usage planned\"` does not work "
+"because of the unique codes!"
+msgstr "Der Ausdruck `\"ch_usage_current\" <> \"ch_usage planned\"` funktioniert nicht, weil die Zahlencodes einmalig sind!"
+
+#: ../../en/user-guide/editing/editing.rst:147
+msgid ""
+"In the demo-project is no use of represent_value for rule-based symbols, "
+"because the rules will otherwise only work for one language."
+msgstr "Im Demo-Projekt wird der Ausdruck repesent_value für regelbasierte Symbole nicht verwendet, weil die Regeln sonst nur für eine spezifische Sprache funktionieren."
+
+#: ../../en/user-guide/editing/editing.rst:151
+msgid "An other way to choose an object"
+msgstr "Ein andere Möglichkeit ein Objekt auszuwählen"
+
+#: ../../en/user-guide/editing/editing.rst:153
+msgid ""
+"With the **Identify feature** tool activated, right clicking an element "
+"outputs a selection of all existing objects at this place."
+msgstr "Mit aktiviertem **Objekte abfragen** Werkzeug wird durch Rechtsklicken eine Auswahl aller existierender Objekte an dieser Stelle ausgegeben."
+
+#: ../../en/user-guide/editing/editing.rst:157
+msgid ""
+"You can select then the object you want. This will get you to the "
+"correspondent form to see the details."
+msgstr "Sie können dann das gewünschte Objekt auswählen. Es erscheint das zugehörige Formular um die Details einzusehen"
+
+#: ../../en/user-guide/editing/editing.rst:162
+msgid "Adding additional covers and nodes to an existing wastewater structure"
+msgstr "Hinzufügen weiterer Deckel und Abwasserknoten zu bestehenden Abwasserbauwerken"
+
+#: ../../en/user-guide/editing/editing.rst:164
+msgid ""
+"The following description is for an additional cover. It works similar for "
+"additional wastewater nodes."
+msgstr "Die folgende Beschreibung ist für das Hinzufügen eines weiteren Deckels. Es funktioniert analog auch für das Hinzufügen eines weiteren Abwasserknotens."
+
+#: ../../en/user-guide/editing/editing.rst:166
+msgid ""
+"Be sure to have the relation between vw_cover (field "
+"fk_wastewater_structure) and vw_qgep_wastewater_structure (field obj_id) in "
+"your project properties / relations."
+msgstr "Voraussetzung: Unter Projekt/Projekteigenschaften/Beziehungen muss die Beziehung zwischen vw_cover (Feld fk_wastewater_structure) und vw_qgep_wastewater_structure (Feld obj_id) vorhanden sein."
+
+#: ../../en/user-guide/editing/editing.rst:167
+msgid ""
+"Define in layer vw_cover / Properties / **Attribute Forms** the field "
+"**fk_wastewater_structure** as value relation"
+msgstr "Im Layer vw_cover / Eigenschaften / **Attribute Forms** muss das Feld **fk_wastewater_structure** als Beziehungsreferenz definiert sein"
+
+#: ../../en/user-guide/editing/editing.rst:171
+msgid ""
+"With QGIS 3.16 there is a new way: select layer "
+"vw_qgep_wastewater_structure, set it editable, click the manhole you want to"
+" add a cover with the **Identify feature** tool. Go to tab **covers** and "
+"click the new child point-button. Now you can digitize a new cover for the "
+"wastewater structure."
+msgstr "Mit QGIS 3.16 gibt es folgende neue Möglichkeit: Wähle den Layer vw_qgep_Abwasserbauwerk, setzte den Layer editierbar, klicke den Schacht, bei dem ein Deckel hinzugefügt werden soll mit dem  **Objekte abfragen** Werkzeug. Wechsle zum Reiter **Deckel** und klicke den Neues Punkt-Kind Knopf. Jetzt kann ein ein neuer Deckel für das Abwasserbauwerk digitalisiert werden."
+
+#: ../../en/user-guide/editing/editing.rst:175
+msgid "The other way (before QGIS 3.16)"
+msgstr "Der alte Weg (vor QGIS 3.16)"
+
+#: ../../en/user-guide/editing/editing.rst:176
+msgid "Start editing vw_cover and add the new cover"
+msgstr "Die Bearbeitung des Layer vw_cover starten und einen neuen Deckel definieren."
+
+#: ../../en/user-guide/editing/editing.rst:177
+msgid ""
+"In the form you find behind the field fk_wastewater_structure a button to "
+"connect the new cover to an existing wastewater structure"
+msgstr "In der Form hat es hinter dem Feld fk_wastewater_structure einen  Knopf, mit dem der neue Deckel mit einem bestehenden Abwasserbauwerk verknüpft werden kann."
+
+#: ../../en/user-guide/editing/editing.rst:178
+msgid ""
+"After clicking this button, you get blue hint in the qgis-window. You can "
+"move the vw_cover - form-window and click on the wastewater_structure, that "
+"will be associated to the cover."
+msgstr "Nach dem Klick auf den Knopf erscheint ein blauer Hinweis im QGIS-Fenster. Das vw_cover-Formularfenster falls notwendig verschieben und mit einem Klick auf das Abwasserbauwerk die Verknüpfung des Deckels mit dem Bauwerk definieren. "
+
+#: ../../en/user-guide/editing/editing.rst:183
+msgid "Adding a wastewater node to an existing reach"
+msgstr "Einen Abwasserknoten mit einer bestehenden Haltung verknüpfen"
+
+#: ../../en/user-guide/editing/editing.rst:185
+msgid ""
+"In some cases, you need to add a wastewater node between two or more "
+"reaches, although there is no manhole at this place."
+msgstr "In gewissen Fällen muss ein Abwasserknoten zwischen zwei oder mehrere Haltungen gesetzt werden, obwohl dort kein Schachtbauwerk vorhanden ist."
+
+#: ../../en/user-guide/editing/editing.rst:187
+msgid ""
+"This cases are mainly in pwwf_channels (primary wastewater facilities) if "
+"there is e.g. a change of slope or a change of the material or if there is a"
+" connection of two channels without manhole (in German: Blindanschluss)."
+msgstr "Diese Fälle sind vorwiegend in PAA-Kanälen (primäre Abwasseranlagen) z.B. bei Gefällswechsel oder Materialwechsel oder bei einem Blindanschluss."
+
+#: ../../en/user-guide/editing/editing.rst:189
+msgid ""
+"In the data model, you can connect a node between reaches to a channel "
+"(because also a channel is a wastewater structure). There is in the moment a"
+" discussion, if it is necessary or optional or even forbidden to define a "
+"connection to a wastewater structure."
+msgstr "Im VSA-Datenmodell kann ein Abwasserknoten auch mit einem Kanal verknüpft werden (weil ein Kanal auch ein Abwasserbauwerk ist). Im Moment wird diskutiert, ob ein Abwasserknoten zwischen Haltungen zwingend oder optional oder nie mit einem Abwasserbauwerk verbunden werden soll."
+
+#: ../../en/user-guide/editing/editing.rst:191
+msgid ""
+"In QGEP, there is in the moment no tool, that helps you to connect a "
+"wastewater node to a channel. So you just connect the reach points to the "
+"node."
+msgstr "In QGEP existiert im Moment kein Werkzeug, um einen Abwasserknoten mit einem Kanal zu verknüpfen.  Es werden also vorläufig nur die Haltungspunkte mit dem Abwasserknoten verknüpft."
+
+#: ../../en/user-guide/editing/editing.rst:193
+msgid ""
+"If you really want to connect the node to a channel, then type the obj_id of"
+" the channel manually in the fk_wasterwater_structure field of the node."
+msgstr "Wenn ein Abwasserknoten zwingend mit einem Kanal verknüpft werden soll, dann kann die Obj_ID des Kanals manuell in das Feld fk_wasterwater_structure des Abwasserknotens eingetippt werden."
+
+#: ../../en/user-guide/editing/editing.rst:197
+msgid "Multiedit"
+msgstr "Mehrfachänderung"
+
+#: ../../en/user-guide/editing/editing.rst:198
+msgid ""
+"If you want to edit attributes for multiple objects of the same class you "
+"can use the `multiedit Tool of QGIS "
+"<https://docs.qgis.org/latest/en/docs/user_manual/working_with_vector/attribute_table.html#multi-"
+"edit-fields>`_."
+msgstr "Wenn Sie Attribute für mehrere Objekte der gleichen Klasse bearbeiten wollen, können Sie das `multiedit Tool von QGIS <https://docs.qgis.org/latest/de/docs/user_manual/working_with_vector/attribute_table.html#multi-edit-fields>`_ verwenden."
+
+#: ../../en/user-guide/editing/editing.rst:202
+msgid "Saving changes"
+msgstr "Änderungen Speichern"
+
+#: ../../en/user-guide/editing/editing.rst:204
+msgid ""
+"Click **Save** and then deactivate the edit mode or click on **Stop data "
+"entry** if you have worked with the **QGEP Data Entry** wizard."
+msgstr "Drücken Sie **Save** und dann deaktivieren Sie den Bearbeitungsmodus oder klicken Sie auf **Stop data entry** wenn Sie mit dem **QGEP Data Entry** Arbeitsassistenten gearbeitet haben."
+
+#: ../../en/user-guide/editing/editing.rst:208
+msgid "Changing Wastewater Structure Type"
+msgstr "Abwasserbauwerk Typ ändern"
+
+#: ../../en/user-guide/editing/editing.rst:210
+msgid ""
+"In the vw_qgep_wastewater_structure form, you can change the subclass of the"
+" wastewater structure (e.g. from manhole to special structure or to "
+"infiltration installation). The old subclass-record will be deleted and you "
+"must enter those attributes, that are subclass specific. But all connections"
+" (they are defined to the class wastewater_structure and not to the "
+"subclass) or the obj_id or the identifier will not change."
+msgstr "Im vw_qgep_wastewater_structure Formular kann die Subklasse das Abwasserbauwerks geändert werden (z.B. von Normschacht zu Spezialbauwerk oder Versickerungsanlage). Der alte Subklassen-Datensatz wird dabei gelöscht und die Subklassen-spezifischen Felder müssen neu eingegeben werden. Aber alle Verknüpfungen (die beziehen sich auf die Klasse Abwasserbauwerk und nicht auf die Subklasse) und auch die Obj_ID oder die Bezeichnung bleiben unverändert."
+
+#: ../../en/user-guide/editing/editing.rst:212
+msgid ""
+"You can not change a point - wastewater structure (e.g. manhole) to a line "
+"wastewater structure (channel) or vice versa."
+msgstr "Ein Schacht-Abwasserbauwerk kann nicht in ein Kanal-Abwasserbauwerk geändert werden oder umgekehrt."
+
+#: ../../en/user-guide/editing/editing.rst:216
+msgid "Split a reach (channel) into different reaches"
+msgstr "Kanäle in verschiedene Haltungen unterteilen"
+
+#: ../../en/user-guide/editing/editing.rst:218
+msgid ""
+"This is a quite complex function and not jet implemented in QGEP. There "
+"exists a QGIS-Tool to split objects, but if you use this tool with "
+"vw_qgep_reach - layer, you will get a database error, because the obj_id of "
+"the split (= duplicated) records are no more unique."
+msgstr "Das ist eine ziemlich komplexe Funktion und zur Zeit nicht implementiert in QGEP. Es gibt ein QGIS-Werkzeug, um Objekte aufzuteilen, aber wenn dieses Werkzeug auf den Layer vw_qgep_reach angewendet wird, resultiert ein Datenbank-Fehler, weil die Obj_ID des aufgeteilten (= duplizierten) Kanales nicht mehr eindeutig sind."
+
+#: ../../en/user-guide/editing/editing.rst:220
+msgid ""
+"Temporary solution: Change the existing reach and draw the second reach "
+"manually. Control the connections."
+msgstr "Temporäre Lösung: Die bestehende Haltung ändern und eine zweite Haltung manuell erstellen. Dann auch die Verknüpfungen kontrollieren."
+
+#: ../../en/user-guide/editing/editing.rst:222
+msgid ""
+"There will be later a tool in QGEP to split reaches. The user has to decide,"
+" if splitting concerns only class reach or also the class channel, if there "
+"a new wastewater node shall be added and connected. The tool shall be able "
+"to calculate the new reachpoint - levels and should change the existing "
+"network-element-connections if necessary."
+msgstr "In QGEP ist ein Werkzeug geplant, mit dem Haltung aufgeteilt werden können. Der Benutzer kann wählen ob nur die Haltung aufgeteilt werden soll oder auch die Kanäle, ob ein neuer Abwasserknoten zwischen den Haltung eingefügt und verbunden werden soll. Mit dem Werkzeug sollen die neuen Haltungspunktkoten berechnet werden können die bestehenden Abwassernetzelement-Verknüpfungen sind anzupassen falls notwendig."
+
+#: ../../en/user-guide/editing/index.rst:2
+msgid "Editing in QGEP"
+msgstr "Bearbeiten in QGEP"
+
+#: ../../en/user-guide/editing/index.rst:4
+msgid "This represents a guide on how to add and edit data in QGEP."
+msgstr "Eine Anleitung zum hinzufügen und bearbeiten von Dateien in QGEP."
+
+#: ../../en/user-guide/editing/maintenance_events.rst:4
+msgid "Adding or Editing of Maintenance Events"
+msgstr "Hinzufügen oder bearbeiten von Erhaltungsereignissen"
+
+#: ../../en/user-guide/editing/maintenance_events.rst:7
+msgid ""
+"This represents a guide on how to add or edit maintenance event data in "
+"QGEP."
+msgstr "Eine Anleitung zum hinzufügen oder bearbeiten vom  Erhaltungsereignissen Datensätzen in QGEP."
+
+#: ../../en/user-guide/editing/maintenance_events.rst:12
+msgid ""
+"Maintenance events can be connected to one structure or to many. Therefore "
+"QGEP uses a intermediary RE_table to model the n:m relationship "
+"(**re_maintenance_event_wastewater_structure**)"
+msgstr "Erhaltungsereignissen können mit einem oder mehreren Abwasserbauwerken verbunden sein. In der Datenbank ist das mit einer re-Zwischentabelle umgesetzt, um die n:m-Beziehung abzubilden (**re_maintenance_event_wastewater_structure**)"
+
+#: ../../en/user-guide/editing/maintenance_events.rst:17
+msgid "Adding a new Maintenance Event"
+msgstr "Ein neues Erhaltungsereignis hinzufügen"
+
+#: ../../en/user-guide/editing/maintenance_events.rst:19
+#: ../../en/user-guide/editing/maintenance_events.rst:36
+#: ../../en/user-guide/editing/maintenance_events.rst:52
+msgid "Enable the edit mode."
+msgstr "Aktivieren Sie den Bearbeitungsmodus."
+
+#: ../../en/user-guide/editing/maintenance_events.rst:20
+#: ../../en/user-guide/editing/maintenance_events.rst:37
+#: ../../en/user-guide/editing/maintenance_events.rst:53
+msgid ""
+"With the **Identify Features** tool you can select **wastewater_structures**"
+" or **reaches** by selecting their corresponding layer "
+"(**vw_qgep_wastewater_structure** or **vw_qgep_reach**)."
+msgstr "Mit dem **Objekte abfragen** Werkzeug können Sie **Schächte** oder **Haltungen** auswählen indem sie den zugehörigen Layer auswählen (**vw_qgep_Abwasserbauwerk** oder **vw_qgep_Haltung**)"
+
+#: ../../en/user-guide/editing/maintenance_events.rst:21
+#: ../../en/user-guide/editing/maintenance_events.rst:38
+#: ../../en/user-guide/editing/maintenance_events.rst:54
+msgid "The respective form will open. Change to the **Maintenance** tab."
+msgstr "Das entsprechende Formular öffnet sich. Wechseln Sie zum Reiter **Erhaltungsereignis** ."
+
+#: ../../en/user-guide/editing/maintenance_events.rst:23
+msgid "Create a new maintenance event with the **Add child feature** button."
+msgstr "Erstellen Sie ein neues Erhaltungsereignis mit dem **Kindobjekt hinzufügen** Knopf."
+
+#: ../../en/user-guide/editing/maintenance_events.rst:27
+msgid "Edit the new record in the vw_qgep_maintenance form, then click **OK**"
+msgstr "Bearbeite den neuen Datensatz im vw_qgep_maintenance Formular, dann klicke den **OK** Knopf"
+
+#: ../../en/user-guide/editing/maintenance_events.rst:34
+msgid "Link an existing Maintenance Event"
+msgstr "Verknüpfen mit einem bestehenden Erhaltungsereignis."
+
+#: ../../en/user-guide/editing/maintenance_events.rst:40
+msgid "Click the **Link existing child features** button."
+msgstr "Klicke den **Vorhandene Kindobjekte verknüpfen** Knopf."
+
+#: ../../en/user-guide/editing/maintenance_events.rst:44
+msgid ""
+"Choose a maintenance event from the **Dialog** window by clicking in the box"
+" of the record. The box must by yellow. Then click **OK**"
+msgstr "Wähle ein Erhaltungsereignis aus dem **Dialog** Fenster mit Klick in in das Kästchen vor dem Datensatz. Das Kästchen muss gelb sein. Dann auf **OK** klicken"
+
+#: ../../en/user-guide/editing/maintenance_events.rst:46
+msgid ""
+"Close the windows with **OK** and turn of the edit mode to save changes"
+msgstr "Schliessen Sie die Fenster mit **OK** und  beenden Sie den Bearbeitungsmodus um die Änderungen zu speichern"
+
+#: ../../en/user-guide/editing/maintenance_events.rst:50
+msgid "Unlink Maintenance Events"
+msgstr "Verknüpfung zu Erhaltungsereignissen auflösen"
+
+#: ../../en/user-guide/editing/maintenance_events.rst:56
+msgid ""
+"Select a maintenance event by clicking in the box (box gets yellow), then "
+"click the **Delete child feature** button."
+msgstr "Wähle ein Erhaltungsereignis mit Klick in das Kästchen vor dem Datensatz (das Kästchen wird gelb), dann klicke den **Kindobjekt löschen** Knopf."
+
+#: ../../en/user-guide/editing/maintenance_events.rst:60
+msgid ""
+"There is only the record in the RE-table deleted. The maintenance event "
+"record himself is not deleted and can by linked with other wastewater "
+"structures."
+msgstr "Es wird nur der Datensatz in der RE-Tabelle gelöscht. Der Erhaltungsereignis-Datensatz selbst wird nicht gelöscht. Er kann weiterhin mit anderen Abwasserbauwerken verknüpft werden."
+
+#: ../../en/user-guide/editing/maintenance_events.rst:66
+msgid ""
+"Do as described in adding - but just edit existing maintenance events. Or "
+"edit the **vw_qgep_maintenance** table (layer group **inspection**)"
+msgstr "Machen Sie es wie es beim Hinzufügen beschrieben - aber bearbeiten Sie nur die bereits bestehenden Erhaltungsereignisse. Oder bearbeiten Sie die **vw_qgep_maintenance** Tabelle (Layergruppe **Inspektion** )"
+
+#: ../../en/user-guide/editing/maintenance_events.rst:70
+msgid "Multi Edit"
+msgstr "Mehrfachbearbeitung"
+
+#: ../../en/user-guide/editing/maintenance_events.rst:72
+msgid ""
+"There is in the moment no tool to create or to link a maintenance event to a"
+" selection of reaches or wastewater structures. If you open the form in "
+"multi edit mode, the **Maintenance** tab is empty. Multi edit with linked "
+"tables is not implemented in QGIS."
+msgstr "Zur Zeit gibt es kein Werkzeug um ein Erhaltungsereignis mit einer Auswahl von Haltungen oder Abwasserbauwerken zu verknüpfen. Wenn das Formular im Mehrfachbearbeiten-Modus geöffnet wird, ist der Reiter **Erhaltungsereignis** leer. Mehrfachbearbeiten mit verknüpften Tabellen ist zur Zeit in QGIS nicht umgesetzt."
+
+#: ../../en/user-guide/editing/moving.rst:4
+msgid "Moving Wastewater Structures with Reaches, Covers and Nodes"
+msgstr "Verschieben von Abwasserbauwerken zusammen mit Haltungen, Deckeln und Knoten"
+
+#: ../../en/user-guide/editing/moving.rst:6
+msgid ""
+"This represents a guide on how to move wastewater structures with reaches "
+"and wastewater nodes compared to just moving the cover in QGEP."
+msgstr "Eine Anleitung zur Verschiebung von Abwasserbauwerken mit Haltungen und Abwasserknoten verglichen mit der Verschiebung nur von Deckeln in QGEP"
+
+#: ../../en/user-guide/editing/moving.rst:11
+msgid ""
+"It's not unusual, that manholes are digitized the first time with low "
+"precision. Later the manholes are measured, and there is the need, to move "
+"the whole wastewater structure (means cover, node and reachpoints of all "
+"reaches) to the measured point."
+msgstr "Es kommt oft vor, das Schächte zuerst mit beschränkter Genauigkeit digitalisiert werden. Später wird der Schacht vermessen und es wird notwendig, das ganze Bauwerk (also Deckel, Knoten und Haltungspunkte aller verknüpften Haltungen) im GIS auf den gemessenen Punkt zu verschieben."
+
+#: ../../en/user-guide/editing/moving.rst:13
+msgid ""
+"You need to turn on the advanced digitizing toolbar in your project to be "
+"able to select the **Move Feature** tool."
+msgstr "Die Erweiterte Digitalisierungswerkzeugliste muss im Projekt eingeschaltet sein, damit das **Objekt verschieben** Werkzeug gewählt werden kann."
+
+#: ../../en/user-guide/editing/moving.rst:19
+msgid "How to"
+msgstr "Anleitung"
+
+#: ../../en/user-guide/editing/moving.rst:22
+msgid "Set the layer to edit mode"
+msgstr "Setzen Sie die Layer in den Bearbeitungsmodus"
+
+#: ../../en/user-guide/editing/moving.rst:23
+msgid ""
+"Select the **Move Feature** tool (standard QGIS tool in the advanced "
+"digitizing toolbar)"
+msgstr "Wähle das **Objekt(e) verschieben** Werkzeug (Standard QGIS Werkzeug in der Digitalisierungswerkzeugleiste)"
+
+#: ../../en/user-guide/editing/moving.rst:27
+msgid ""
+"Left Click one the wastewater_structure you want to move and left click "
+"again at the new place."
+msgstr "Links-Klick auf das Abwasserbauwerk, das verschoben werden soll und erneuter Links-Klick an der neuen Stelle"
+
+#: ../../en/user-guide/editing/moving.rst:29
+msgid ""
+"In the figure below, there is the 'ZB1' manhole moved. Cover, node and all "
+"tree reachpoints are moved to the new place."
+msgstr "In der Abbildung unten ist der Schacht 'ZB1' verschoben worden. Deckel, Knoten und alle drei Haltungspunkte wurden an die neue Stelle verschoben"
+
+#: ../../en/user-guide/editing/moving.rst:33
+msgid ""
+"Reaches, that are connected to one of the moved reaches, are still connected"
+" with the foreign key, but did not move. You have to corrected manually if "
+"necessary."
+msgstr "Haltungen, die mit einem der verschobenen Haltungen verknüpft sind, sind immer noch über den Fremdschlüssel verknüpft, aber sie wurden nicht mitverschoben. Die graphische Anpassung muss allenfalls manuell erfolgen. "
+
+#: ../../en/user-guide/editing/moving.rst:35
+msgid ""
+"In the next figure, the special structure 'ZRAE' is also moved by clicking "
+"on the cover and clicking at the new place."
+msgstr "In der nächsten Abbildung wurde auch das Spezialbauwerk 'ZRAE' verschoben durch einen Klick auf den Deckel und einen Klick am neuen Ort."
+
+#: ../../en/user-guide/editing/moving.rst:39
+msgid ""
+"The 2 nodes of the special structure and the 3 connected reachpoints "
+"(reaches) are also move with the same distance and in the same direction as "
+"the cover is moved. The wastewater structure area (polygon) is not moved. "
+"You have to correct manually if necessary."
+msgstr "Die 2 Knoten des Spezialbauwerks und die 3 verknüpften Haltungspunkte worden um die gleiche Distanz und in die gleiche Richtung wie der Deckel verschoben. Die Detailgeometrie (Fläche) des Abwasserbauwerks wurde aber nicht mitverschoben. Die graphische Anpassung muss allenfalls manuell erfolgen."
+
+#: ../../en/user-guide/editing/moving.rst:41
+msgid ""
+"If you want to move just the cover or a node of a wastewater structure, then"
+" select the **vw_cover** or **vw_wastewater_node** layer, set the layer to "
+"edit mode and move the cover / the node with the **Move Feature** tool."
+msgstr "Wenn nur der Deckel oder ein Abwasserknoten eines Schachtes verschoben werden soll, dann muss der **vw_cover** oder **vw_wastewater_node** Layer gewählt werden. Der Layer muss im Bearbeitungsmodus sein, damit mit dem **Objekt(e) verschieben** Werkzeug der Deckel / der Abwasserknoten verschoben werden kann."
+
+#: ../../en/user-guide/editing/moving.rst:43
+msgid "See the figure below: just the cover of manhole 'ZRAM' is moved."
+msgstr "Vgl. die Abbildung unten: Nur der Deckel von Schacht 'ZRAM' wurde verschoben."
+
+#: ../../en/user-guide/editing/moving.rst:47
+msgid ""
+"You can also move the wastewater structure with the **Vertex Tool**. The "
+"vertex tool moves all layers, that have objects at the same place, where you"
+" click. You can move the manhole 'ZB1' with this tool as shown in the first "
+"example. But you can not move the nodes and reachpoints, because they are "
+"not at the same place. And you can not move only covers in vw_cover. If "
+"there are nodes or reachpoints at the same place, they will move to."
+msgstr "Abwasserbauwerke können auch mit dem **Knotenwerkzeug** verschoben werden. Das Knotenwerkzeug verschiebt in allen Layern Objekte, welche an der Stelle des ersten Klick liegen. Man kann den Schacht 'ZB1' damit genau gleich verschieben, wie im ersten Beispiel gezeigt. Aber man kann damit nicht die Knoten und die Haltungspunkte aus dem zweiten Beispiel verschieben, weil diese nicht am gleichen Ort sind. Man kann nicht nur den Deckel in vw_cover verschieben. Wenn Knoten und Haltungspunkte am gleichen Ort sind, werden sie mitverschoben."
+
+#: ../../en/user-guide/editing/moving.rst:53
+msgid ""
+"See `this video tutorial (version QGIS 2) <https://vimeo.com/162978741>`_"
+msgstr "Vgl. `video tutorial (version QGIS 2) <https://vimeo.com/162978741>`_"
+
+#: ../../en/user-guide/history/history.rst:2
+msgid "History viewer"
+msgstr "Verlaufsanzeige (History viewer)"
+
+#: ../../en/user-guide/history/history.rst:4
+msgid ""
+"`PostgresSQL history viewer <https://github.com/qwat/pg-history-viewer>`_ "
+"plugin allows you to retrieve modification on the QGEP database."
+msgstr "Das `PostgresSQL-History-Viewer <https://github.com/qwat/pg-history-viewer>`-Plugin ermöglicht es, Änderungen in der QGEP-Datenbank abzurufen."
+
+#: ../../en/user-guide/history/history.rst:6
+msgid "Install the plugin from the QGIS Plugin repository."
+msgstr "Installiere das Plugin aus den QGIS Erweiterungen"
+
+#: ../../en/user-guide/history/history.rst:12
+msgid "Plugin configuration"
+msgstr "Plugin Konfiguration"
+
+#: ../../en/user-guide/history/history.rst:16
+msgid "First, you have to configure the plugin for the session like this:"
+msgstr "Zuerst muss das Plugin wie folgt konfiguriert werden:"
+
+#: ../../en/user-guide/history/history.rst:22
+msgid "Database configuration"
+msgstr "Konfiguration der Datenbank"
+
+#: ../../en/user-guide/history/history.rst:24
+msgid "Then you need to enable logging on desired tables or views."
+msgstr "Dann muss das Logging für die gewünschten Tabellen oder Views aktiviert werden."
+
+#: ../../en/user-guide/history/history.rst:26
+msgid "For views::"
+msgstr "Für Views:"
+
+#: ../../en/user-guide/history/history.rst:30
+msgid "For tables::"
+msgstr "Für Tabellen:"
+
+#: ../../en/user-guide/history/history.rst:36
+msgid "You can disable logging with::"
+msgstr "Das Logging kann so wieder deaktiviert werden:"
+
+#: ../../en/user-guide/history/history.rst:42
+msgid "Usage"
+msgstr "Verwendung"
+
+#: ../../en/user-guide/history/history.rst:44
+msgid "The \"logged events\" window is composed of 4 parts."
+msgstr "Das \"logged events\" Fenster besteht aus 4 Teilen."
+
+#: ../../en/user-guide/history/history.rst:48
+msgid ""
+"Part identifying the tools used to filter modifications in the database."
+msgstr "Hier können Filter für gesetzt werden um protokollierte Ereignisse in der Datenbank zu finden."
+
+#: ../../en/user-guide/history/history.rst:49
+msgid ""
+"Logged events with the modification date, the table, the action type "
+"\"Update/Delete/Insert\", the application and the user who made the "
+"modification."
+msgstr "Protokollierte Ereignisse mit Änderungsdatum, Tabelle, Bearbeitungstyp \"Ändern/Löschen/Einfügen\", die Anwendung und der Anwender, der die Änderung gemacht hat."
+
+#: ../../en/user-guide/history/history.rst:50
+msgid ""
+"The view comparing the data before and after the change. The red lines are "
+"the ones modified."
+msgstr "Teil mit dem Vergleich der Daten vor und nach der Änderung. Rot hinterlegt sind Felder mit Änderungen."
+
+#: ../../en/user-guide/history/history.rst:51
+msgid "If the geometry has been modified, a canvas will show the difference."
+msgstr "Wenn die Geometrie geändert wurde, wird der Unterschied dargestellt."
+
+#: ../../en/user-guide/history/history.rst:54
+msgid "Replay function"
+msgstr "Wiedergabefunktion"
+
+#: ../../en/user-guide/history/history.rst:56
+msgid ""
+"If you have configured the replay option, you can replay actions. Example "
+"below:"
+msgstr "Wenn die Option replay (Wiedergabefunktion) konfiguriert wurde, kann eine Wiedergabe Aktion gestartet werden. Beispiel:"
+
+#: ../../en/user-guide/history/history.rst:58
+msgid "Actual value:"
+msgstr "Aktueller Wert:"
+
+#: ../../en/user-guide/history/history.rst:62
+msgid ""
+"Select the event you want to replay and its values will become the current "
+"ones. Example for the year that becomes 2004 again:"
+msgstr "Wählen Sie das Ereignis, das Sie wiederholen möchten, und seine Werte werden zu den aktuellen. Beispiel für das Jahr, das wieder zu 2004 wird:"
+
+#: ../../en/user-guide/history/index.rst:2
+msgid "History in QGEP"
+msgstr "History in QGEP"
+
+#: ../../en/user-guide/history/index.rst:4
+msgid "How to manage data history in QGEP."
+msgstr "Wie man den Datenverlauf in QGEP verwaltet"
+
+#: ../../en/user-guide/index.rst:4
+msgid "QGEP User Guide"
+msgstr "QGEP Benutzerhandbuch"
+
+#: ../../en/user-guide/index.rst:6
+msgid ""
+"This represents a guide on how to collect data in QGEP (digitizing), edit "
+"existing data and use various tools like length profile, network following "
+"and plan plotting."
+msgstr "Eine Anleitung wie man Daten in QGEP erfasst, ändert und Werkzeuge für Längsschnitte und Planausgabe nutzt."
+
+#: ../../en/user-guide/layerexplanations/addviewlayer.rst:2
+msgid "Add View Layer"
+msgstr "View Layer hinzufügen"
+
+#: ../../en/user-guide/layerexplanations/addviewlayer.rst:4
+msgid ""
+"To add a layer based on a view in the usual Add Layer dialog will give the "
+"following message, when selecting a view"
+msgstr "Wenn eine View mit dem normalen Add Layer Befehl hinzugefügt wird, wird die folgende Meldung erscheinen"
+
+#: ../../en/user-guide/layerexplanations/addviewlayer.rst:8
+msgid ""
+"To avoid this select the view layer and then scroll to the column \"feature "
+"id\" and pick \"obj_id\" as the relevant feature id, as QGIS will not "
+"automatically recognize this."
+msgstr "Um das zu vermeiden, muss der View Layer gewählt werden. Dann in der Spalte \"feature id\" den Wert \"obj_id\" als massgebende ID auswählen (QGIS erkennt dies nicht automatisch)."
+
+#: ../../en/user-guide/layerexplanations/index.rst:2
+msgid "Overview of QGEP"
+msgstr "Übersicht über QGEP"
+
+#: ../../en/user-guide/layerexplanations/index.rst:4
+msgid "An overview of QGEP including the layer explanation"
+msgstr "Eine Übersicht und die Layer Erläuterungen"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:4
+msgid "Layers explanation"
+msgstr "Layer Erläuterungen"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:7
+msgid "Main layers"
+msgstr "Hauptlayer"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:9
+msgid "QGEP is constructed around two main layers :"
+msgstr "QGEP ist aufgebaut auf zwei Hauptlayer:"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:11
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:15
+msgid "Wastewater structures ``qgep_od.vw_qgep_wastewater_structure``"
+msgstr "Abwasserbauwerke ``qgep_od.vw_qgep_wastewater_structure``"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:12
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:26
+msgid "Reaches ``qgep_od.vw_qgep_reach``"
+msgstr "Haltungen ``qgep_od.vw_qgep_reach``"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:17
+msgid ""
+"Main layer for manholes, special structures, infiltration installations, "
+"discharge points (and wastewater treatment plant (wwtp) structure). Creating"
+" a new record in this layer always creates a new wastewater structure, a new"
+" cover and a new wastewater node. In the edit form, you have access to a lot"
+" of the related tables (e.g. structure parts, maintenance events)."
+msgstr "Haupt-Layer für Normschächte, Spezialbauwerke, Versickerungsanlagen, Einleitstellen (und ARA-Bauwerke). Wenn ein neuer Datensatz erstellt wird, wird immer ein neues Abwasserbauwerk, ein neuer Deckel und ein neuer Abwasserknoten erzeugt. In der Eingabemaske ist Zugang zu vielen verknüpften Tabellen (z.B. Bauwerksteile, Erhaltungsereignisse). "
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:21
+msgid ""
+"Even if there are several covers or wastewater nodes, there is just one "
+"point for every wastewater structure in this layer. By default, the position"
+" of the wastewater node created first is used as the point coordinate."
+msgstr "Auch wenn mehrere Deckel oder Abwasserknoten vorhanden sind, gibt es nur einen Punkt für ein Abwasserbauwerk in diesem Layer.  Als Vorgabewert wird die Lage des ersten erzeugten Abwasserknotens verwendet."
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:23
+msgid ""
+"Do not export this point coordinates as covers. Use the layer vw_cover for "
+"this."
+msgstr "Diese Punkte können nicht als Deckel-Koordinaten exportiert werden. Benutze als Deckel den Layer vw_Deckel."
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:28
+msgid ""
+"Main layer for line-wastewater structures (channels). Creating a new record "
+"in this layer always creates a new reach and a new channel. In the edit "
+"form, you have access to a lot of the related tables (e.g. structure parts, "
+"maintenance events)."
+msgstr "Haupt-Layer für Linien-Abwasserbauwerke (Kanäle). Wird ein neuer Datensatz in diesem Layer erzeugt, wird eine neue Haltung und ein neuer Kanal erstellt. In der Eingabemaske ist Zugang zu vielen verknüpften Tabellen (z.B. Bauwerksteile, Erhaltungsereignisse)."
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:33
+msgid "Wastewater Structures"
+msgstr "Abwasserbauwerke"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:36
+msgid "Wastewater Structures Details ``qgep_od.wastewater_structure``"
+msgstr "Abwasserbauwerke Details ``qgep_od.wastewater_structure``"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:38
+msgid ""
+"This layer shows and enables you to edit the detailed geometries of "
+"wastewater structures. You can add a new detailed geometry using the layer "
+"`vw_qgep_wastewater_structure` action called digitize detailed geometry."
+msgstr "Diese Layer zeigen und ermöglichen das Editieren von Detailgeometrien von Abwasserbauwerken. Eine neue Detailgeometrie kann im Layer `vw_qgep_Abwasserbauwerk` mit der Aktion  `Digitize` erstellt werden."
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:40
+msgid ""
+"See `digitizing detailed geometries "
+"<../digitizing/digitizingdetailedgeometry.html>`_ for more information."
+msgstr "Vergleiche `Digitalisieren detaillierter Geometrie <../digitizing/digitizingdetailedgeometry.html>`_ für weitere Infos."
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:43
+msgid "Structure Parts ``qgep_od.structure_part``"
+msgstr "Bauwerksteile ``qgep_od.structure_part``"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:45
+msgid ""
+"Cover is the only structure part with a point-geometry itself. All other "
+"structure parts are just linked to their wastewater structures and should by"
+" only edited by the main layers (`vw_qgep_wastewater_structure` and "
+"`vw_qgep_reach`)."
+msgstr "Deckel ist der einzige Bauwerksteil mit einer eigenen Lageinformation. Alle anderen Bauwerksteile sind nur mit ihrem Abwasserbauwerk verknüpft und sollen nur über die Hauptlayer  (vw_qgep_wastewater_structure und vw_qgep_reach) geändert werden."
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:48
+msgid "Covers ``qgep_od.vw_cover``"
+msgstr "Deckel ``qgep_od.vw_cover``"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:50
+msgid ""
+"Use this layer to change the situation of some specific cover (and not the "
+"whole wastewater structure) or to add a new cover to an existing wastewater "
+"structure. You can add an additional covers in the covers-tab of the "
+"`vw_qgep_wastewater_structure` too. Additionally, use this layer to show the"
+" detailed position of the covers (e.g. in network_plan or pipeline_registry)"
+" or to export the cover positions `situation_geometry`."
+msgstr "Den Deckellayer nur benutzen, um die Lageinfo von einem ausgewählten Deckel zu verändern (und nicht das ganze Abwasserbauwerk zu verschieben). Oder um einen neuen Deckel zu einem Abwasserbauwerk hinzu zufügen. (Ein Deckel kann auch im Reiter Deckel von vw_qgep_wastewater-structure hinzugefügt werden. Und der Layer wird verwendet, um die Position der Deckel darzustellen (z.B. im Werkplan) oder um die Deckellage zu exportieren."
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:53
+msgid "Channels ``qgep_od.vw_channel``"
+msgstr "Kanäle``qgep_od.vw_channel``"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:55
+msgid ""
+"The channel-class has no geometry and is therefore mostly changed in the "
+"vw_qgep_reach layer."
+msgstr "Die Klasse Kanal hat keine Geometrie und wird deshalb meistens über den Layer vw_qgep_Haltung bearbeitet. "
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:58
+msgid "Organisations ``qgep_od.organisation``"
+msgstr "Organisationen ``qgep_od.organisation``"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:60
+msgid ""
+"todo: This table is today at a strange place (it is not only related to "
+"wastewater structures) and has to be revised."
+msgstr "Todo: Diese Tabelle ist nicht nur mit Abwasserbauwerken verknüpft und deshalb in dieser Layer-Gruppe nicht ganz richtig."
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:63
+msgid "Maintenance events ``qgep_od.vw_qgep_maintenance``"
+msgstr "Erhaltungsereignis ``qgep_od.vw_qgep_maintenance``"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:65
+msgid ""
+"Maintenance events can be created through the view "
+"qgep_od.vw_qgep_maintenance."
+msgstr "Erhaltungsereignisse können mit der View qgep_od.vw_qgep_maintenance erstellt werden."
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:67
+msgid ""
+"These maintenance events are used in the maintenance tabs in the main "
+"tables. They can be linked to one or several wastewater structures."
+msgstr "Die Erhaltungsereignisse werden im Tab Erhaltungsereignis in den Hauptlayern benutzt. Erhaltungsereignisse können mit einem oder mehreren Abwasserbauwerken verknüpft sein."
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:69
+msgid ""
+"See `editing maintenance events <../editing/maintenance_events.html>`_ for "
+"more information."
+msgstr "Vergleiche `Bearbeiten von Erhaltungsereignissen <../editing/maintenance_events.html>`_ für mehr Infos."
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:72
+msgid "Value Lists ``qgep_vl.*``"
+msgstr "Wertelisten ``qgep_vl.*``"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:74
+msgid "These value lists are defined in the VSA-datamodel. Do not change."
+msgstr "Diese Wertelisten sind im Datenmodell VSA-DSS definiert. Nicht ändern."
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:77
+msgid "Hydraulic"
+msgstr "Hydraulik Layer"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:80
+msgid "Wastewater nodes ``qgep_od.vw_wastewater_node``"
+msgstr "Abwasserknoten ``qgep_od.vw_wastewater_node``"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:82
+msgid ""
+"Use this layer to change the situation of one selected wastewater node (and "
+"not the whole wastewater structure) or if you want to add a new wastewater "
+"node to an existing wastewater structure. You can add additional wastewater "
+"nodes in the wastewater nodes-tab of the `vw_qgep_wastewater_structure` too."
+msgstr "Dieser Layer kann nur benutzt werden, wenn nur ein ausgewählter Abwasserknoten in der Lage geändert werden soll (und nicht das ganze Abwasserbauwerk) oder wenn ein neuer Abwasserknoten zu einem bestehenden Abwasserbauwerk hinzugefügt werden soll. (Ein Abwasserknoten kann auch im Reiter Abwasserknoten der vw-qgep_wastewater_structure-Eingabemaske hinzugefügt werden, aber dann hat dieser Knoten keine Koordinaten...)."
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:85
+msgid "Overflow tables ``qgep_od.vw_qgep_overflow``"
+msgstr "Überlauf Tabellen ``qgep_od.vw_qgep_overflow``"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:87
+msgid ""
+"These tables are connected to wastewater nodes. In the project-file template"
+" (Version 8.0, 4.6.2020) are no relations defined for these tables."
+msgstr "Diese Tabellen sind mit den Abwasserknoten verknüpft. Im Demo-Projekt (Version 8.0, 4.6.2020) sind keine Verknüpfungen definiert für diese Tabellen. "
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:90
+msgid "Topology"
+msgstr "Topologie"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:93
+msgid "Nodes ``qgep_network.node`` and segments ``qgep_network.segment``"
+msgstr "Nodes ``qgep_network.node`` und Segments ``qgep_network.segment``"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:95
+msgid ""
+"These two layers are used by the qgep-extension for the profile and the "
+"network-following functionalities. Use the qgep_network.segment layer to "
+"show the flow direction, if you use a markerline (filled_arrowhead) as "
+"symbol."
+msgstr "Diese beiden Layer werden von QGEP für das Längenprofil und die Netzverfolgung verwendet. Nicht verändern. \nDer Layer vw_network_segment kann benutzt werden, um die Fliessrichtung darzustellen. Dazu kann als Symbol eine Marker-Linie (filled_arrowhead) verwendet werden."
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:98
+msgid ""
+"See `connect wastewater network elements "
+"<../editing/connect_wastewater_network_elements.html>`_ for more information"
+" on how to create and maintain a good Topology."
+msgstr "Vergleiche `Werkzeuge zur Netzwerkverfolgung <../editing/connect_wastewater_network_elements.html>`_ für mehr Infos und wie eine zweckmässige Topologie erstellt werden soll."
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:101
+msgid "Catchment ``qgep_od.catchment_area``"
+msgstr "Einzugsgebiete ``qgep_od.catchment_area``"
+
+#: ../../en/user-guide/layerexplanations/layerexplanation.rst:103
+msgid "Main layer to digitize and edit the catchment_areas."
+msgstr "Hauptlayer um Einzugsgebiete zu erfassen oder zu verändern."
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:2
+msgid "Naming conventions"
+msgstr "Namenskonventionen"
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:5
+msgid "Schemas in the QGEP-Database"
+msgstr "Schemas in der QGEP-Datenbank"
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:6
+msgid "The QGEP-Database has six qgep-schemas:"
+msgstr "Die QGEP-Datenbank hat sechs qgep-Schemas:"
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:8
+msgid ""
+"qgep_od: in this schema you find the tables, that correspond to the VSA-DSS-"
+"datamodel (cover, wastewaternode, channel, etc.) These are the tables you "
+"normally work with."
+msgstr "qgep_od: in diesem Schema sind die Tabellen, die mit dem Datenmodell VSA-DSS übereinstimmen (Deckel, Abwasserknoten, Kanal etc.). Mit diesen Tabellen wird normalerweise gearbeitet."
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:10
+msgid ""
+"qgep_vl: is the schema for value lists. There is a table for every value "
+"list of the VSA-DSS. As a QGEP-user you can not edit these tables."
+msgstr "qgep_vl: ist das Schema für die Wertelisten (value lists). Es gibt ein Tabelle für jede Werteliste der VSA-DSS. Als QGEP-User kann man diese Tabellen nicht bearbeiten."
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:12
+msgid ""
+"qgep_network: schema for the tables that are necessary to use the network-"
+"topology with the qgep-tools. You can rebuild these tables from the QGEP-"
+"tools."
+msgstr "qgep_network: Schema für die Tabellen, die QGEP für die Netzwerk-Werkzeuge benötigt. Diese Tabellen können mit den QGEP-Werkzeugen aktualisiert werden."
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:14
+msgid ""
+"qgep_sys: special tables for administration of the database. As a QGEP-User "
+"you can not edit these tables."
+msgstr "qgep_sys: Spezielle Tabellen für die Administration der Datenbank. Als QGEP-User kann man diese Tabellen nicht bearbeiten."
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:16
+msgid ""
+"qgep_import and qgep_swmm: schema for additional plugins/functions (QField "
+"and working with SWMM)"
+msgstr "qgep_import und qgep_swmm: Schema für zusätzliche Plugins/Funktionen (QField und Arbeiten mit SWMM)"
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:20
+msgid "Layer names"
+msgstr "Layer Bezeichnungen"
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:22
+msgid "Layer names have often a prefix like od_ or vl_."
+msgstr "Layer Namen haben oft Präfixe wie od_ oder vl_."
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:24
+msgid ""
+"This shows you, in which schema to look for the table. od_organisation is "
+"the table organisation in the qgep_od-schema."
+msgstr "Diese Präfixe zeigen, in welchem Schema die Tabellen vorhanden sind. od_Organisation ist die Tabelle Organisation im Schema qgep_od."
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:26
+msgid "Layer Names that begin with vw_"
+msgstr "Layer Namen welche mit vw_ beginnen"
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:28
+msgid ""
+"Two or more VSA-DSS tables are joined in a view (vw). The layer has the name"
+" of the main-table. Example: vw_qgep_reach: the main layer is the table "
+"reach (not the table channel). It is important to know the main-table to be "
+"sure, that you use the correct attributes."
+msgstr "Zwei oder mehrere VSA-DSS-Tabellen sind in einer View (vw) verknüpft. Der Layer hat die Bezeichnung der Haupttabelle. Beispiel: vw_qgep_Haltung: die Haupttabellen ist die Tabelle Haltung (nicht die Tabelle Kanal). Es ist wichtig die Haupttabelle zu kennen, damit die richtigen Attribute verwendet werden."
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:31
+msgid "Layer vw_network_"
+msgstr "Layer vw_network_"
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:33
+msgid "These are views in the schema qgep_network"
+msgstr "Das sind Views im Schema qgep_network"
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:36
+msgid "Attribute names"
+msgstr "Feldnamen"
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:38
+msgid "Prefixes in attribute names"
+msgstr "Präfixe in Feldnamen"
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:40
+msgid ""
+"In a view, you find fields from different tables. In easier cases, there are"
+" only a subclass and a superclass included. In the qgep-mainlayers there are"
+" several sub- und superclasses. With the prefix of the attribute name, you "
+"know to which table an attribute belongs. The prefix are two letters that "
+"belong to a table of the VSA-DSS datamodel. Example: co = cover, ws = "
+"wastewater structure. The convention is: attributes of the main table have "
+"no prefix, all other attributes have a prefix that points to the table they "
+"are from. In case of sub- and superclass, the two tables are taken together."
+" Example in layer vw_qgep_reach: identifier is the attribute of the table "
+"wastewater_networkelement (the superclass of maintable reach) and therefore "
+"has no prefix. Material is in table reach, has no prefix because its the "
+"maintable. ch_usage_current is an attribute of the table channel. ws_remark "
+"is the attribute remark of the table wastewater_structure."
+msgstr "In einer View gibt es Felder von verschiedenen Tabellen. In einfachen Fällen ist da nur die Superklasse und die Sub-Klasse vorhanden.  In den qgep-Hauptleyern sind es aber mehrere Sub- und Superklassen. Mit dem Präfix des Feldname wird angezeigt, zu welcher Klasse ein Feld gehört.  Das Präfix sind zwei Buchstaben welche für eine Klasse des VSA-DSS Datenmodell stehen. Beispiel: DE = Deckel, BW = Abwasserbauwerk. Es gilt folgende Konvention:  Felder der Haupttabelle haben kein Präfix, alle anderen Felder haben ein Präfix, dass auf die jeweilige Tabelle verweist. Bei Sub- und Superklasse werden die beiden Tabellen zusammengenommen. Beispiel im Layer vw_qgep_Haltung: Bezeichnung ist ein Feld der Tabelle Abwassernetzelement (der Superklasse der Haupttabelle Haltung) und hat deswegen kein Präfix.  Material ist in der Tabelle Haltung und hat auch kein Präfix weil das die Haupttabelle ist.  KA_Nutzungsart_IST ist ein Feld der Tabelle Kanal. BW-Bemerkung ist das Feld Bemerkung der Tabelle Abwasserbauwerk."
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:45
+msgid "fk_ fields"
+msgstr "fk_ Felder"
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:47
+msgid "fk_ is not a shortcut for a special table. It stands for foreign key."
+msgstr "fk_ ist nicht eine Abkürzung für eine spezielle Tabelle. Es steht für Fremdschlüssel (foreign key). Das sind Fremdschlüsselfelder."
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:49
+msgid "_ fields"
+msgstr "_ Felder"
+
+#: ../../en/user-guide/layerexplanations/namingconventions.rst:51
+msgid ""
+"Attributes that start with _ (underscore) are calculated fields. You can not"
+" find them in the schemas. Examples: _slope_per_mill in vw_qgep_reach. "
+"_channel_usage_current in vw_qgwp_wastewater_structure is calculated from "
+"the field usage_current of the channel, that is connected with the foreign "
+"keys of the wastewater_networkelement as outlet to a manhole or special "
+"structure."
+msgstr "Felder die mit _ (Unterstrich) beginnen sind berechnete Felder. Man findet sie in den Schemas nicht. Beispiele: _slope_per_mill (_GefaellePromille) in vw_qgep_Haltung. _Kanal_Nutzungsart_ist in vw_qgep_Abwasserbauwerk ist berechnet aus dem Feld Nutzungsart_Ist des Kanales, der über die Fremdschlüsselfelder der Abwassernetzelemente als Auslauf mit dem Schacht verknüpft ist."
+
+#: ../../en/user-guide/layerexplanations/overview.rst:4
+msgid "Introduction and Overview"
+msgstr "Einleitung und Übersicht"
+
+#: ../../en/user-guide/layerexplanations/overview.rst:6
+msgid ""
+"**QGEP** is a selection of tools and a database implementation to work with "
+"the data in the data structure for wastewater and GEP, short VSA-DSS."
+msgstr "**QGEP** ist eine Sammlung von Werkzeugen und eine GIS-Datenbank Umsetzung, um  Abwasser- und GEP-Daten in der Datenstruktur VSA-DSS bearbeiten zu können."
+
+#: ../../en/user-guide/layerexplanations/overview.rst:8
+msgid ""
+"The Data Structure for urban drainage systems of the Swiss Waste Water "
+"Association (in German Verband Schweizer Abwasser- und "
+"Gewässerschutzfachleute (VSA)), referenced to usually as VSA-DSS was "
+"published 1999 and is since then the valid standard for data covering "
+"General Water Drainage Planning (in German Generelle Entwässerungsplanung "
+"(GEP). When applying VSA-DSS you also comply to SIA405 Abwasser, the subset "
+"for sewer networks as described in `Norm SIA405 (Merkblatt 2015 / 2016) "
+"<http://www.sia.ch/de/dienstleistungen/sia-norm/geodaten/>`_. More "
+"information you can find on the homepage of the `VSA <http://dss.vsa.ch>`_"
+msgstr "Die Datenstruktur Siedlungsentwässerung des Verband Schweizer Abwasser- und Gewässerschutzfachleute (VSA)), abgekürzt VSA-DSS wurde 1999 publiziert und ist seither der gültige Standard Generelle Entwässerungsplanung (GEP). Wenn die VSA-DSS angewendet wird, wird auch die SIA405 Abwasser gemäss der `Norm SIA405 (Merkblatt 2015 / 2016) befolgt <http://www.sia.ch/de/dienstleistungen/sia-norm/geodaten/>`_. Weiter Infos auf der Homepage des `VSA <http://dss.vsa.ch>`_"
+
+#: ../../en/user-guide/layerexplanations/overview.rst:10
+msgid ""
+"The current database implementation in PostgreSQL is for the Version 2015 of"
+" the VSA-DSS datamodel, including the extension for sewer TV inspections "
+"called VSA-KEK."
+msgstr "Die Datenbank Umsetzung in PostgreSQL entspricht der Version 2015 des VSA-DSS Datenmodels, inklusive der Erweiterung VSA-KEK für Kanalfernsehuntersuchungen."
+
+#: ../../en/user-guide/layerexplanations/overview.rst:12
+msgid ""
+"We also recommend you to get a licence for the data model by purchasing the "
+"**CD VSA-DSS** with the datamodel in INTERLIS, object catalogues and "
+"additional description and introduction and transfer datasets in the `VSA "
+"Shop <https://vsashop.ch/de/A~21_1100~1/Datenstruktur-"
+"Siedlungsentw%C3%A4sserung-VSA-DSS-Lizenz/Mitglied>`_"
+msgstr "Es wird empfohlen, durch den Kauf der **CD VSA-DSS** im VSA Shop die Lizenz für das Datenmodell zu erwerben. Damit erhält man auch den INTERLIS Beschrieb, die Objektkataloge sowie zusätzlichen Beschreibungen und Dokumentation zu den Transfer-Datensätzen und der Modellabbildung. `VSA Shop <https://vsashop.ch/de/A~21_1100~1/Datenstruktur-Siedlungsentw%C3%A4sserung-VSA-DSS-Lizenz/Mitglied>`_"
+
+#: ../../en/user-guide/layerexplanations/overview.rst:14
+msgid ""
+"To work with QGEP-tools, it is important to know also the following norm: "
+"`Wegleitung GEP-Daten <https://vsashop.ch/de/A~11_1104~1/Wegleitung-GEP-"
+"Daten/Mitglied/Gedruckte-Publikation>`_ which is a practitioners guide to "
+"modelling reality into GIS and hydraulic datamodel of the VSA and there "
+"specially the annex \"**Erfassungsgrundsätze**\" (data acquisition policy)."
+msgstr "Für die Arbeit mit QGEP ist es wichtig, die folgenden Richtlinien zu kennen: `Wegleitung GEP-Daten <https://vsashop.ch/de/A~11_1104~1/Wegleitung-GEP-Daten/Mitglied/Gedruckte-Publikation>`_ mit einer Anleitung aus der Praxis für das Modellieren der Realität im GIS und im hydraulischen Modell des VSA und dort speziell die Beilage \"**Erfassungsgrundsätze**\" ."
+
+#: ../../en/user-guide/layerexplanations/overview.rst:16
+msgid ""
+"This is important because with VSA-DSS you do not only describe the manholes"
+" and channels (wastewater structures as constructive part), but with the "
+"nodes and reaches you do create the hydraulic model of the sewer network "
+"(network elements) also."
+msgstr "Das ist wichtig, denn mit der VSA-DSS werden nicht nur Schächte und Kanäle (also der bauliche Teil der Abwasserbauwerke) erfasst, sondern mit den Abwasserknoten und Haltungen (Abwassernetzlemente) wird auch das hydraulische Modell des Abwassernetzes aufgebaut. "
+
+#: ../../en/user-guide/layerexplanations/overview.rst:18
+msgid ""
+"It is important to know the difference between **primary and secondary "
+"wastewater facilities** (pwwf / swwf). There are not the same rules for "
+"placing wastewater nodes in pwwf and swwf-networks. Catchment areas should "
+"be connected only to pwwf-network. Reaches are always created in flow-"
+"direction (flow direction in case of normal-flow)."
+msgstr "Es ist wichtig, den Unterschied zwischen **primären und sekundären Abwasseranlagen** (PAA / SAA) zu kennen. In PAA- und SAA-Netzen gelten nicht die gleichen Regeln für das Platzieren von Abwasserknoten. Einzugsgebiete sollen nur auf PAA-Abwasserelemente verknüpft werden. Haltungen werden immer in Fliessrichtung (Fliessrichtung bei Normalabfluss), also von oben nach unten erzeugt."
+
+#: ../../en/user-guide/layerexplanations/overview.rst:21
+msgid ""
+"To support the digitizing, QGEP uses two main-views: "
+"**vw_qgep_wastewater_structure** and **vw_qgep_reach**. To edit these main "
+"views, there is a special wizard and the preconfigured feature attribute "
+"windows of these views. The idea is, to support with the wizard the "
+"digitizing, so that 95% of the manholes and channels can be collected on the"
+" general-tab of the feature attribute-window, that means with as few mouse "
+"clicks as possible."
+msgstr "QGEP nutzt zwei Hauptlayer für das Erfassen und Bearbeiten der Daten der Abwasserbauwerke: **vw_qgep_wastewater_structure** für Schachtbauwerke und **vw_qgep_reach** für Haltungen/Kanäle. Um diese Hauptlayer zu bearbeiten ist ein spezieller Wizard (\"Zauberer\") und vorkonfigurierte Eingabefenster für diese Layer vorhanden.  Das Ziel ist es, mit dieser Konfiguration 95% der Schächte und Kanäle mit den Attributfeldern auf dem Generell Tab des Eingabefensters und damit mit möglichst wenigen Mausklicks erfassen zu können (trotz dem relativ komplexen Datenmodell mit verschiedenen involvierten Klassen)."
+
+#: ../../en/user-guide/layerexplanations/overview.rst:24
+msgid "**QGEP wizard**"
+msgstr "**QGEP Wizard**"
+
+#: ../../en/user-guide/layerexplanations/overview.rst:26
+msgid ""
+"To use the wizard (:ref:`digitizing-wastewater-structures`) is recommended "
+"for digitizing reaches because it supports snapping and connecting to the "
+"nodes preferred to the reaches. If you use the QGIS - Add line feature - "
+"tool you can not select and pick the nodes as easy."
+msgstr "Die Benutzung des Wizard (:ref:`digitizing-wastewater-structures`) ist speziell für das Digitalisieren von Haltungen empohlen, weil damit das Schnappen und Verknüpfen auf Abwasserknoten bevorzugt unterstützt wird. Wenn das QGIS - Linienobjekt hinzufügen - Werkzeug verwendet wird, können die Abwasserknoten für das Verknüpfen nicht so einfach ausgewählt werden."
+
+#: ../../en/user-guide/length-profile/index.rst:2
+msgid "Length profiles"
+msgstr "Längsschnitte"
+
+#: ../../en/user-guide/length-profile/index.rst:4
+msgid ""
+"This represents a guide on how to choose a section and display a length "
+"profile."
+msgstr "Eine Anleitung wie man einen Abschnitt wählt und einen Längsschnitt zeigt"
+
+#: ../../en/user-guide/length-profile/index.rst:9
+msgid ""
+"QGEP has a unique function to display length profiles. Choose the length "
+"profile button to start."
+msgstr "QGEP hat eine einzigartige Funktion um Längenprofile darzustellen. Wählen Sie den Längenprofil Knopf um zu starten."
+
+#: ../../en/user-guide/length-profile/index.rst:13
+msgid "The length profile window opens."
+msgstr "Das Längenprofil Fenster öffnet sich."
+
+#: ../../en/user-guide/length-profile/index.rst:17
+msgid "Select the **vw_qgep_cover** layer to select a starting point."
+msgstr "Wählen Sie den **vw_qgep_cover** Layer um einen Startpunkt auszuwählen."
+
+#: ../../en/user-guide/length-profile/index.rst:21
+msgid ""
+"Then select a next manhole - it is not needed to be the direct next one. The"
+" tool automatically selects the manholes in between. You can repeat this "
+"several times. If there is no continuity you will get a warning. Right click"
+" to finish your selection."
+msgstr "Wählen Sie dann den nächsten Kanalschacht - Es ist nicht zwingend den nächstgelegenen zu wählen. Das Werkzeug wählt automatisch die dazwischenliegenden Kanalschächte. Sie können das mehrere Male wiederholen. Gibt es keinen Anschluss erhalten Sie eine Warnmeldung. Rechtsklick um Ihre Auswahl zu beenden."
+
+#: ../../en/user-guide/length-profile/index.rst:26
+msgid ""
+"In the profile window you now have the length profile. You can see detail "
+"info about manholes. If you hover over a manhole in the profile window you "
+"can see that the canvas correspondent gets highlighted in green."
+msgstr "Im Profil Fenster haben Sie jetzt Ihr Längenprofil. Sie können detaillierte Informationen über die Kanalschächte finden. Wenn Sie über dem Kanalschacht im Profil Fenster schweben, können Sie sehen dass die zugehörige Arbeitsfläche in grün aufleuchtet"
+
+#: ../../en/user-guide/length-profile/index.rst:31
+msgid "Same goes for the reaches."
+msgstr "Das selbe gilt für die Haltungen"
+
+#: ../../en/user-guide/length-profile/index.rst:36
+msgid "Printing"
+msgstr "Drucken"
+
+#: ../../en/user-guide/length-profile/index.rst:38
+msgid ""
+"Select the **Print** button to send the profile to your selected printer. If"
+" you have installed a pdf printer you can save it as a pdf file."
+msgstr "Wählen Sie den **Print** Knopf, um das Profil zu Ihrem ausgewählten Drucker zu senden. Wenn Sie einen PDF Drucker installiert haben, können Sie es als eine PDF Datei speichern"
+
+#: ../../en/user-guide/network-following/index.rst:2
+msgid "Network following tools"
+msgstr "Werkzeuge zur Netzwerkverfolgung"
+
+#: ../../en/user-guide/network-following/index.rst:5
+msgid "Refresh network topology"
+msgstr "Netzwerk Topologie aktualisieren"
+
+#: ../../en/user-guide/network-following/index.rst:7
+msgid ""
+"Before using the network following tools, be sure that your network topology"
+" is updated"
+msgstr "Bevor die Netzwerk-Verfolgungs-Werkzeuge verwendet werden können, muss die Netzwerk Topologie aktualisiert sein"
+
+#: ../../en/user-guide/network-following/index.rst:9
+msgid ""
+"To refresh the network topology, click the **Refresh network topology** tool"
+" (Button with SQL and drip)"
+msgstr "Um die Netzwerk Topologie zu aktualisieren, klicke das  **Refresh network topology** Werkzeug (Knopf mit SQL und dem Wassertropf)"
+
+#: ../../en/user-guide/network-following/index.rst:11
+msgid "If ok, there is a message: **Success: Network successfully updated**"
+msgstr "Wenn die Aktualisierung erfolgreich ist, erscheint eine Meldung: **Success: Network successfully updated**"
+
+#: ../../en/user-guide/network-following/index.rst:15
+msgid "Upstream"
+msgstr "Gegen die Fließrichtung"
+
+#: ../../en/user-guide/network-following/index.rst:19
+msgid ""
+"To start upstream network following select the **Upstream** QGEP button"
+msgstr "Um einen Netzwerk Verfolgung gegen die Fließrichtung zu starten wählen Sie den **Upstream** Knopf"
+
+#: ../../en/user-guide/network-following/index.rst:24
+msgid ""
+"QGEP opens then profile window at the bottom of the map. Click on your start"
+" node."
+msgstr "QGEP öffnet das Profil Fenster im unteren Teil des Kartenfensters. Klick auf deinen Start-Abwasserknoten."
+
+#: ../../en/user-guide/network-following/index.rst:26
+msgid ""
+"If there is more than one node in this area, you choose the one you want "
+"form the mouse-list"
+msgstr "Wenn mehr als einen Abwasserknoten in der Nähe vorhanden ist, kann der gewünschte Knoten aus einer Liste ausgewählt werden"
+
+#: ../../en/user-guide/network-following/index.rst:28
+msgid ""
+"With qgepplugin 1.1.8 / QGIS 3.4.2, it's a good idea to zoom in so far, that"
+" you can choose your start node without having any other node nearby. If you"
+" choose the node from the mouse-list, you may get unexpected results."
+msgstr "Mit dem QGEPPlugin 1.1.8 / QGIS 3.4.2 ist es empfehlenswert, soweit hinein zu zoomen, dass der Start-Knoten direkt angeklickt werden kann. Wenn ein Knoten aus der Liste ausgewählt werden muss, können unerwartete Resultate eintreten."
+
+#: ../../en/user-guide/network-following/index.rst:33
+msgid ""
+"After a few seconds all upstream reaches will be highlighted and you can see"
+" where the water is coming from."
+msgstr "Nach ein paar Sekunden werden alle Elemente gegen die Fließrichtung hervorgehoben und Sie können sehen, woher das Wasser kommt"
+
+#: ../../en/user-guide/network-following/index.rst:35
+msgid ""
+"If you want to select the highlighted reaches, then click on the **Select "
+"current path** button in the profile window"
+msgstr "Wenn die graphisch markierten Haltungen als Auswahl selektiert werden soll, dann klicke auf den Knopf **Select current path** im Profil Fenster"
+
+#: ../../en/user-guide/network-following/index.rst:40
+msgid ""
+"You can now work with your reach selection in the attribute table or zoom to"
+" the selected reaches (if the vw_qgep_reach layer is selected)"
+msgstr "Du kannst dann mit der Auswahl in der Haltungs-Attributtabelle weiterarbeiten oder auf die selektierten Haltungen zoomen (wenn der Layer  vw_qgep_reach selektiert ist)"
+
+#: ../../en/user-guide/network-following/index.rst:42
+msgid "Use this tool to check if the topology of your network is correct."
+msgstr "Benutzen Sie dieses Werkzeug um zu überprüfen, ob Ihr Topologie-Netzwerk korrekt ist"
+
+#: ../../en/user-guide/network-following/index.rst:44
+msgid ""
+"In the button select current path, you have a menu **Configure Select**. "
+"This is prepared to select later not only the path, put also the catchment "
+"areas that are connected to the path. This feature is not working with "
+"qgepplugin 1.1.8."
+msgstr "Im Knopf **Select current path** gibt es das Menu **Configure Select**. Das ist vorbereitet, damit später nicht nur die Haltungen, sondern auch die Einzugsgebiete, welche mit den Haltungen resp. den Abwasserknoten verknüpft sind, ausgewählt werden können. Diese Funktion ist im QGEPPlugin 1.1.8 noch nicht implementiert."
+
+#: ../../en/user-guide/network-following/index.rst:48
+msgid "Downstream"
+msgstr "In Fließrichtung"
+
+#: ../../en/user-guide/network-following/index.rst:50
+msgid ""
+"Downstream network following works similar as the Upstream network following"
+" described above."
+msgstr "Netzverfolgung in Fliessrichtung funktioniert gleich wie die oben beschriebene Netzverfolgung gegen die Fliessrichtung."
+
+#: ../../en/user-guide/network-following/index.rst:55
+msgid "You can see where the water is going to."
+msgstr "Du siehst, wohin das Wasser fliessen wird."
+
+#: ../../en/user-guide/network-following/index.rst:57
+msgid "Control, if QGEP finds also the overflows"
+msgstr "Kontrolliere ob QGEP auch die Überlauf findet"
+
+#: ../../en/user-guide/network-following/index.rst:59
+msgid ""
+"Use this to check whether the topology of your network is correct or to find"
+" out where you could intervene in case of an accident."
+msgstr "Benutzen Sie diese Funktion, um zu überprüfen ob Ihr Topologie- Netzwerk korrekt ist oder herauszufinden wo Sie Fehler beheben können."
+
+#: ../../en/user-guide/network-following/index.rst:65
+msgid "Sum up upstream"
+msgstr "Summieren gegen die Fließrichtung"
+
+#: ../../en/user-guide/network-following/index.rst:67
+#: ../../en/user-guide/network-following/index.rst:108
+msgid "This is a tool in the QGEP-toolbox."
+msgstr "Ein Tool in der QGEP-Werkzeugkiste."
+
+#: ../../en/user-guide/network-following/index.rst:69
+msgid ""
+"The idea for this tool is to sum up a value over the whole network of "
+"channels, e.g. the flowtime for each point to the outlet of the network."
+msgstr "Mit diesem Tool kann ein Wert über ein ganzes Kanalnetz summiert werden, z. Bsp. die Fliesszeit von jedem Punkt bis zum Auslass aus dem Kanalnetz."
+
+#: ../../en/user-guide/network-following/index.rst:71
+msgid ""
+"For this tool you need a field in the layer vw_qgep_reach with the values to"
+" sum up. Because interesting values are normally not part of this layer, you"
+" have first to join the value-field (e.g flowtime or flow rate) to the layer"
+" vw_qgep_reach."
+msgstr "Für dieses Tool ist ein Feld im Layer vw_qgep_reach notwendig, welches die zu summierenden Werte enthält. Weil interessierende Werte normalerweise nicht im Layer vorhanden sind, muss das Feld (z. Bsp. die Fliesszeit oder die Fliessgeschwindigkeit) an den Layer vw_qgep_reach verknüpft (join) werden. "
+
+#: ../../en/user-guide/network-following/index.rst:73
+msgid ""
+"As example look at this small network, labeled with reach-identifier, length"
+" and flow direction arrow"
+msgstr "Als Beispiel hier ein kleines Netzwerk, beschriftet mit Haltungs-Bezeichnung, Länge und Fliessrichtungspfeil."
+
+#: ../../en/user-guide/network-following/index.rst:77
+msgid ""
+"We need a table (in the example called sum up tool) with at least two "
+"fields: field identifier for the join and field flow rate (in the example in"
+" [m/s]) to sum up."
+msgstr "Es braucht eine Tabelle (im Beispiel heisst sie sum up tool) mit mindestens zwei Feldern: Feld identifier als Verknüpfungsfeld und das Feld flow rate (im Beispiel die Fliessgeschwindigkeit in [m/s]) als verknüpftes Feld, dass summiert wird."
+
+#: ../../en/user-guide/network-following/index.rst:78
+msgid ""
+"Open the properties of layer vw_qgep_reach, choose **Joins** and **Add new "
+"join** (green + Button) and define the join with the join field (identifier)"
+" and the joined fields (field to sum up)."
+msgstr "Im Layer vw_qgep_reach die Einstellungen öffnen, dort **Verknüpfungen** und **Neue Verknüpfung hinzufügen** (grüner + Knopf) wählen. Die Verknüpfung mit dem Verknüpfungsfeld (identifier) und dem verknüpften Feld (Feld das summiert werden soll) definieren."
+
+#: ../../en/user-guide/network-following/index.rst:82
+msgid "Start the tool with double-click one **Sum up upstream**"
+msgstr "Starten sie mit Doppelklick auf das **Sum up upstream** Tool"
+
+#: ../../en/user-guide/network-following/index.rst:87
+msgid "In the window you have to enter/to choose"
+msgstr "Im Fenster muss folgendes eingegeben/gewählt werden"
+
+#: ../../en/user-guide/network-following/index.rst:89
+msgid ""
+"an expression as shown in the title of the field "
+"(COALESCE(\"field_name\",0). If you do not use the **coalesce** command, you"
+" will get an error when running the tool and there are NULL-values in the "
+"field to sum up. In the figure is as example the calculation for the flow "
+"time in [minutes], calculated with length effective and the flow rate in "
+"[m/s]."
+msgstr "einen Ausdruck gemäss dem Titel des Feldes (COALESCE(\"field_name\",0). Wenn der **coalesce** Befehl nicht verwendet wird, gibt es bei der Ausführung des Tools einen Fehler, wenn sich im zu summierenden Feld ein NULL-Wert befindet. In der Abbildung ist als Beispiel die Berechnung der Fliesszeit in [Minuten], berechnet aus der Länge effektiv und der Fliessgeschindigkeit in [m/s]."
+
+#: ../../en/user-guide/network-following/index.rst:91
+msgid ""
+"the branch behavior (Minimum, Maximum, Average): which value will be used "
+"after when two branches join to continue the summing."
+msgstr "das Verhalten bei Verzweigungen (Minimum, Maximum, Durchschnitt): welcher Wert wird für die weiter Summierung verwendet, wenn zwei Äste des Kanalnetzes zusammenkommen."
+
+#: ../../en/user-guide/network-following/index.rst:93
+msgid ""
+"the advanced parameters are preconfigured for QGEP and should not need to be"
+" changed."
+msgstr "die erweiterten Parameter sind für QGEP bereits vorkonfiguriert und sollten nicht geändert werden."
+
+#: ../../en/user-guide/network-following/index.rst:95
+msgid ""
+"Summed up: if you let this field empty, there will be a temporary point "
+"layer with the results in your project. Otherwise you can save the results "
+"to a new point vector layer."
+msgstr "Summed up: Bleibt das Feld leer wird im Projekt ein temporärer Punkt-Layer mit den Resultaten erstellt. Oder sie können in diesem Feld das Resultat in einen Punkt-Vektorlayer speichern."
+
+#: ../../en/user-guide/network-following/index.rst:99
+msgid ""
+"The resulting point-vector layer has the fields of the vw_wastewater_node "
+"layer and an additional field **value** with the sum for each wastewater "
+"node. * In the figure below you see the result of the example with all three"
+" branch behaviors: minimum = normal style, maximum = bold, average = "
+"underscored"
+msgstr "Der resultierende Punkt-Layer hat die Felder des vw_wastewater_node Layer und ein ein zusätzliches Feld **value** mit der Summe für jeden Abwasserknoten. In der Abbildung ist das Resultat des Beispiels mit allen drei Verzweigungsverhalten dargestellt: Minimum = normaler Text, Maximum = fett, Durchschnitt = unterstrichen."
+
+#: ../../en/user-guide/network-following/index.rst:106
+msgid "Flow times downstream"
+msgstr "Fliesszeiten abwärts"
+
+#: ../../en/user-guide/network-following/index.rst:110
+msgid ""
+"The idea for this tool is to get the flowtime between a startpoint (where "
+"e.g.is an accident) and an interesting wastewater structure downstreams. It "
+"is not the idea to create a flowtime plan for a whole network with this tool"
+" (use the SumUpTool_ tool for this task)."
+msgstr "Die Idee für dieses Tool: Berechne die Fliesszeit zwischen einem Startpunkt (hier ist z.B. ein Unfall) und einem Abwasserbauwerk unterhalb. Es ist nicht die Idee einen Fliesszeitenplan für ein ganzes Abwassernetz mit diesem Tool zu erstellen (für diese Aufgabe kann das Summieren gegen die Fliessrichtung-Tool verwendet werden). "
+
+#: ../../en/user-guide/network-following/index.rst:112
+msgid ""
+"For this tool you need a layer (table) in the QGEP-project with the flowtime"
+" per reach and the obj_id of the reach."
+msgstr "Für diese Tool braucht es einen Layer (eine Tabelle) im QGEP-Projekt mit der Fliesszeit und der Obj-ID der Haltungen."
+
+#: ../../en/user-guide/network-following/index.rst:114
+msgid ""
+"You have to select the start-reach (where the accident is) in the "
+"vw_qgep_reach-layer"
+msgstr "Die Starthaltung (wo der Unfall passiert ist) muss im vw_qgep_reach - Layer selektiert werden"
+
+#: ../../en/user-guide/network-following/index.rst:116
+msgid "Start the tool with double-click one **Flow times downstream**"
+msgstr "Starten sie mit Doppelklick auf das **Flow times downstream** Tool"
+
+#: ../../en/user-guide/network-following/index.rst:121
+msgid "In the window you have to choose"
+msgstr "Im Toolfenster muss gewählt werden"
+
+#: ../../en/user-guide/network-following/index.rst:123
+msgid "as reach layer: vw_qgep_reach"
+msgstr "als reach layer: vw_qgep_reach"
+
+#: ../../en/user-guide/network-following/index.rst:125
+msgid ""
+"as flow time layer: your table with the reach obj_id and the flowtimes (or "
+"the values you want to sum-up downstream)"
+msgstr "als flow time layer: die Tabelle mit der Haltungs Obj_ID und den Fliesszeiten (oder dem Wert, der aufsummiert werden soll)"
+
+#: ../../en/user-guide/network-following/index.rst:127
+msgid ""
+"as reach id field: the field in your table that is the obj_id of the reach"
+msgstr "als reach id field: das Feld in der Tabelle mit der Obj_ID der Haltung"
+
+#: ../../en/user-guide/network-following/index.rst:129
+msgid "as Flow times field: the field in your table, that you want to sum-up"
+msgstr "als Flow times field: das Feld aus der Tabelle, dass aufsummiert werden soll"
+
+#: ../../en/user-guide/network-following/index.rst:131
+msgid ""
+"as Flow times: if you let this field empty, there will be a temporary file "
+"with the results in your projects. Otherwise you can save the results to a "
+"vector layer."
+msgstr "als Flow times: wenn sie das Feld leer lassen wird ein temporärer Layer im Projekt erstellt. Oder sie können in diesem Feld das Resultat in einen Vektorlayer speichern."
+
+#: ../../en/user-guide/network-following/index.rst:135
+msgid ""
+"The tool makes a downstream network search starting with the selected reach "
+"and creates for every reach a record in the (temporary) vector layer with "
+"just one field (the sum of the Flow times)."
+msgstr "Das Tool macht eine Netzverfolgung in Fliessrichtung ab der selektierten Haltung und erzeugt für jede Haltung einen Datensatz im (temporären) Vektor-Layer mit nur einem Feld (der Summe der Werte im flow times field)."
+
+#: ../../en/user-guide/network-following/index.rst:139
+msgid ""
+"If there is more than one downstream-way, the results are wrong after the "
+"branch."
+msgstr "Wenn es mehr als einen Abwärts - Fliessweg gibt, sind die Resultate nach der Verzweigung falsch."
+
+#: ../../en/user-guide/network-following/index.rst:141
+msgid ""
+"There are some cases, where you get an empty flow time-Layer and red (error)"
+" text in the Log-window:"
+msgstr "Es gibt Fälle, bei denen ein leerer flow time - Layer und roter (Fehler-)Text im Log-Fenster resultieren:"
+
+#: ../../en/user-guide/network-following/index.rst:143
+msgid "Do not select more than one reach to start"
+msgstr "Nicht mehr als eine Haltung als Start selektieren"
+
+#: ../../en/user-guide/network-following/index.rst:145
+msgid ""
+"Do not select vw_qgep_reach as flow time layer (to sum-up the length, use "
+"the vw_network_segment layer)"
+msgstr "vw_qgep_reach nicht als Flow time layer auswählen (um die Länge der Haltungen zu summieren, kann der vw_network_segment - Layer verwendet werden)"
+
+#: ../../en/user-guide/network-following/index.rst:147
+msgid ""
+"If the reach id field has no values that match the reach obj_id, you will "
+"also get an error"
+msgstr "Wenn im reach id Feld kein Wert vorhanden ist, der zu der Haltungs Obj_ID passt, gibt es einen Fehler"
+
+#: ../../en/user-guide/plan-plotting/index.rst:2
+msgid "Plan plotting"
+msgstr "Plandruck"
+
+#: ../../en/user-guide/plan-plotting/index.rst:4
+msgid "This represents a guide on how to do plan plotting in QGEP."
+msgstr "Eine Anleitung wie man Pläne in QGEP druckt."
+
+#: ../../en/user-guide/plan-plotting/index.rst:10
+msgid "You can define a title page and legends"
+msgstr "Sie können eine Titelseite und Legenden definieren "
+
+#: ../../en/user-guide/plan-plotting/index.rst:11
+msgid "You can define, maintain and do serial plotting (**Rahmenpläne**)"
+msgstr "Sie können  definieren, behalten und Serieplotten (**Rahmenpläne**)"
+
+#: ../../en/user-guide/plan-plotting/index.rst:13
+msgid ""
+"For further instructions see `QGIS manual Creating Detailed Maps with the "
+"Atlas Tool "
+"<https://docs.qgis.org/latest/en/docs/training_manual/forestry/forest_maps.html>`_"
+msgstr "Weitere Anweisungen finden Sie im  `QGIS-Handbuch Erstellen detaillierter Karten mit dem Atlas-Tool <https://docs.qgis.org/latest/de/docs/training_manual/forestry/forest_maps.html>`_"

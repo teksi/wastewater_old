@@ -1,0 +1,75 @@
+[main]
+host = https://www.transifex.com
+
+[o:teksi:p:QGEP:r:qgep-plugin]
+source_file = plugin/qgepplugin/i18n/qgep-plugin.ts
+file_filter = plugin/qgepplugin/i18n/qgep-plugin_<lang>.ts
+source_lang = en
+type = QT
+
+[o:teksi:p:QGEP:r:qgep-plugin-js]
+source_file = plugin/qgepplugin/i18n/qgepplugin-js_en.ts
+file_filter = plugin/qgepplugin/i18n/qgepplugin-js_<lang>.ts
+source_lang = en
+type = QT
+
+[o:teksi:p:qgep-project:r:qgep_ents]
+file_filter = project/project/i18n/qgep_<lang>.ts
+source_file = project/project/qgep.ts
+source_lang = en
+type = QT
+
+[o:teksi:p:wastewater-docs:r:index]
+source_file = doc/i18n/pot/index.pot
+source_lang = en
+file_filter = doc/i18n/<lang>/index.po
+type = PO
+
+[o:teksi:p:wastewater-docs:r:features-guide]
+source_file = doc/i18n/pot/features-guide.pot
+source_lang = en
+file_filter = doc/i18n/<lang>/features-guide.po
+type = PO
+
+[o:teksi:p:wastewater-docs:r:installation-guide]
+source_file = doc/i18n/pot/installation-guide.pot
+source_lang = en
+file_filter = doc/i18n/<lang>/installation-guide.po
+type = PO
+
+[o:teksi:p:wastewater-docs:r:vm]
+source_file = doc/i18n/pot/vm.pot
+source_lang = en
+file_filter = doc/i18n/<lang>/vm.po
+type = PO
+
+[o:teksi:p:wastewater-docs:r:user-guide]
+source_file = doc/i18n/pot/user-guide.pot
+source_lang = en
+file_filter = doc/i18n/<lang>/user-guide.po
+type = PO
+
+[o:teksi:p:wastewater-docs:r:qgep_swmm]
+source_file = doc/i18n/pot/qgep_swmm.pot
+source_lang = en
+file_filter = doc/i18n/<lang>/qgep_swmm.po
+type = PO
+
+[o:teksi:p:wastewater-docs:r:wincan2qgep]
+source_file = doc/i18n/pot/wincan2qgep.pot
+source_lang = en
+file_filter = doc/i18n/<lang>/wincan2qgep.po
+type = PO
+
+[o:teksi:p:wastewater-docs:r:admin-guide]
+source_file = doc/i18n/pot/admin-guide.pot
+source_lang = en
+file_filter = doc/i18n/<lang>/admin-guide.po
+type = PO
+
+[o:teksi:p:wastewater-docs:r:translation]
+source_file = doc/i18n/pot/translation.pot
+source_lang = en
+file_filter = doc/i18n/<lang>/translation.po
+type = PO
+
