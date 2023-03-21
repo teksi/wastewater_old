@@ -34,11 +34,11 @@ For each yearly release (`YYYY.0`), the supported versions are updated like this
 - [Postgis](https://trac.osgeo.org/postgis/wiki/UsersWikiPostgreSQLPostGIS): keep versions matching a supported version at release date
 - Ili2pg and java: not defined yet
 
-Support for new versions of depepdencies can be added at any point in time.
+Support for new versions of dependencies can be added at any point in time.
 
-Non-system dependencies (such as pure python libraries) can be upgraded at any time, provided they match the supported versions above.
+Non-system dependencies (such as pure python libraries) can be upgraded at any time, provided they meet the above requirements in terms of supported versions.
 
-Developement requiring features unavailable to older versions must be handled gracefully (user message).
+Developement requiring features unavailable to older supoorted versions must be handled gracefully (display a message to the user saying why the feature is not available).
 
 
 ### Datamodel support policy
