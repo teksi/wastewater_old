@@ -1,20 +1,20 @@
 
 [general]
-name=QGEP
-description=Plugin to manage wastewater networks
+name=TEKSI Wastewater
+description=Plugin to manage wastewater networks (formerly: QGEP)
 qgisMinimumVersion=3.2
 category=Vector
 version=dev
 
 changelog=See repository for full changelog
-tags=gep, abwasser, wastewater
-author=QGEP group
-email=qgep@qgis.ch
-about=The QGEP plugin adds functionality to manage wastewater networks in QGIS. It requires a QGEP compatible database and project file.
-homepage=https://github.com/qgep/qgepplugin
-tracker=https://github.com/qgep/qgepplugin/issues
-repository=http://github.com/QGEP/qgepplugin
-icon=icons/qgepIcon.svg
+tags=teksi, gep, abwasser, wastewater, qgep, assainissement
+author=TEKSI
+email=info@teksi.ch
+about=The TEKSI wastewater plugin adds functionality to manage wastewater networks in QGIS. It was formerly known as QGEP.
+homepage=https://www.teksi.ch/modules/abwasser-gep/
+tracker=https://github.com/teksi/teksi_wastewater/issues
+repository=https://github.com/teksi/teksi_wastewater
+icon=icons/teksi-abwasser-logo.svg
 
 experimental=False
 deprecated=False
