@@ -1,4 +1,3 @@
-# files: '^.*\.py|.*\.tpl|.*\.sql|.*\.yaml|.*\.txt|.*\.md$'
 exclude: '^.*\.xtf|.*\.xml|.*\.ili|qgepqwat2ili/bin.*$'
 
 repos:
