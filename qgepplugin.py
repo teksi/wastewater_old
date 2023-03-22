@@ -64,7 +64,7 @@ def locale(values, feature, parent):
 class QgepPlugin(object):
     """
     A plugin for wastewater management
-    http://www.github.com/qgep/QGEP
+    https://github.com/teksi/teksi_wastewater
     """
 
     # The networkAnalyzer will manage the networklayers and pathfinding
@@ -143,7 +143,7 @@ class QgepPlugin(object):
         ini_text = QSettings(fp, QSettings.IniFormat)
         verno = ini_text.value("version")
 
-        self.logger.info("QGEP plugin version " + verno + " started")
+        self.logger.info("TEKSI Wastewater plugin version " + verno + " started")
 
     def initGui(self):
         """
@@ -257,7 +257,7 @@ class QgepPlugin(object):
         self.datamodelInitToolAction.triggered.connect(self.showDatamodelInitTool)
 
         # Add toolbar button and menu item
-        self.toolbar = QToolBar(QApplication.translate("qgepplugin", "QGEP"))
+        self.toolbar = QToolBar(QApplication.translate("TEKSI Wastewater", "TEKSI Wastewater"))
         self.toolbar.addAction(self.profileAction)
         self.toolbar.addAction(self.upstreamAction)
         self.toolbar.addAction(self.downstreamAction)
@@ -265,16 +265,16 @@ class QgepPlugin(object):
         self.toolbar.addAction(self.refreshNetworkTopologyAction)
         self.toolbar.addAction(self.connectNetworkElementsAction)
 
-        self.iface.addPluginToMenu("&QGEP", self.profileAction)
-        self.iface.addPluginToMenu("&QGEP", self.settingsAction)
-        self.iface.addPluginToMenu("&QGEP", self.aboutAction)
+        self.iface.addPluginToMenu("TEKSI &Wastewater", self.profileAction)
+        self.iface.addPluginToMenu("TEKSI &Wastewater", self.settingsAction)
+        self.iface.addPluginToMenu("TEKSI &Wastewater", self.aboutAction)
 
         admin_mode = QSettings().value("/QGEP/AdminMode", False)
         # seems QGIS loads True as "true" on restart ?!
         if admin_mode and admin_mode != "false":
             self.toolbar.addAction(self.importAction)
             self.toolbar.addAction(self.exportAction)
-            self.iface.addPluginToMenu("&QGEP", self.datamodelInitToolAction)
+            self.iface.addPluginToMenu("TEKSI &Wastewater", self.datamodelInitToolAction)
 
         self.iface.addToolBar(self.toolbar)
 
@@ -343,10 +343,10 @@ class QgepPlugin(object):
 
         self.toolbar.deleteLater()
 
-        self.iface.removePluginMenu("&QGEP", self.profileAction)
-        self.iface.removePluginMenu("&QGEP", self.settingsAction)
-        self.iface.removePluginMenu("&QGEP", self.aboutAction)
-        self.iface.removePluginMenu("&QGEP", self.datamodelInitToolAction)
+        self.iface.removePluginMenu("TEKSI &Wastewater", self.profileAction)
+        self.iface.removePluginMenu("TEKSI &Wastewater", self.settingsAction)
+        self.iface.removePluginMenu("TEKSI &Wastewater", self.aboutAction)
+        self.iface.removePluginMenu("TEKSI &Wastewater", self.datamodelInitToolAction)
 
         QgsApplication.processingRegistry().removeProvider(self.processing_provider)
 
