@@ -3,12 +3,12 @@ name: Docker
 on:
   push:
     branches:
-      - master
+      - main
     tags:
       - '*'
   pull_request:
     branches:
-      - master
+      - main
 
   release:
     types: ['prereleased', 'released']
@@ -38,12 +38,12 @@ jobs:
 
       - name: "assert version is up to date"
         run: |
-          LAST_VERSION=$(ls delta | sort -r | sed '/^delta_/!d' | head -n 1 | cut -d_ -f2)
-          CUR_VERSION=$(cat system/CURRENT_VERSION.txt)
+          LAST_VERSION=$(ls datamodel/delta | sort -r | sed '/^delta_/!d' | head -n 1 | cut -d_ -f2)
+          CUR_VERSION=$(cat datamodel/system/CURRENT_VERSION.txt)
           [[ "${LAST_VERSION}" == "${CUR_VERSION}" ]] || (echo "Version mismatch ${LAST_VERSION} != ${CUR_VERSION}" && exit 1)
 
       - name: "build dockerfile"
-        run: docker build -f .docker/Dockerfile --build-arg POSTGIS_VERSION=${{ matrix.pgis }} --tag opengisch/qgep_datamodel:${GITHUB_REF##*/}-${{ matrix.pgis }} .
+        run: docker build -f datamodel/.docker/Dockerfile --build-arg POSTGIS_VERSION=${{ matrix.pgis }} --tag opengisch/qgep_datamodel:${GITHUB_REF##*/}-${{ matrix.pgis }} datamodel
 
       - name: "initialize qgep container"
         run: docker run -d -p 5432:5432 --name qgep opengisch/qgep_datamodel:${GITHUB_REF##*/}-${{ matrix.pgis }}
@@ -95,11 +95,12 @@ jobs:
           PGPASSWORD: postgres
           PGUSER: postgres
 
-      - uses: AButler/upload-release-assets@v2.0
+      - uses: svenstaro/upload-release-action@v2
         if: github.event_name == 'release' && matrix.pgis == env.pgis_stable
         with:
-          files: 'artifacts/*'
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          file: artifacts/*
+          file_glob: true
+          overwrite: true
 
       - name: "failure logs"
         if: failure()
