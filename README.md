@@ -20,7 +20,8 @@ Teksi-Wastewater follows a *rolling release* model, meaning that the `main` bran
 
 A yearly release (`YYYY.0`) is created at the same time as QGIS LTR releases (usually in march). Non-backwards compatible changes such as dropping support for dependencies or removing existing workflows can only be merged during the "feature thaw", a period of 1 month before the yearly release (aimed to match QGIS's LTR feature freezes).
 
-Two additional tags (`YYYY.1`, `YYYY.2`) are created in august and november. They only serve as milestones for organisational purposes (roadmapping) but otherwise do no differ from rolling release.
+Two additional tags (`YYYY.1`, `YYYY.2`) are created in august and november. They only serve as milestones for organisational purposes (roadmapping) but otherwise do not differ from rolling release.
+
 
 To accommodate that release model, the following rules apply:
 - all changes happen in pull requests
