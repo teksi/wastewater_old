@@ -1,7 +1,6 @@
 # TEKSI Wastewater
 
-<img src="https://www.teksi.ch/wp-content/uploads/210910-teksi-assain-logos-fr-02.png" height="100"> 
-<img src="https://www.teksi.ch/wp-content/uploads/210910-teksi-logos-fr-04.png" height="100">
+<img src="https://www.teksi.ch/wp-content/uploads/210910-teksi-assain-logos-fr-02.png" height="100"> <img src="https://www.teksi.ch/wp-content/uploads/210910-teksi-logos-fr-04.png" height="100">
 
 ---
 
