@@ -1,0 +1,146 @@
+on:
+  release:
+    types:
+      - published
+
+jobs:
+
+  # Release the datamodel by attaching generated SQL files to the release and pushing it to Dockerhub
+  release-datamodel:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # postgres-postgis version, see available tags https://hub.docker.com/r/postgis/postgis/tags
+        pgis:
+          # WARNING: if changing this, make sure tu update `pgis_stable` below 
+          - 9.6-3.2
+          - 10-3.2
+          - 11-3.2
+          - 12-3.2
+      fail-fast: false
+
+    env:
+      # which pgis version to use for :tag images and to generate the dumps attached to the release (must be in the matrix above)
+      pgis_stable: "11-3.2"
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "assert version is up to date"
+        run: |
+          LAST_VERSION=$(ls datamodel/delta | sort -r | sed '/^delta_/!d' | head -n 1 | cut -d_ -f2)
+          CUR_VERSION=$(cat datamodel/system/CURRENT_VERSION.txt)
+          [[ "${LAST_VERSION}" == "${CUR_VERSION}" ]] || (echo "Version mismatch ${LAST_VERSION} != ${CUR_VERSION}" && exit 1)
+
+      - name: "build dockerfile"
+        run: docker build -f datamodel/.docker/Dockerfile --build-arg POSTGIS_VERSION=${{ matrix.pgis }} --tag opengisch/qgep_datamodel:${GITHUB_REF##*/}-${{ matrix.pgis }} datamodel
+
+      - name: "initialize qgep container"
+        run: docker run -d -p 5432:5432 --name qgep opengisch/qgep_datamodel:${GITHUB_REF##*/}-${{ matrix.pgis }}
+
+      - name: "wait for qgep container"
+        run: docker exec qgep init_qgep.sh wait
+        timeout-minutes: 10
+
+      - name: "dockerhub login"
+        run: |
+          docker login --username "${{ secrets.DOCKERHUB_USERNAME }}" --password "${{ secrets.DOCKERHUB_PASSWORD }}"
+
+      - name: "push to dockerhub"
+        run: |
+          docker push opengisch/qgep_datamodel:${GITHUB_REF##*/}-${{ matrix.pgis }}
+
+      - name: "push to dockerhub (:tag)"
+        if: matrix.pgis == env.pgis_stable && github.ref != 'refs/heads/master'
+        run: |
+          docker tag opengisch/qgep_datamodel:${GITHUB_REF##*/}-${{ matrix.pgis }} opengisch/qgep_datamodel:${GITHUB_REF##*/}
+          docker push opengisch/qgep_datamodel:${GITHUB_REF##*/}
+
+      - name: "push to dockerhub (:latest)"
+        if: github.ref == 'refs/heads/master'
+        run: |
+          docker tag opengisch/qgep_datamodel:${GITHUB_REF##*/}-${{ matrix.pgis }} opengisch/qgep_datamodel:latest
+          docker push opengisch/qgep_datamodel:latest
+
+      - name: "create dumps"
+        if: matrix.pgis == env.pgis_stable
+        run: |
+          CI_TAG=${GITHUB_REF#refs/*/} .deploy/create-dumps.py
+          ls artifacts
+        env:
+          PGHOST: localhost
+          PGPASSWORD: postgres
+          PGUSER: postgres
+
+      - uses: svenstaro/upload-release-action@v2
+        if: matrix.pgis == env.pgis_stable
+        with:
+          file: artifacts/*
+          file_glob: true
+          overwrite: true
+
+      - name: "failure logs"
+        if: failure()
+        run: |
+          docker logs qgep
+
+  # Release the plugin to the QGIS plugin repository and to github releases using qgis-plugin-ci
+  release-plugin:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Install Qt lrelease
+        run: |
+          sudo apt-get update
+          sudo apt-get install qtbase5-dev qttools5-dev-tools
+
+      - name: Install qgis-plugin-ci
+        run: pip3 install qgis-plugin-ci==2.7.*
+
+      - name: Compile translations
+        run: lrelease $(find ./plugin -type f -name "*.ts")
+
+      - name: Release plugin
+        run: |
+          qgis-plugin-ci -v release $(echo "${GITHUB_REF_NAME}" | cut -d+ -f1) \
+            --release-tag ${GITHUB_REF_NAME} \
+            # --transifex-token ${{ secrets.TX_TOKEN }} \  # this is done separately
+            --github-token ${{ secrets.GITHUB_TOKEN }} \
+            --osgeo-username ${{ secrets.OSGEO_USERNAME }} \
+            --osgeo-password ${{ secrets.OSGEO_PASSWORD }} \
+            --allow-uncommitted-changes
+
+  release-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Get dependencies
+        run: pip install sphinx-rtd-theme==0.1.9
+
+      - name: Compile translations
+        run: lrelease $(find ./doc -type f -name "*.ts")
+
+      - name: build
+        working-directory: ./doc
+        run: |
+          make html
+          touch build/html/.nojekyll
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: doc/build/html

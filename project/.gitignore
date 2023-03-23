@@ -3,8 +3,11 @@ qgepplugin-*.zip
 plugins.xml
 *.qgs~
 project/qgep_*.qgs
-project/*.ts
 project/*.qm
 qgep.zip
 .DS_Store
 .idea
+
+# don't version the extracted source strings nor the compiled files as they be regenerated from source
+project/qgep.ts
+*.qm

@@ -1,0 +1,59 @@
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - '*'
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test-datamodel:
+  
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # postgres-postgis version, see available tags https://hub.docker.com/r/postgis/postgis/tags
+        pgis:
+          - 9.6-3.2
+          - 10-3.2
+          - 11-3.2
+          - 12-3.2
+      fail-fast: false
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: "assert version is up to date"
+        run: |
+          LAST_VERSION=$(ls datamodel/delta | sort -r | sed '/^delta_/!d' | head -n 1 | cut -d_ -f2)
+          CUR_VERSION=$(cat datamodel/system/CURRENT_VERSION.txt)
+          [[ "${LAST_VERSION}" == "${CUR_VERSION}" ]] || (echo "Version mismatch ${LAST_VERSION} != ${CUR_VERSION}" && exit 1)
+
+      - name: "build dockerfile"
+        run: docker build -f datamodel/.docker/Dockerfile --build-arg POSTGIS_VERSION=${{ matrix.pgis }} --tag opengisch/qgep_datamodel:${GITHUB_REF##*/}-${{ matrix.pgis }} datamodel
+
+      - name: "initialize qgep container"
+        run: docker run -d -p 5432:5432 --name qgep opengisch/qgep_datamodel:${GITHUB_REF##*/}-${{ matrix.pgis }}
+
+      - name: "wait for qgep container"
+        run: docker exec qgep init_qgep.sh wait
+        timeout-minutes: 10
+
+      - name: "run tests on qgep_build (structure)"
+        run: |
+          docker start qgep
+          # Run tests that depend on data model. Tests that require demo data are ignored and run below in qgep_prod
+          docker exec -e PGSERVICE=qgep_build qgep pytest --ignore test/test_import.py --ignore test/test_swmm.py
+
+      - name: "run tests on qgep_prod (production)"
+        run: |
+          docker start qgep
+          docker exec -e PGSERVICE=qgep_prod qgep pytest
+
+      - name: "failure logs"
+        if: failure()
+        run: |
+          docker logs qgep

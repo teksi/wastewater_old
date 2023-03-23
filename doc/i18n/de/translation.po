@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module
+# This file is distributed under the same license as the QGEP package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Urs Kaufmann <urs.kaufmann@holinger.com>, 2022
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: QGEP 0.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-11 14:38+0000\n"
+"PO-Revision-Date: 2022-05-10 11:24+0000\n"
+"Last-Translator: Urs Kaufmann <urs.kaufmann@holinger.com>, 2022\n"
+"Language-Team: German (https://www.transifex.com/qgep/teams/40646/de/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../en/translation/index.rst:3
+msgid "Translation"
+msgstr "Übersetzungen"
+
+#: ../../en/translation/index.rst:5
+msgid "The documentation is available in:"
+msgstr "Diese Doku ist verfügbar in:"
+
+#: ../../en/translation/index.rst:7
+msgid "`English <https://qgep.github.io/docs/en/>`_"
+msgstr "`English <https://qgep.github.io/docs/en/>`_"
+
+#: ../../en/translation/index.rst:8
+msgid "`Deutsch <https://qgep.github.io/docs/de/>`_"
+msgstr "`Deutsch <https://qgep.github.io/docs/de/>`_"
+
+#: ../../en/translation/index.rst:9
+msgid "`Français <https://qgep.github.io/docs/fr/>`_"
+msgstr "`Français <https://qgep.github.io/docs/fr/>`_"
+
+#: ../../en/translation/index.rst:10
+msgid "`Italiano <https://qgep.github.io/docs/it/>`_"
+msgstr "`Italiano <https://qgep.github.io/docs/it/>`_"
+
+#: ../../en/translation/index.rst:11
+msgid "`Română <https://qgep.github.io/docs/ro/>`_"
+msgstr "`Română <https://qgep.github.io/docs/ro/>`_"
+
+#: ../../en/translation/index.rst:12
+msgid "`Español <https://qgep.github.io/docs/es/>`_"
+msgstr "`Español <https://qgep.github.io/docs/es/>`_"

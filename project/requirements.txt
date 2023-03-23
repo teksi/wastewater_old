@@ -1,3 +1,0 @@
-transifex-client
-lxml
-PyGithub
