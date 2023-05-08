@@ -1,0 +1,217 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2021, The QGEP Project www.qgis.ch/en/projects/qgep-waste-water-module
+# This file is distributed under the same license as the QGEP package.
+# 
+# Translators:
+# DanBing <daniel.binggeli@pully.ch>, 2017
+# DanBing <daniel.binggeli@pully.ch>, 2019
+# valentine arrieta <valentine.arrieta@geoconseils.ch>, 2016
+msgid ""
+msgstr ""
+"Project-Id-Version: QGEP Documentation\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-11 14:38+0000\n"
+"PO-Revision-Date: 2015-08-14 19:14+0000\n"
+"Last-Translator: DanBing <daniel.binggeli@pully.ch>, 2019\n"
+"Language-Team: French (http://www.transifex.com/qgep/qgep-documentation/language/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
+
+#: ../../en/vm/about.rst:2
+msgid "About"
+msgstr "À propos"
+
+#: ../../en/vm/about.rst:4
+msgid ""
+"This represents a guide on how to download and install a virtual machine "
+"(VM) that has a working QGEP installation with a demo dataset. The VM also "
+"has a working demo of the `QWAT water project "
+"<https://github.com/qwat/QWAT>`_ ."
+msgstr "Guide pour télécharger et installer une machine virtuelle (MV) incluant une installation fonctionnelle de QGEP avec un projet de démonstration. Cette MV inclut également une démo fonctionnelle de `QWAT water project <https://github.com/qwat/QWAT>`_"
+
+#: ../../en/vm/about.rst:7
+msgid "The VM is based on Debian Testing with Cinnamon Desktop."
+msgstr "La VM est basée sur Debian Testing avec l'environnement de bureau 'Cinnamon'."
+
+#: ../../en/vm/about.rst:9
+msgid ""
+"Debian Testing was chosen in order to have GDAL 2.x and also benefit from "
+"latest linux kernel so that latest hardware won't be a problem for the case "
+"where the VM is used outside virtualization (e.g use the virtual disk as "
+"basis to create a non-virtualized usb-stick to be used for demo purposes)."
+msgstr "Debian Testing a été retenu dans le but de disposer de GDAL 2.x et de bénéficier également des derniers noyaux Linux, afin que les hardware les plus récents ne soient pas un problème  dans le cas d'une MV utilisée hors virtualisation (p. ex. pour le cas où un disque virtuel est utilisé comme support pour créer une clé usb  physique à utiliser à des fins de démonstration)."
+
+#: ../../en/vm/about.rst:13
+msgid "Installed software:"
+msgstr "Logiciels installés: "
+
+#: ../../en/vm/about.rst:15
+msgid "PostgreSQL 9.6.0 with Postgis 2.3"
+msgstr "PostgreSQL 9.6.0 avec Postgis 2.3"
+
+#: ../../en/vm/about.rst:16
+msgid "QGIS 2.18"
+msgstr "QGIS 2.18"
+
+#: ../../en/vm/about.rst:17
+msgid "pgAdmin 4 (open the browser at http://localhost:5050 to access it)"
+msgstr ""
+
+#: ../../en/vm/about.rst:20
+msgid "Settings that are changed from a default software install:"
+msgstr "Paramètres différents d'une installation logicielle par défaut:"
+
+#: ../../en/vm/about.rst:22
+msgid "``pg_hba.conf`` has ``trust`` for local connections"
+msgstr ""
+
+#: ../../en/vm/about.rst:23
+msgid ""
+"QGIS is setup with `multithreaded rendering enabled "
+"<http://www.lutraconsulting.co.uk/products/qgis-mtr>`_"
+msgstr "QGIS est installé avec `multithreaded rendering enabled <http://www.lutraconsulting.co.uk/products/qgis-mtr>`_"
+
+#: ../../en/vm/about.rst:27
+msgid "The users ``qgis`` and ``root`` have the password ``qgis``"
+msgstr "Les utilisateurs ``qgis`` et ``root`` ont le mot de passe ``qgis``"
+
+#: ../../en/vm/about.rst:31
+msgid "If you decide to use the VM in production, it is recommended to:"
+msgstr "Si vous décidez d'utiliser la MV en production, il est recommandé de: "
+
+#: ../../en/vm/about.rst:33
+msgid "change the passwords"
+msgstr "Changer les mots de passe"
+
+#: ../../en/vm/about.rst:34
+msgid ""
+"regenerate the ssh keys by running in a terminal ``sudo rm "
+"/etc/ssh/ssh_host_* && sudo dpkg-reconfigure openssh-server``"
+msgstr ""
+
+#: ../../en/vm/index.rst:4
+msgid "Demo Virtual Machine"
+msgstr "Machine virtuelle de démonstration"
+
+#: ../../en/vm/index.rst:6
+msgid ""
+"This represents a guide on how to download and install a virtual machine "
+"(VM) that has a working QGEP installation with a preinstalled demo dataset."
+msgstr "Ceci représente un guide de téléchargement et d'installation de la machine virtuelle (MV) qui propose un set de données de démonstration pré-installé ainsi qu'une installation fonctionnelle de QGEP"
+
+#: ../../en/vm/install.rst:2
+msgid "Install"
+msgstr "installer"
+
+#: ../../en/vm/install.rst:5
+msgid "Download"
+msgstr "Télécharger"
+
+#: ../../en/vm/install.rst:6
+msgid "Download the vm from `here <https://docs.qtibia.ro/qgis.vdi.xz>`_"
+msgstr ""
+
+#: ../../en/vm/install.rst:10
+msgid ""
+"The size of the VM is around 2GB compressed and up to 15GB uncompressed."
+msgstr "La taille de la VM (compressée) est d'environ 2GB et peut atteindre 15GB (non compressée)."
+
+#: ../../en/vm/install.rst:13
+msgid "Extract"
+msgstr "Extraire"
+
+#: ../../en/vm/install.rst:14
+msgid "The virtual disk is archived using XZ compression."
+msgstr "Le disque virtuel est archivé avec une compression XZ"
+
+#: ../../en/vm/install.rst:16
+msgid "To extract the archive:"
+msgstr "Pour extraire l'archive:"
+
+#: ../../en/vm/install.rst:18
+msgid ""
+"**Windows:** you can use `7-Zip <http://7-zip.org/>`_ to extract the "
+"archive."
+msgstr "**Windows:** vous pouvez utiliser `7-Zip <http://7-zip.org/>`_ pour extraire l'archive."
+
+#: ../../en/vm/install.rst:19
+msgid "**Linux:** cd to the download directory and run ``xz -d qgis.vdi.xz``"
+msgstr "**Linux:** cd vers le directoire de téléchargement et lancer ``xz -d qgis.vdi.xz``"
+
+#: ../../en/vm/install.rst:21
+msgid "You can run the VM as you would do with any VirtualBox VM."
+msgstr "Vous utilisez la MV comme vous le feriez avec n'importe quelle boîte virtuelle pour MV."
+
+#: ../../en/vm/install.rst:25
+msgid ""
+"As the VM is based on Linux it is fairly simple to convert the image to a "
+"raw disk and put it on a USB stick (minimum 16GB) or a faster storage. This "
+"would enable you to run the app without the virtualization penalty and enjoy"
+" the full speed of your hardware."
+msgstr "Comme la VM est basée sur Linux, il est aisé de convertir l'image vers un disque 'RAW' et de la déposer sur une clé USB (min. 16 GB) ou un autre support de stockage plus rapide. Ceci vous permettra de démarrer l'application sans être pénalisé en performance par la virtualisation et de profiter de la pleine vitesse de vos composants matériels."
+
+#: ../../en/vm/install.rst:30
+msgid "Run QGEP"
+msgstr "Démarrez QGEP"
+
+#: ../../en/vm/install.rst:32
+msgid ""
+"After logging in with ``qgis`` user and the same password, by  clicking the "
+"QGIS icon located in the bottom bar you will get the following image:"
+msgstr "Après vous être connecté en tant qu' utilisateur ``qgis`` avec le même mot de passe, cliquez sur l'icône QGIS située dans la barre inférieure et vous obtiendrez l'image suivante:"
+
+#: ../../en/vm/install.rst:37
+msgid ""
+"Clicking the **qgep_en** project and following the :ref:`user-guide` should "
+"get you started."
+msgstr "En cliquant sur le projet **qgep_en** et en suivant le :ref:`user-guide`, vous serez à même de commencer."
+
+#: ../../en/vm/server.rst:2
+msgid "QGIS Server"
+msgstr "serveur QGIS"
+
+#: ../../en/vm/server.rst:4
+msgid ""
+"You can download a VM with an older QGEP setup that also has QGIS Server "
+"installed from http://docs.qtibia.ro/qgisplatform.vdi.xz ."
+msgstr "Vous pouvez télécharger une machine virtuelle comprenant une ancienne configuration de QGEP ainsi qu'une installation de QGIS Serveur depuis http://docs.qtibia.ro/qgisplatform.vdi.xz "
+
+#: ../../en/vm/server.rst:7
+msgid ""
+"The VM has working installations of `QGIS Server "
+"<https://docs.qgis.org/latest/en/docs/user_manual/working_with_ogc/ogc_server_support.html>`_"
+" and `QGIS Web Client (QWC). <https://github.com/qgis/QGIS-Web-Client>`_"
+msgstr ""
+
+#: ../../en/vm/server.rst:12
+msgid "Access the Web Services"
+msgstr "Accès aux services Web"
+
+#: ../../en/vm/server.rst:14
+msgid ""
+"The Apache server is setup to respond to requests pointing to the "
+"`http://qgisplatform.demo`. Accessing the above link with the Internet "
+"Browser of the VM will take you to the starting page of QWC depicted in the "
+"below image."
+msgstr ""
+
+#: ../../en/vm/server.rst:20
+msgid "**QGIS Web client starting page**"
+msgstr "**QGIS page de démarrage client Web**"
+
+#: ../../en/vm/server.rst:22
+msgid ""
+"If you want to access the web services outside the VM, you need to edit the "
+"``hosts`` file on your machine and point ``qgisplatform.demo`` to the IP of "
+"the VM."
+msgstr "Si vous souhaitez accéder aux services Web en dehors de la MV, vous devez éditer les fichiers ``hosts`` sur votre machine et pointer sur ``qgisplatform.demo`` comme IP de la MV."
+
+#: ../../en/vm/server.rst:27
+msgid ""
+"If you've setup the VM with the network adapter in NAT mode only the VM host"
+" will be able to access the services. If you want all the devices on your "
+"LAN to do it, you need to setup the network adapter in bridge mode."
+msgstr "Si vous avez configuré la MV avec l'adaptateur réseau en mode NAT, seule la MV hôte pourra accéder aux services. Si vous souhaitez que toutes les machines de votre réseau local puissent y accéder, vous devez configurer l'adaptateur réseau en mode pont. "
